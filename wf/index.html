@@ -44,6 +44,8 @@ h2 b{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0;text-tra
 .tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:1px}
 .secret{background:var(--secret-soft);color:var(--secret)}
 .maybe{background:var(--accent-soft);color:var(--accent)}
+.ph{margin-top:8px;background:var(--accent-soft);color:var(--accent);border:0;border-radius:6px;padding:6px 10px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.pics{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}.pics img{max-height:180px;max-width:45%;background:#fff;border-radius:6px;padding:4px;object-fit:contain}
 .note{background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:12px;font-size:14px;margin-top:22px}
 .note strong{color:var(--secret)}
 .done-msg{text-align:center;font-weight:600;color:var(--accent);margin-top:18px}
@@ -69,26 +71,26 @@ h2 b{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0;text-tra
 (function(){
   var ROUTE=[
     {s:"1 · Entrance & seasonal display", w:"Right as you walk in. October means a pumpkin and baking display.", items:[
-      {id:"pumpkin",n:"Pumpkin purée",q:"1 can (15 oz)",t:"Check the seasonal display first. Must say 100% pure pumpkin, NOT pumpkin pie filling. If it isn't here, it's in the baking aisle (step 3).",secret:1}
+      {id:"pumpkin",img:["pumpkin.jpg"],n:"Pumpkin purée",q:"1 can (15 oz)",t:"Check the seasonal display first. Must say 100% pure pumpkin, NOT pumpkin pie filling. If it isn't here, it's in the baking aisle (step 3).",secret:1}
     ]},
     {s:"2 · Produce", w:"Usually the first big section. Potatoes and onions sit along the edge, often near bulk bins.", items:[
-      {id:"sp",n:"Sweet potatoes",q:"~1 kg (2–3 large)",t:"Pick big, smooth, even ones so they roast at the same speed. The orange-flesh kind (often labelled garnet or jewel)."}
+      {id:"sp",img:["sp.jpg"],n:"Sweet potatoes",q:"~1 kg (2–3 large)",t:"Pick big, smooth, even ones so they roast at the same speed. The orange-flesh kind (often labelled garnet or jewel)."}
     ]},
     {s:"3 · Centre aisles", w:"Walk them in one sweep. Read the aisle signs overhead.", items:[
-      {id:"nutmeg",n:"Ground nutmeg",q:"1 small jar",t:"Spice rack, alphabetical (between mustard seed and onion). 365 brand is cheapest. Ground, not whole.",secret:1},
-      {id:"spread",n:"Hazelnut-cocoa spread",q:"1 jar",t:"Nut butter & jam aisle, next to the peanut and almond butters. Nocciolata (Rigoni di Asiago) or Justin's Chocolate Hazelnut Butter.",secret:1},
-      {id:"meringue",n:"Meringue cookies",q:"~100 g (1 pack)",t:"Cookie aisle, small tubs or bags (vanilla). If none, check the bakery case near the front."},
-      {id:"cookies",n:"Cookies for the snack cabinet",q:"1 pack",t:"Riddle II says \"behind the cookies\". Only if your snack cabinet has none.",maybe:1},
-      {id:"foil",n:"Aluminum foil",q:"1 roll",t:"Household / paper goods aisle, near the end of the store.",maybe:1},
-      {id:"zip",n:"Small zip bags",q:"1 box",t:"Same aisle as foil. For Evidence IV in the freezer.",maybe:1},
+      {id:"nutmeg",img:["nutmeg.jpg","nutmeg2.jpg"],n:"Ground nutmeg",q:"1 small jar",t:"Spice rack, alphabetical (between mustard seed and onion). 365 Organic (left photo) or Simply Organic. Ground, not whole.",secret:1},
+      {id:"spread",img:["spread.jpg","spread2.jpg"],n:"Hazelnut-cocoa spread",q:"1 jar",t:"Nut butter & jam aisle, next to the peanut and almond butters. Nocciolata (Rigoni di Asiago) or Justin's Chocolate Hazelnut Butter.",secret:1},
+      {id:"meringue",img:["shortbread.jpg"],n:"Meringue cookies",q:"~100 g (1 pack)",t:"Check the bakery case and the cookie aisle (WF online doesn't list them, so they may be out). No meringues? Get 365 Butter Shortbread (photo) and crumble it instead."},
+      {id:"cookies",img:["shortbread.jpg"],n:"Cookies for the snack cabinet",q:"1 pack",t:"Riddle II says \"behind the cookies\". Only if your snack cabinet has none.",maybe:1},
+      {id:"foil",img:["foil.jpg"],n:"Aluminum foil",q:"1 roll",t:"Household / paper goods aisle, near the end of the store.",maybe:1},
+      {id:"zip",img:["zip.jpg"],n:"Small zip bags",q:"1 box",t:"Same aisle as foil. For Evidence IV in the freezer.",maybe:1},
       {id:"gloves",n:"Disposable gloves",q:"1 box",t:"Household aisle, near cleaning supplies. WF may not stock them; skip if not.",maybe:1},
       {id:"therm",n:"Instant-read thermometer",q:"1",t:"Small kitchen-tools rack, if this store has one. Otherwise a pharmacy or hardware store on the way home.",maybe:1}
     ]},
     {s:"4 · Back wall: meat", w:"The meat counter or packaged case along the back.", items:[
-      {id:"pork",n:"Pork tenderloin",q:"5 pieces (~2.5 kg total)",t:"About 500 g each. Packaged twin packs are fine (3 packs = 6 pieces, freeze the spare). Or ask the butcher for 5 tenderloins."}
+      {id:"pork",img:["pork.jpg"],n:"Pork tenderloin",q:"5 pieces (~2.5 kg total)",t:"About 500 g each. Packaged twin packs are fine (3 packs = 6 pieces, freeze the spare). Or ask the butcher for 5 tenderloins."}
     ]},
     {s:"5 · Dairy wall", w:"Usually along a side wall near the back. Grab cold things last.", items:[
-      {id:"cream",n:"Heavy cream",q:"1 pint",t:"Heavy cream, not half-and-half or light cream. Check the date is after Oct 6."}
+      {id:"cream",img:["cream.jpg"],n:"Heavy cream",q:"1 pint",t:"Heavy cream, not half-and-half or light cream. Check the date is after Oct 6."}
     ]}
   ];
   var KEY="c08-wf-";
@@ -105,8 +107,12 @@ h2 b{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0;text-tra
       d.setAttribute("role","checkbox"); d.setAttribute("aria-checked",get(it.id));
       d.innerHTML='<div class="box"></div><div><div class="name">'+it.n+' <span class="qty">· '+it.q+'</span>'+
         (it.secret?'<span class="tag secret">🤫 SECRET</span>':'')+(it.maybe?'<span class="tag maybe">IF NEEDED</span>':'')+
-        '</div><div class="tip">'+it.t+'</div></div>';
+        '</div><div class="tip">'+it.t+'</div>'+(it.img?'<button class="ph" type="button">Show photo</button><div class="pics" hidden></div>':'')+'</div>';
       function toggle(){var on=!d.classList.contains("on");d.classList.toggle("on",on);d.setAttribute("aria-checked",on);set(it.id,on);update()}
+      var pb=d.querySelector('.ph');
+      if(pb){pb.addEventListener('click',function(e){e.stopPropagation();var box=d.querySelector('.pics');
+        if(!box.childElementCount){it.img.forEach(function(f){var im=document.createElement('img');im.src='img/'+f;im.alt=it.n;box.appendChild(im)})}
+        box.hidden=!box.hidden;pb.textContent=box.hidden?'Show photo':'Hide photo'});}
       d.addEventListener("click",toggle);
       d.addEventListener("keydown",function(e){if(e.key===" "||e.key==="Enter"){e.preventDefault();toggle()}});
       el.appendChild(d);
