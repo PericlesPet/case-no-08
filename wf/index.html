@@ -76,6 +76,12 @@ h2 b{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0;text-tra
     {s:"2 · Produce", w:"Usually the first big section. Potatoes and onions sit along the edge, often near bulk bins.", items:[
       {id:"sp",img:["sp.jpg"],n:"Sweet potatoes",q:"~1 kg (2–3 large)",t:"Pick big, smooth, even ones so they roast at the same speed. The orange-flesh kind (often labelled garnet or jewel)."}
     ]},
+    {s:"2b · Bakery, cheese & deli (snack board)", w:"Usually right after produce: bread wall, the cheese island, then the deli counter / packaged charcuterie fridge next to it.", items:[
+      {id:"bread",n:"Baguette or sliced sourdough",q:"1–2",t:"Bakery wall. For the garlic-herb butter and the snack board.",maybe:1},
+      {id:"cheese",n:"A cheese or two",q:"1–2 wedges",t:"Cheese island. Skip anything coated in nuts or with nuts mixed in (it would add a suspect).",maybe:1},
+      {id:"crackers",n:"Crackers",q:"1 box",t:"Usually on the shelves around the cheese island. No nut or seed-and-nut crackers.",maybe:1},
+      {id:"charc",n:"Salami or prosciutto",q:"1–2 packs",t:"Packaged charcuterie fridge next to the cheese, or the deli counter.",maybe:1}
+    ]},
     {s:"3 · Centre aisles", w:"Walk them in one sweep. Read the aisle signs overhead.", items:[
       {id:"nutmeg",img:["nutmeg.jpg","nutmeg2.jpg"],n:"Ground nutmeg",q:"1 small jar",t:"Spice rack, alphabetical (between mustard seed and onion). 365 Organic (left photo) or Simply Organic. Ground, not whole.",secret:1},
       {id:"spread",img:["spread.jpg","spread2.jpg"],n:"Hazelnut-cocoa spread",q:"1 jar",t:"Nut butter & jam aisle, next to the peanut and almond butters. Nocciolata (Rigoni di Asiago) or Justin's Chocolate Hazelnut Butter.",secret:1},
@@ -87,10 +93,13 @@ h2 b{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0;text-tra
       {id:"therm",n:"Instant-read thermometer",q:"1",t:"Small kitchen-tools rack, if this store has one. Otherwise a pharmacy or hardware store on the way home.",maybe:1}
     ]},
     {s:"4 · Back wall: meat", w:"The meat counter or packaged case along the back.", items:[
-      {id:"pork",img:["pork.jpg"],n:"Pork tenderloin",q:"5 pieces (~2.5 kg total)",t:"About 500 g each. Packaged twin packs are fine (3 packs = 6 pieces, freeze the spare). Or ask the butcher for 5 tenderloins."}
+      {id:"pork",img:["pork.jpg"],n:"Pork tenderloin",q:"5 pieces (~2.5 kg total)",t:"About 500 g each. Packaged twin packs are fine. Or ask the butcher for 5 tenderloins."},
+      {id:"pork6",n:"6th tenderloin (buffer)",q:"1 more",t:"Optional: ~250 g per person instead of ~210 g. Twin packs make this easy (3 packs = 6).",maybe:1}
     ]},
     {s:"5 · Dairy wall", w:"Usually along a side wall near the back. Grab cold things last.", items:[
-      {id:"cream",img:["cream.jpg"],n:"Heavy cream",q:"1 pint",t:"Heavy cream, not half-and-half or light cream. Check the date is after Oct 6."}
+      {id:"cream",img:["cream.jpg"],n:"Heavy cream",q:"1 pint",t:"Heavy cream, not half-and-half or light cream. Check the date is after Oct 6."},
+      {id:"rwbutter",n:"Red wine & shallot butter",q:"1 small tub",t:"Next to the regular butter, or in the specialty cheese fridge. 30 g goes into the pork pan sauce instead of plain butter. Check: no nuts in the ingredients.",maybe:1},
+      {id:"ghbutter",n:"Garlic & herb butter",q:"1 small tub",t:"Same spot. For the bread / snack board, not the mash.",maybe:1}
     ]}
   ];
   var KEY="c08-wf-";
