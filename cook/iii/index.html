@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#121a15">
+<title>Case No. 08 · III · The Root Cellar</title>
+<meta name="description" content="Team III cook-mode: sweet potato mash for 12.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --ground:#121a15; --surface:#1a241e; --surface-2:#24322a; --surface-3:#2d3d33;
+  --ink:#f3e7cf; --muted:#b9ab8e; --line:#34463b;
+  --accent:#e0a868; --accent-2:#c9a15a; --accent-ink:#121a15; --accent-soft:#3b3424;
+  --copper:#d8955f; --wax:#7a2a22; --wax-lt:#a8443a;
+  --green:#9fcf86; --green-soft:#22382a; --flame:#e4571c; --flame-in:#ffc23d; --honey:#f2b33a; --eye:#20130b;
+  --skin:#a8563d; --skin-dk:#7a3624; --skin-ln:#4a1e12;
+  --flesh:#f08a2e; --flesh-dk:#c9621a; --flesh-lt:#f8b26c;
+  --syrup:#4a230c; --syrup-lt:#8a4418;
+  --ev3:#a9542b; --ev3-lt:#cf7a45; --ev4:#5b3726; --ev4-lt:#8a5a42;
+  --mitt:#5a8cad; --mitt-ln:#3c6680; --towel:#d9d1c0; --towel-ln:#9c917c;
+  --butter:#f3d56e; --butter-ln:#c9a83e; --cream:#f2eadb; --cream-ln:#9c8c74; --milk:#ffffff;
+  --whip:#f4efe6; --whip-ln:#9c8f80; --tint:#c79a7c; --meringue:#efe6d6; --mer-ln:#9c8c74; --cocoa:#4a2c1e; --whey:#d9d3b8;
+  --glass:#3f6470; --glass-ln:#8fc3d4; --water:#4e8aa6; --ice:#8fcbf0; --ice-soft:#1e3440;
+  --pan:#4a443e; --pan-rim:#6c645c; --steel:#9a948a; --steel-dk:#6e685f;
+  --hand:#d8a987; --hand-ln:#a5724d; --plate:#e8e1d6; --screen:#0c120e; --lcd:#ffc46b;
+  --bag:#cfd8d2; --bag-ln:#8fa39a; --paper:#efe4c8; --tub:#e8e2d6; --tub-ln:#9c917c;
+  --fridge:#2e393e;
+  --display:"IM Fell English",Georgia,"Times New Roman",serif;
+  --display-sc:"IM Fell English SC","IM Fell English",Georgia,serif;
+  --body:"EB Garamond",Garamond,Georgia,"Times New Roman",serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%;background:var(--ground)}
+body{margin:0;color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.4;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;overflow:hidden;
+  background-image:radial-gradient(ellipse 90% 60% at 50% 30%,rgba(216,149,95,.07),transparent 70%)}
+.app{height:100%;display:flex;flex-direction:column;max-width:560px;margin:0 auto;padding-inline:16px;padding-top:env(safe-area-inset-top,0px)}
+.top{display:flex;flex-direction:column;gap:8px;padding-block:12px 4px}
+.bars{display:flex;gap:4px}
+.bars button{flex:1;height:7px;border:0;border-radius:3px;background:var(--line);padding:0;cursor:pointer}
+.bars button.done{background:var(--accent-2)}
+.bars button.cur{background:var(--ink)}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:8px;font:600 15px var(--body);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.meta .team{font-family:var(--display-sc);text-transform:none;letter-spacing:.04em;color:var(--accent);font-size:16px}
+.stage{flex:1;overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;gap:16px;padding-block:8px 18px;-webkit-overflow-scrolling:touch}
+.stage>*{flex-shrink:0}
+.gearh{margin:6px 0 0;font:700 14px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2)}
+.tag{align-self:flex-start;font:700 14px var(--body);letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:6px;background:var(--accent-soft);color:var(--accent);border:1px solid rgba(224,168,104,.35)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(32px,9vw,44px);line-height:1.04;margin:0;text-wrap:balance}
+.detail{font-size:20px;margin:0;line-height:1.42}
+.detail b{color:var(--accent);font-weight:700}
+.note{font-size:17px;margin:0;color:var(--muted)}
+.art{width:100%;max-width:380px;align-self:center;border-radius:16px;background:var(--surface);border:1px solid var(--line);overflow:hidden}
+.art svg{width:100%;height:auto;display:block}
+.ings{display:grid;grid-template-columns:auto 1fr;border-top:1.5px solid var(--line)}
+.ings div{padding:10px 0;border-bottom:1.5px solid var(--line)}
+.ings .q{font-weight:700;font-variant-numeric:tabular-nums lining-nums;padding-right:16px;white-space:nowrap;color:var(--accent)}
+.ings .n small,.check .n small,.gear small{display:block;color:var(--muted);font-size:16px;line-height:1.3}
+.timer{display:flex;align-items:center;gap:14px;border:1.5px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);padding:12px 16px;font:inherit;cursor:pointer;text-align:left;width:100%}
+.timer .clock{font:600 36px var(--body);font-variant-numeric:tabular-nums lining-nums;min-width:4.2ch}
+.timer .lbl{font-size:17px;color:var(--muted);line-height:1.25}
+.timer.run{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.timer.run .lbl{color:var(--ground);opacity:.75}
+.timer.ring{background:var(--flame);border-color:var(--flame);color:#fff;animation:pulse .8s ease-in-out infinite alternate}
+.timer.ring .lbl{color:#fff}
+@keyframes pulse{from{transform:scale(1)}to{transform:scale(1.02)}}
+.mw{border-left:4px solid var(--copper);background:var(--surface);border-radius:4px 12px 12px 4px;padding:10px 14px}
+.mw b{display:block;font:700 13px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--copper);margin-bottom:2px}
+.mw p{margin:0;font-size:18px;line-height:1.38}
+.check{display:flex;flex-direction:column;border-top:1.5px solid var(--line)}
+.check label{display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1.5px solid var(--line);cursor:pointer}
+.check input{width:24px;height:24px;accent-color:var(--accent);margin:0}
+.check .q{font-weight:700;font-variant-numeric:tabular-nums lining-nums;color:var(--accent);white-space:nowrap;text-align:right}
+.check label:has(input:checked) .n{text-decoration:line-through;color:var(--muted)}
+.gear{display:flex;flex-direction:column;border-top:1.5px solid var(--line)}
+.gear div{display:grid;grid-template-columns:1fr 1.1fr;gap:12px;padding:9px 0;border-bottom:1.5px solid var(--line);font-size:18px;line-height:1.3}
+.gear .w{color:var(--accent)}
+.clockl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:18px;line-height:1.3}
+.clockl .t{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums lining-nums;white-space:nowrap}
+.clockl .you{color:var(--ink)}
+.clockl .oth{color:var(--muted)}
+.case{display:flex;gap:14px;align-items:center}
+.seal{flex-shrink:0;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font:400 26px var(--display-sc);color:#f3d9c4;
+  background:radial-gradient(circle at 35% 30%,var(--wax-lt),var(--wax) 60%,#4f1a15);box-shadow:0 2px 0 rgba(0,0,0,.4),inset 0 0 0 4px rgba(0,0,0,.18)}
+.kick{margin:0;font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2)}
+.sub{margin:4px 0 0;font-size:19px;color:var(--ink)}
+.sub b{color:var(--accent)}
+.evid{border:1.5px dashed var(--accent-2);border-radius:14px;padding:14px;background:rgba(122,42,34,.16);display:flex;flex-direction:column;gap:8px}
+.evid h2{margin:0;font:400 26px var(--display)}
+.evid p{margin:0;font-size:19px}
+.evid b{color:var(--accent)}
+.maplg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:15px;color:var(--muted)}
+.maplg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.dock{display:flex;gap:8px;flex-wrap:wrap}
+.dock:empty{display:none}
+.dock button{border:0;border-radius:999px;background:var(--ink);color:var(--ground);font:700 16px var(--body);padding:8px 14px;font-variant-numeric:tabular-nums lining-nums;cursor:pointer}
+.dock button.ring{background:var(--flame);color:#fff}
+.nav{display:grid;grid-template-columns:1fr 2fr;gap:10px;padding-block:8px calc(12px + env(safe-area-inset-bottom,0px))}
+.nav button{border:0;border-radius:14px;font:400 24px var(--display-sc);padding:14px 0;cursor:pointer}
+.nav .back{background:var(--surface-2);color:var(--ink)}
+.nav .next{background:var(--accent);color:var(--accent-ink)}
+.nav button:disabled{opacity:.35;cursor:default}
+button:focus-visible,label:focus-within{outline:3px solid var(--accent);outline-offset:2px}
+.fade{animation:in .18s ease-out}
+@keyframes in{from{opacity:.4;transform:translateX(8px)}to{opacity:1;transform:none}}
+
+/* "How?" chip + inline technique panel */
+.ttl{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.ttl h1{flex:1}
+.how{flex-shrink:0;margin-top:4px;border:2px solid var(--accent);background:transparent;color:var(--accent);font:700 17px var(--body);letter-spacing:.04em;border-radius:999px;padding:6px 14px;cursor:pointer}
+.how[aria-expanded="true"]{background:var(--accent);color:var(--accent-ink)}
+.howp{display:flex;flex-direction:column;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px}
+.howp[hidden]{display:none}
+.term{display:grid;grid-template-columns:132px 1fr;gap:12px;align-items:center}
+.term .mini{border-radius:10px;background:var(--surface-2);overflow:hidden}
+.term .mini svg{width:100%;height:auto;display:block}
+.term h3{margin:0 0 2px;font:400 20px var(--display);line-height:1.15;color:var(--accent)}
+.term p{margin:0;font-size:17px;line-height:1.35;color:var(--ink)}
+@media (max-width:360px){.term{grid-template-columns:1fr}.term .mini{max-width:220px}}
+
+/* scene motion: .a = sequenced (runs on the scene clock --T), .m = small endless loops */
+.sc text{font-family:var(--body);font-weight:700;letter-spacing:.03em}
+.sc .a{animation-duration:var(--T,5s);animation-iteration-count:infinite;animation-fill-mode:both;animation-timing-function:ease-in-out;transform-box:fill-box;transform-origin:center}
+.sc .m{transform-box:fill-box;transform-origin:center}
+@keyframes scin{0%{opacity:0}5%,100%{opacity:1}}
+@keyframes flick{from{transform:scale(1,1)}to{transform:scale(.86,.74)}}
+@keyframes steam{0%{opacity:0;transform:translateY(6px)}35%{opacity:.8}100%{opacity:0;transform:translateY(-14px)}}
+@keyframes fallm{0%{opacity:0;transform:translateY(-6px)}15%,80%{opacity:1}100%{opacity:0;transform:translateY(var(--fd,40px))}}
+@keyframes pop{0%,50%{transform:scale(.2);opacity:0}70%{transform:scale(1.1);opacity:1}100%{transform:scale(1.35);opacity:0}}
+@keyframes shake{from{transform:translate(-2px,-2px)}to{transform:translate(2px,2px)}}
+@keyframes squeeze{from{transform:translateY(-4px)}to{transform:translateY(6px)}}
+@keyframes pinch{from{transform:translateX(0)}to{transform:translateX(5px)}}
+@keyframes circ{0%,100%{transform:translate(-7px,0)}25%{transform:translate(0,-2px)}50%{transform:translate(7px,0)}75%{transform:translate(0,2px)}}
+@keyframes rub{0%,100%{transform:translate(0,0)}25%{transform:translate(10px,-4px)}50%{transform:translate(-4px,8px)}75%{transform:translate(8px,6px)}}
+@keyframes wsw{from{transform:translate(-14px,0) rotate(-9deg)}to{transform:translate(14px,3px) rotate(9deg)}}
+@keyframes jsh{from{transform:translate(-5px,-6px) rotate(-7deg)}to{transform:translate(5px,6px) rotate(7deg)}}
+@keyframes tapm{0%,55%,100%{transform:none}70%{transform:translateY(3px) rotate(5deg)}}
+@keyframes foldm{0%,100%{transform:translate(0,-8px)}30%{transform:translate(0,6px)}60%{transform:translate(-16px,4px)}85%{transform:translate(-18px,-8px)}}
+@keyframes mashm{0%,100%{transform:translateY(-14px)}45%,60%{transform:translateY(4px)}}
+@keyframes blink{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes glow{from{opacity:.35}to{opacity:1}}
+@keyframes warmp{from{opacity:.06}to{opacity:.2}}
+@keyframes sweep{0%,100%{transform:translate(0,0)}25%{transform:translate(60px,-10px)}50%{transform:translate(120px,4px)}75%{transform:translate(60px,12px)}}
+@media (prefers-reduced-motion:reduce){
+  .fade,.timer.ring{animation:none!important}
+  /* sequenced art jumps straight to its final (done) frame; loops stop */
+  .sc .a{animation-duration:0s!important;animation-delay:0s!important;animation-iteration-count:1!important;animation-fill-mode:forwards!important}
+  .sc .m{animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top">
+    <div class="bars" id="bars" aria-label="Steps"></div>
+    <div class="meta"><span id="count"></span><span class="team">III · The Root Cellar</span></div>
+  </div>
+  <main class="stage" id="stage" aria-live="polite"></main>
+  <div class="dock" id="dock"></div>
+  <nav class="nav">
+    <button class="back" id="back">Back</button>
+    <button class="next" id="next">Next</button>
+  </nav>
+</div>
+<script>
+// ---------- art kit: each step is a looping mini-scene (0% start → action → hold on the done state) ----------
+// Sequenced parts use class "a" and run on the scene clock --T; positioning/rotation always lives on an OUTER
+// <g transform> (see at()), animation on an inner <g>, so CSS never wipes out a rotation.
+const kfDone=new Set();let kfEl=null;
+const kf=(name,body)=>{if(!kfDone.has(name)){kfDone.add(name);if(!kfEl){kfEl=document.createElement('style');document.head.appendChild(kfEl)}kfEl.append(`@keyframes ${name}{${body}}`)}return name};
+const A=(name,x='')=>`class="a" style="animation-name:${name};${x}"`;
+const M=(anim,dur,delay=0,x='',alt=false)=>`class="m" style="animation:${anim} ${dur}s ${alt?'ease-in-out':'linear'} ${delay}s infinite${alt?' alternate':''};${x}"`;
+const on=(p,x='')=>A(kf(`on${p}`,`0%,${p}%{opacity:var(--o0,0);transform:translate(var(--ox,0px),var(--oy,5px))}${p+4}%,100%{opacity:1;transform:none}`),x);
+const off=(p,x='')=>A(kf(`off${p}`,`0%,${p}%{opacity:1}${p+4}%,100%{opacity:0}`),x);
+const drop=(p,x='')=>A(kf(`drop${p}`,`0%,${p}%{opacity:0;transform:translateY(var(--dy,-80px))}${p+1}%{opacity:1;transform:translateY(var(--dy,-80px))}${p+7}%{opacity:1;transform:none}${p+9}%{transform:scale(1.1,.88)}${p+11}%,100%{opacity:1;transform:none}`),x);
+const win=(a,b,inner,x='')=>`<g ${on(a,x)}><g ${off(b)}>${inner}</g></g>`;
+const SC=(T,inner,h=180,w=240)=>`<svg viewBox="0 0 ${w} ${h}" aria-hidden="true" class="sc" style="--T:${T}s"><g ${A('scin')}>${inner}</g></svg>`;
+const at=(x,y,inner,r=0,s=1)=>`<g transform="translate(${x} ${y})${r?` rotate(${r})`:''}${s!==1?` scale(${s})`:''}">${inner}</g>`;
+const chip=(x,y,label,tone='ink',anchor='middle')=>{const w=Math.round(label.length*6.4+16),bg=tone==='ok'?'var(--green)':tone==='hot'?'var(--accent)':tone==='no'?'var(--flame)':tone==='ice'?'var(--ice)':tone==='wax'?'var(--wax)':'var(--ink)',fg=tone==='no'||tone==='wax'?'#fff':'var(--ground)',x0=anchor==='start'?x:x-w/2;return `<rect x="${x0}" y="${y-8.5}" width="${w}" height="17" rx="8.5" fill="${bg}"/><text x="${x0+w/2}" y="${y+3.6}" font-size="10" fill="${fg}" text-anchor="middle">${label}</text>`};
+const cap=(t,a,b,tone)=>`<g ${on(a)}>${b==null?chip(120,12,t,tone):`<g ${off(b)}>${chip(120,12,t,tone)}</g>`}</g>`;
+const list=(L,P,y0=34)=>L.map((t,i)=>`<g ${on(P[i],'--o0:.28;--oy:0px')}>${chip(6,y0+i*18,t,'ink','start')}</g>`).join('');
+const bowlP=(cx,top,w,d)=>`M${cx-w/2} ${top} h${w} q${-w*.06} ${d} ${-w/2} ${d} q${-w*.44} 0 ${-w/2} ${-d} z`;
+const bowl=(cx,top,w,d)=>`<path d="${bowlP(cx,top,w,d)}" fill="var(--surface-3)" stroke="var(--steel)" stroke-width="1.5"/>`;
+const rim=(cx,top,w)=>`<path d="M${cx-w/2-2} ${top} h${w+4}" stroke="var(--steel)" stroke-width="3" stroke-linecap="round" fill="none"/>`;
+// small glass bowl (side-on): glass → contents → outline
+const gb=(cx,top,w,d,fill='',fa='')=>`<path d="${bowlP(cx,top,w,d)}" fill="var(--glass)" opacity=".5"/>${fill?`<path d="${bowlP(cx,top+5,w-8,d-5)}" fill="${fill}" ${fa}/>`:''}<path d="${bowlP(cx,top,w,d)}" fill="none" stroke="var(--glass-ln)" stroke-width="1.6"/><path d="M${cx-w/2-2} ${top} h${w+4}" stroke="var(--glass-ln)" stroke-width="3" stroke-linecap="round" fill="none"/>`;
+// countdown ring that fills from a% to b%
+const ring=(cx,cy,label,a,b)=>`<circle cx="${cx}" cy="${cy}" r="15" fill="var(--ground)"/><circle cx="${cx}" cy="${cy}" r="10" fill="none" stroke="var(--line)" stroke-width="5"/><path d="M${cx} ${cy-10} a10 10 0 1 1 0 20 a10 10 0 1 1 0 -20" fill="none" stroke="var(--accent)" stroke-width="5" pathLength="100" stroke-dasharray="100 100" ${A(kf(`rf${a}_${b}`,`0%,${a}%{stroke-dashoffset:100}${b}%,100%{stroke-dashoffset:0}`),'animation-timing-function:linear')}/>${label?`<text x="${cx}" y="${cy+28}" font-size="11" fill="var(--ink)" text-anchor="middle">${label}</text>`:''}`;
+const steam=(xs,y)=>xs.map((x,i)=>`<path ${M('steam',2.4,+(i*.8).toFixed(2))} d="M${x} ${y} q-7 -9 0 -18 q7 -9 0 -18" stroke="var(--muted)" stroke-width="3" fill="none" stroke-linecap="round"/>`).join('');
+const bits=(xs,y,fill,fd=40,r=2)=>xs.map((x,i)=>`<circle ${M('fallm',1.1,+(i*.22).toFixed(2),`--fd:${fd}px`)} cx="${x}" cy="${y}" r="${r}" fill="${fill}"/>`).join('');
+const pops=(pts,d=1.2,r=3.5,f='var(--syrup-lt)')=>pts.map(([x,y],i)=>`<circle ${M('pop',d,+(i*d/pts.length).toFixed(2))} cx="${x}" cy="${y}" r="${r}" fill="${f}"/>`).join('');
+const cut=(d,a,b,w=2.5,c='var(--flesh-dk)')=>`<path d="${d}" stroke="${c}" stroke-width="${w}" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 100" ${A(kf(`ct${a}_${b}`,`0%,${a}%{stroke-dashoffset:100}${b}%,100%{stroke-dashoffset:0}`),'animation-timing-function:linear')}/>`;
+const dots=(pts,f,r,st='')=>pts.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${f}"${st?` stroke="${st}" stroke-width=".8"`:''}/>`).join('');
+const tear=(f,st='')=>`<path d="M0 -8 Q6 0 0 4 Q-6 0 0 -8Z" fill="${f}"${st?` stroke="${st}" stroke-width="1"`:''}/>`;
+// a tool that pokes down at each point in turn (global coords, tool tip at 0,0); returns [keyframe, poke-times]
+const pokes=(name,pts,p0,step,lift=24)=>{const d=Math.round(step*.35),u=Math.round(step*.7),P=pts.map((_,i)=>p0+i*step);
+  let s=`0%,${p0-2}%{opacity:0;transform:translate(${pts[0][0]}px,${pts[0][1]-lift}px)}`;
+  pts.forEach(([x,y],i)=>{const p=P[i];s+=`${p}%{opacity:1;transform:translate(${x}px,${y-lift}px)}${p+d}%{opacity:1;transform:translate(${x}px,${y+2}px)}${p+u}%{opacity:1;transform:translate(${x}px,${y-lift}px)}`});
+  const e=P.at(-1)+u,[lx,ly]=pts.at(-1);s+=`${e+3}%,100%{opacity:0;transform:translate(${lx}px,${ly-lift}px)}`;
+  return [kf(name,s),P.map(p=>p+d)]};
+// scale LCD: [text, from%, to%] windows (from 0 = shown at start, to 100 = the done reading)
+const lcdWin=(a,b)=>kf(`lw${a}_${b}`,a===0?`0%,${b}%{opacity:1}${b+.5}%,100%{opacity:0}`:b===100?`0%,${a}%{opacity:0}${a+.5}%,100%{opacity:1}`:`0%,${a}%{opacity:0}${a+.5}%,${b}%{opacity:1}${b+.5}%,100%{opacity:0}`);
+const SCALE=(cx,y,seq)=>`<rect x="${cx-62}" y="${y}" width="124" height="24" rx="7" fill="var(--steel)"/><rect x="${cx-26}" y="${y+5}" width="52" height="15" rx="3" fill="var(--screen)"/><rect x="${cx+32}" y="${y+6}" width="24" height="13" rx="6.5" fill="var(--ground)"/><text x="${cx+44}" y="${y+15.3}" font-size="7" fill="var(--ink)" text-anchor="middle">TARE</text>`+
+  seq.map(([t,a,b])=>`<g ${A(lcdWin(a,b))}><text x="${cx}" y="${y+16.5}" font-size="11" fill="var(--lcd)" text-anchor="middle">${t}</text></g>`).join('');
+const HL='fill="var(--hand)" stroke="var(--hand-ln)" stroke-width="1.5"';
+const FINGER=`<rect x="-5" y="-38" width="10" height="36" rx="5" ${HL}/>`;
+const taps=(x,y,ps)=>{const up='transform:translateY(-12px)';let b=`0%{opacity:0;${up}}`;ps.forEach(p=>{b+=`${p-4}%{opacity:0;${up}}${p-2}%{opacity:1;${up}}${p}%{opacity:1;transform:none}${p+3}%{opacity:1;${up}}${p+5}%{opacity:0;${up}}`});b+=`100%{opacity:0;${up}}`;return at(x,y,`<g ${A(kf('tp'+ps.join('_'),b))}>${FINGER}</g>`)};
+const HAND=`<ellipse rx="13" ry="9" ${HL}/><rect x="-11" y="-17" width="6" height="12" rx="3" ${HL}/><rect x="-3" y="-19" width="6" height="14" rx="3" ${HL}/><rect x="5" y="-17" width="6" height="12" rx="3" ${HL}/>`;
+const PINCH=`<ellipse cy="-14" rx="11" ry="8" ${HL}/><rect x="-6" y="-12" width="5" height="13" rx="2.5" ${HL}/><rect x="1" y="-12" width="5" height="13" rx="2.5" ${HL}/>`;
+const spoon=`<path d="M3 -3 L24 -50" stroke="var(--steel)" stroke-width="4" stroke-linecap="round" fill="none"/><ellipse rx="8" ry="4.5" fill="var(--steel)"/>`;
+const KNIFE=`<path d="M-3 0 L-3 -34 L4 -34 L4 -6 Z" fill="var(--steel)"/><rect x="-4" y="-54" width="8" height="21" rx="3" fill="var(--pan-rim)"/>`;
+const FORK=`<path d="M0 -26 V-62" stroke="var(--steel)" stroke-width="5" stroke-linecap="round"/><path d="M-6.9 -21 Q-7 -28 0 -28 Q7 -28 6.9 -21" fill="none" stroke="var(--steel)" stroke-width="3"/><path d="M-6.9 -21 V0 M-2.3 -21 V0 M2.3 -21 V0 M6.9 -21 V0" stroke="var(--steel)" stroke-width="2" stroke-linecap="round"/>`;
+const SPAT=`<rect x="-2.5" y="-60" width="5" height="44" rx="2.5" fill="var(--pan-rim)"/><path d="M-9 -18 h18 v14 q0 6 -9 6 q-9 0 -9 -6 Z" fill="var(--copper)" opacity=".95"/>`;
+const MITT=`<path d="M-14 -16 V6 Q-14 18 0 18 Q14 18 14 6 V-16 Z" fill="var(--mitt)" stroke="var(--mitt-ln)" stroke-width="1.5"/><path d="M14 -2 Q25 0 23 10 L14 12" fill="var(--mitt)" stroke="var(--mitt-ln)" stroke-width="1.5"/><rect x="-16" y="-22" width="32" height="8" rx="3" fill="var(--mitt-ln)"/>`;
+const TOWEL=`<rect x="-15" y="-24" width="30" height="48" rx="6" fill="var(--towel)" stroke="var(--towel-ln)" stroke-width="1.5"/><path d="M-15 -10 h30 M-15 10 h30" stroke="var(--towel-ln)" stroke-width="1"/>`;
+const PAT=`<rect x="-26" y="-12" width="52" height="16" rx="4" fill="var(--towel)" stroke="var(--towel-ln)" stroke-width="1.5"/><path d="M-26 -5 h52" stroke="var(--towel-ln)" stroke-width="1"/>`;
+const BUTTER=`<rect x="-10" y="-6" width="20" height="12" rx="2" fill="var(--butter)" stroke="var(--butter-ln)" stroke-width="1"/>`;
+const PAN=(x,y,w)=>`<rect x="${x}" y="${y}" width="${w}" height="6" rx="2" fill="var(--steel)"/><path d="M${x+1} ${y} v-4 M${x+w-1} ${y} v-4" stroke="var(--steel)" stroke-width="2.5" stroke-linecap="round"/>`;
+// burner + flames: 1 low … 4 high
+const flames=(n,cx,y)=>{const xs=Array.from({length:n},(_,i)=>cx+(i-(n-1)/2)*16);
+  return `<rect x="${cx-40}" y="${y}" width="80" height="5" rx="2.5" fill="var(--steel-dk)"/>${xs.map((x,i)=>at(x,y,`<g ${M('flick',.32+i*.07,+(i*.11).toFixed(2),'transform-origin:50% 100%',true)}><path d="M-6 0 q6 -19 12 0z" fill="var(--flame)"/><path d="M-3 0 q3 -9 6 0z" fill="var(--flame-in)"/></g>`)).join('')}`};
+const flameIc=(x,y,s=1)=>`<path d="M${x-5*s} ${y} q${5*s} ${-14*s} ${10*s} 0z" fill="var(--flame)"/><path d="M${x-2.5*s} ${y} q${2.5*s} ${-7*s} ${5*s} 0z" fill="var(--flame-in)"/>`;
+// tall stockpot, side-on but tipped so you see into it: opening ellipse at top
+const POTW=(cx,top,w,h)=>`<rect x="${cx-w/2-9}" y="${top+10}" width="10" height="6" rx="3" fill="var(--steel-dk)"/><rect x="${cx+w/2-1}" y="${top+10}" width="10" height="6" rx="3" fill="var(--steel-dk)"/><path d="M${cx-w/2} ${top} V${top+h-4} q0 4 4 4 H${cx+w/2-4} q4 0 4 -4 V${top}" fill="var(--steel)" stroke="var(--steel-dk)" stroke-width="1.5"/><path d="M${cx-w/2+8} ${top+12} v${h-26}" stroke="#fff" stroke-width="3" opacity=".22" stroke-linecap="round"/>`;
+const POTO=(cx,top,w)=>`<ellipse cx="${cx}" cy="${top}" rx="${w/2}" ry="${(w*.12).toFixed(1)}" fill="var(--screen)" stroke="var(--steel-dk)" stroke-width="2"/>`;
+const POTRIM=(cx,top,w)=>`<ellipse cx="${cx}" cy="${top}" rx="${w/2}" ry="${(w*.12).toFixed(1)}" fill="none" stroke="var(--steel)" stroke-width="2.5"/>`;
+const POTLID=(w)=>`<ellipse rx="${w/2+3}" ry="${(w*.13).toFixed(1)}" fill="var(--glass)" opacity=".75" stroke="var(--glass-ln)" stroke-width="2"/><rect x="-7" y="-${(w*.13+6).toFixed(1)}" width="14" height="7" rx="3" fill="var(--pan-rim)"/>`;
+// evidence bag, bottom-centre at 0,0; seal strip on top (animate it off with sealKf)
+const BAGBODY=(n,frost=false)=>`<path d="M-34 -78 H34 V-4 q0 4 -4 4 H-30 q-4 0 -4 -4 Z" fill="var(--bag)" opacity=".92" stroke="var(--bag-ln)" stroke-width="1.5"/>
+  <rect x="-26" y="-64" width="52" height="24" rx="2" fill="var(--paper)" stroke="var(--accent-2)" stroke-width="1"/><text x="0" y="-54" font-size="7" fill="var(--wax)" text-anchor="middle">EVIDENCE</text><text x="0" y="-44" font-size="9" fill="var(--ground)" text-anchor="middle" style="font-family:var(--display-sc)">${n}</text>
+  <path d="M-26 -30 h52 M-26 -22 h40 M-26 -14 h46" stroke="var(--bag-ln)" stroke-width="1.5"/>
+  <circle cx="20" cy="-14" r="8" fill="var(--wax)"/><circle cx="20" cy="-14" r="5" fill="none" stroke="var(--wax-lt)" stroke-width="1.2"/>
+  ${frost?`<g class="frost">${dots([[-28,-70],[-14,-34],[8,-74],[28,-50],[-30,-20],[14,-6],[30,-26],[-6,-8]],'#fff',2.2)}</g>`:''}`;
+const BAGSEAL=`<rect x="-36" y="-88" width="72" height="11" rx="2" fill="var(--wax)"/><text x="0" y="-80" font-size="6.5" fill="#fff" text-anchor="middle">SEALED · CASE No. 08</text>`;
+// opaque evidence tub, bottom-centre at 0,0; lid drawn separately so it can come off
+const TUB=(n)=>`<path d="M-21 -34 H21 L18 -3 q0 3 -3 3 H-15 q-3 0 -3 -3 Z" fill="var(--tub)" stroke="var(--tub-ln)" stroke-width="1.5"/><rect x="-12" y="-24" width="24" height="12" rx="1.5" fill="var(--paper)" stroke="var(--accent-2)" stroke-width=".8"/><text x="0" y="-15" font-size="8" fill="var(--wax)" text-anchor="middle" style="font-family:var(--display-sc)">${n}</text>`;
+const TUBLID=`<rect x="-23" y="-40" width="46" height="7" rx="2.5" fill="var(--wax)"/>`;
+const TUBIN=(f)=>`<ellipse cx="0" cy="-34" rx="19" ry="4" fill="${f}"/>`;
+// oven front: dial (animated by dialKf), LCD, window, racks at the given y's; glow=null for a switched-off oven
+const OVEN=(dialKf,lcdHtml,inner,racks=[100,136],glow=6,rl=[])=>`<rect x="14" y="24" width="170" height="146" rx="10" fill="var(--surface-3)" stroke="var(--steel)" stroke-width="1.5"/><path d="M14 52 h170" stroke="var(--steel)" stroke-width="1.5" fill="none"/>
+  <circle cx="42" cy="38" r="9" fill="var(--ground)" stroke="var(--ink)" stroke-width="2"/><g ${A(dialKf,'transform-box:view-box;transform-origin:42px 38px')}><path d="M42 38 V31" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" fill="none"/></g>
+  <rect x="108" y="30" width="56" height="16" rx="3" fill="var(--screen)"/>${lcdHtml}
+  <rect x="40" y="56" width="118" height="4" rx="2" fill="var(--steel)"/><rect x="28" y="64" width="142" height="92" rx="6" fill="var(--screen)"/>
+  ${glow==null?'':`<g ${on(glow,'--oy:0px')}><rect x="28" y="64" width="142" height="92" rx="6" fill="var(--flame)" opacity=".22"/></g>`}
+  ${racks.map((y,i)=>`<path d="M32 ${y} h134" stroke="var(--steel)" stroke-width="2" fill="none"/>${rl[i]?`<text x="36" y="${y-3}" font-size="7" fill="var(--muted)">${rl[i]}</text>`:''}`).join('')}${inner}`;
+const oLcd=t=>`<text x="136" y="42" font-size="11" fill="var(--lcd)" text-anchor="middle">${t}</text>`;
+
+// ---------- kitchen mini-map: hl = this team's spots (gold), own = which team uses each spot ----------
+const MAP=(hl,steps={})=>{
+  const H=new Set(hl),own={freezer:'IV',sink:'III',counter:'I',board:'II',fl:'II',br:'III',up:'III',lo:'II',table:'IV'};
+  const box=(k,x,y,w,h,lbl,sub='')=>{const on_=H.has(k);return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="4" fill="${on_?'var(--accent-soft)':'var(--surface-2)'}" stroke="${on_?'var(--accent)':'var(--line)'}" stroke-width="${on_?2.5:1.2}"/>${on_?`<rect x="${x-3}" y="${y-3}" width="${w+6}" height="${h+6}" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.5" ${M('glow',.9,0,'',true)}/>`:''}
+    <text x="${x+w/2-(own[k]?5:0)}" y="${y+h/2+(sub?-1:3)}" font-size="${w<52?7.5:8.5}" fill="${on_?'var(--ink)':'var(--muted)'}" text-anchor="middle">${lbl}</text>${sub?`<text x="${x+w/2}" y="${y+h/2+9}" font-size="7" fill="${on_?'var(--accent)':'var(--muted)'}" text-anchor="middle">${sub}</text>`:''}${tagT(k,x+w-2,y+2)}`};
+  const tagT=(k,x,y)=>own[k]?`<circle cx="${x-5}" cy="${y+5}" r="6" fill="${H.has(k)?'var(--wax)':'var(--surface-3)'}"/><text x="${x-5}" y="${y+7.6}" font-size="6.5" fill="${H.has(k)?'#fff':'var(--muted)'}" text-anchor="middle" style="font-family:var(--display-sc)">${own[k]}</text>`:'';
+  const burner=(k,cx,cy,r,lbl)=>{const on_=H.has(k);return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${on_?'var(--accent-soft)':'var(--screen)'}" stroke="${on_?'var(--accent)':'var(--steel-dk)'}" stroke-width="${on_?2.5:1.5}"/><circle cx="${cx}" cy="${cy}" r="${r*.5}" fill="none" stroke="${on_?'var(--accent)':'var(--steel-dk)'}" stroke-width="1"/>${on_?`<circle cx="${cx}" cy="${cy}" r="${r+3}" fill="none" stroke="var(--accent)" stroke-width="1.5" ${M('glow',.9,0,'',true)}/>`:''}<text x="${cx}" y="${cy+r+8}" font-size="6.5" fill="${on_?'var(--accent)':'var(--muted)'}" text-anchor="middle">${lbl}</text>${own[k]?`<text x="${cx}" y="${cy+2.5}" font-size="7" fill="${on_?'var(--ink)':'var(--muted)'}" text-anchor="middle" style="font-family:var(--display-sc)">${own[k]}</text>`:''}`};
+  const rack=(k,y,lbl)=>{const on_=H.has(k);return `<path d="M228 ${y} h56" stroke="${on_?'var(--accent)':'var(--steel-dk)'}" stroke-width="${on_?3.5:2}" ${on_?M('glow',.9,0,'',true):''}/><text x="256" y="${y-3}" font-size="6.5" fill="${on_?'var(--accent)':'var(--muted)'}" text-anchor="middle">${lbl}</text>`};
+  return `<svg viewBox="0 0 300 214" class="sc" aria-label="Kitchen map">
+    <text x="112" y="9" font-size="7" fill="var(--muted)" text-anchor="middle" letter-spacing=".2em">BACK WALL</text>
+    <rect x="4" y="12" width="292" height="44" rx="4" fill="var(--surface)" stroke="var(--line)"/>
+    ${box('freezer',6,14,50,17,'FREEZER')}${box('fridge',6,33,50,40,'FRIDGE')}
+    ${box('sink',60,16,44,36,'SINK')}
+    ${box('counter',108,16,54,36,'COUNTER','beside stove')}
+    ${box('board',166,16,42,36,'BOARD','raw meat')}
+    <rect x="212" y="14" width="80" height="62" rx="4" fill="var(--surface-3)" stroke="var(--steel-dk)"/>
+    ${burner('bl',234,28,7,'back-L')}${burner('br',270,28,7,'back-R')}${burner('fl',234,57,9.5,'front-L')}${burner('fr',270,57,7,'front-R')}
+    <text x="252" y="88" font-size="7" fill="var(--muted)" text-anchor="middle">OVEN (under the stove)</text>
+    <rect x="218" y="92" width="76" height="72" rx="6" fill="var(--surface-3)" stroke="var(--steel-dk)"/><rect x="224" y="102" width="64" height="56" rx="4" fill="var(--screen)"/>
+    ${rack('up',122,'UPPER rack')}${rack('lo',146,'LOWER rack')}
+    ${box('table',14,138,180,64,'DINING TABLE','far end / far counter')}
+    <rect x="58" y="170" width="92" height="22" rx="11" fill="none" stroke="var(--line)" stroke-dasharray="3 3"/>
+    ${Object.entries(steps).map(([k,[x,y,n]])=>`<circle cx="${x}" cy="${y}" r="7" fill="var(--accent)"/><text x="${x}" y="${y+3.2}" font-size="8.5" fill="var(--ground)" text-anchor="middle">${n}</text>`).join('')}
+  </svg>`};
+
+// ---------- Team III · The Root Cellar: sweet potato mash for 12 ----------
+const STORE_KEY='c08-iii:';
+const SPP='M-30 0 C-30 -10 -16 -13 0 -13 C16 -13 30 -8 32 0 C30 8 16 13 0 13 C-16 13 -30 10 -30 0Z';
+// whole sweet potato (side or top view), about 62 × 26
+const SPW=`<path d="M32 0 l6 1.5" stroke="var(--skin-ln)" stroke-width="1.6" stroke-linecap="round"/><path d="${SPP}" fill="var(--skin)" stroke="var(--skin-ln)" stroke-width="1"/><path d="M-12 -5 q3 1.5 6 0 M6 5 q3 1.5 6 0 M16 -5 q2 1 4 0" stroke="var(--skin-dk)" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M-18 -8 q10 -4 22 -3" stroke="#fff" stroke-width="2" opacity=".28" fill="none" stroke-linecap="round"/>`;
+// a lengthwise half lying cut-side up (top view)
+const HALF=`<path d="${SPP}" fill="var(--skin)" stroke="var(--skin-ln)" stroke-width="1"/><path d="${SPP}" transform="scale(.84 .72)" fill="var(--flesh)"/><path d="M-16 -3 q12 -3 26 0" stroke="var(--flesh-lt)" stroke-width="2" fill="none" stroke-linecap="round"/>`;
+// potato masher, plate at 0,0
+const MASHER=`<path d="M0 -6 V-58" stroke="var(--steel)" stroke-width="4" stroke-linecap="round"/><rect x="-6" y="-70" width="12" height="16" rx="5" fill="var(--pan-rim)"/><path d="M-16 0 l5 -6 l5 6 l5 -6 l5 6 l5 -6 l5 6 M-16 0 Q-16 -10 0 -8 Q16 -10 16 0" stroke="var(--steel)" stroke-width="2.6" fill="none" stroke-linejoin="round" stroke-linecap="round"/>`;
+// magnifying glass, lens centre at 0,0
+const MAG=`<circle r="13" fill="var(--glass)" opacity=".35"/><circle r="13" fill="none" stroke="var(--accent)" stroke-width="3.5"/><path d="M9 9 L24 24" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/><path d="M-6 -6 q3 -4 8 -4" stroke="#fff" stroke-width="2" opacity=".5" fill="none" stroke-linecap="round"/>`;
+const PX=170,PT=96,PW=104,PH=64; // the stockpot in pot scenes
+const potWith=(fill=true)=>`${POTW(PX,PT,PW,PH)}${POTO(PX,PT,PW)}${fill?`<ellipse cx="${PX}" cy="${PT+1}" rx="${PW/2-5}" ry="${(PW*.1).toFixed(1)}" fill="var(--flesh)"/>`:''}`;
+const lid0=(x,y,k)=>at(x,y,`<g ${A(k)}>${POTLID(PW)}</g>`);
+
+const ART = {
+  get oven(){return SC(6,OVEN(kf('ov-d','0%,4%{transform:rotate(-140deg)}14%,100%{transform:rotate(60deg)}'),
+      `<g ${off(14)}>${oLcd('OFF')}</g>${win(14,34,oLcd('200°F'),'--oy:0px')}${win(34,56,oLcd('350°F'),'--oy:0px')}<g ${on(56,'--oy:0px')}>${oLcd('425°F')}</g>`,
+      `<g ${on(36,'--oy:0px')}><path d="M32 100 h134" stroke="var(--accent)" stroke-width="3.5"/>${chip(99,86,'UPPER RACK = YOURS','hot')}</g><g ${on(60,'--oy:0px')}>${chip(99,124,'LOWER = PORK, LATER')}</g>`,[100,136],14,['UPPER','LOWER'])+`
+    ${ring(212,44,'~15 min',14,70)}
+    ${at(212,112,`<rect x="-5" y="-24" width="10" height="44" rx="5" fill="var(--ground)" stroke="var(--muted)" stroke-width="1.5"/><circle cy="24" r="8" fill="var(--flame)"/><rect x="-2.5" y="-20" width="5" height="44" rx="2.5" fill="var(--flame)" ${A(kf('ov-th','0%,14%{transform:scaleY(.15)}70%,100%{transform:scaleY(1)}'),'transform-origin:50% 100%')}/>`)}
+    ${cap('T+0 · DIAL TO 425°F',0,14)}${cap('RACK IN THE UPPER SLOT',16,56)}${cap('HEATING · START SCRUBBING',58,null,'ok')}`)},
+
+  get scrub(){const X=[84,120,156],R=[-6,4,-3];
+    const p1=`${SCALE(120,148,[['0 g',0,12],['2,400 g',12,100]])}
+      ${X.map((x,i)=>at(x,138,`<g ${drop(2+i*4,'--dy:-90px')}>${at(0,0,SPW,R[i],.7)}</g>`)).join('')}`;
+    const p2=`<path d="M40 122 v26 q0 16 16 16 h128 q16 0 16 -16 v-26" fill="var(--surface-3)" stroke="var(--steel)" stroke-width="1.5"/><path d="M34 122 h172" stroke="var(--steel)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M200 122 V54 q0 -16 -16 -16 h-54 q-10 0 -10 10 v6" fill="none" stroke="var(--steel)" stroke-width="9" stroke-linecap="round"/>
+      <rect x="117" y="58" width="6" height="42" fill="var(--water)" opacity=".85" ${A(kf('sb-st','0%,33%{transform:scaleY(0)}37%,74%{transform:scaleY(1)}78%,100%{transform:scaleY(0)}'),'transform-origin:50% 0')}/>
+      ${at(120,104,SPW,-4,1.6)}
+      <g ${off(66)}>${dots([[92,100],[104,110],[118,96],[132,108],[146,100],[158,106],[110,102],[140,112]],'var(--skin-ln)',2.4)}</g>
+      <g ${on(92,'--oy:0px')}><path d="M92 92 q18 -6 40 -5" stroke="#fff" stroke-width="3" opacity=".45" fill="none" stroke-linecap="round"/></g>
+      ${win(38,74,at(118,98,`<g ${M('rub',.7)}>${HAND}</g>`))}
+      <g ${on(38)}><g ${off(76)}>${bits([100,112,130,142],122,'var(--water)',26,2.2)}</g></g>
+      ${win(78,92,at(120,86,`<g ${M('squeeze',.3,0,'',true)}>${PAT}</g>`),'--oy:-10px')}`;
+    return SC(7,`${win(0,30,p1,'--oy:0px')}<g ${on(32,'--oy:0px')}>${p2}</g>
+    ${cap('WEIGH 2,400 g · ABOUT 6 LARGE',0,30)}${cap('AT THE SINK · SCRUB, COLD WATER',32,76)}${cap('PAT DRY',78,92)}${cap('CLEAN + DRY ✓',94,null,'ok')}`)},
+
+  get prick(){const pts=[[66,100],[88,92],[110,110],[132,94],[154,108],[176,98],[122,120]],[k,T]=pokes('pk-f',pts,8,10);
+    return SC(6,`${at(120,104,SPW,0,2.6)}
+    ${pts.map(([x,y],i)=>`<g ${on(T[i],'--oy:0px')}>${dots([[x-6.9,y],[x-2.3,y],[x+2.3,y],[x+6.9,y]],'var(--skin-ln)',1.3)}</g>`).join('')}
+    <g ${A(k)}>${FORK}</g>
+    ${T.map((t,i)=>i<T.length-1?win(t,T[i+1],chip(120,166,`POKE ${i+1}`),'--oy:0px'):`<g ${on(t,'--oy:0px')}>${chip(120,166,`${i+1} POKES ✓`,'ok')}</g>`).join('')}
+    ${cap('FORK STRAIGHT IN, ~1 cm',0,40)}${cap('6–8 POKES, ALL SIDES',42,80)}${cap('HOLES ALL OVER ✓',82,null,'ok')}`)},
+
+  get roast(){const P=[[58,-6],[86,5],[114,-4],[142,6]];
+    const inner=`<g ${A(kf('rs-in','0%,8%{transform:translateX(180px)}24%,100%{transform:none}'))}>${PAN(38,100,118)}
+      ${P.map(([x,r])=>at(x,92,`${SPW}<path d="${SPP}" fill="var(--skin-dk)" ${A(kf('rs-dk','0%,30%{opacity:0}86%,100%{opacity:.5}'))}/>`,r,.42)).join('')}
+      <g ${on(58,'--oy:0px')}><ellipse cx="72" cy="99.5" rx="6" ry="1.6" fill="var(--syrup)"/><ellipse cx="128" cy="99.5" rx="7" ry="1.6" fill="var(--syrup)"/>${pops([[70,98],[100,98],[128,98],[154,98]],1.2,2.2)}</g></g>
+      <g ${on(46,'--oy:0px')}>${chip(99,124,'LOWER: PORK ~T+33')}</g>`;
+    return SC(8,OVEN(kf('rs-d','0%,100%{transform:rotate(60deg)}'),oLcd('425°F'),inner,[106,136],0)+`
+    ${ring(212,44,'45–55 min',26,88)}
+    ${cap('WHOLE, SPACED, SHEET PAN #1',0,24)}${cap('UPPER RACK · IN BY T+8',26,44)}${cap('ROAST 45–55 MIN',46,86)}${cap('PUFFED, SYRUP BUBBLING ✓',88,null,'ok')}`)},
+
+  get hunt(){const CARD=`<rect x="-26" y="-36" width="52" height="72" rx="4" fill="var(--paper)" stroke="var(--accent-2)" stroke-width="1.5"/><text x="0" y="-20" font-size="8" fill="var(--wax)" text-anchor="middle" style="font-family:var(--display-sc)">Riddle</text><path d="M-17 -8 h34 M-17 0 h28 M-17 8 h32 M-17 16 h22" stroke="var(--muted)" stroke-width="2"/>`;
+    const spots=[[118,74],[176,64],[150,118]];
+    return SC(9,`${at(62,96,`<g ${A(kf('hn-cd','0%,4%{transform:scaleX(.05)}12%,100%{transform:scaleX(1)}'))}>${CARD}</g>`)}
+    ${chip(62,146,'YOUR CARD, BACK')}
+    ${spots.map(([x,y],i)=>`<g ${off(24+i*14)}><circle cx="${x}" cy="${y}" r="14" fill="var(--surface-2)" stroke="var(--line)" stroke-dasharray="3 3"/><text x="${x}" y="${y+5}" font-size="14" fill="var(--muted)" text-anchor="middle">?</text></g><g ${on(26+i*14,'--oy:0px')}><g ${off(62)}>${chip(x,y,'NOPE','no')}</g></g>`).join('')}
+    <g ${A(kf('hn-mg','0%,14%{opacity:0;transform:translate(104px,60px)}18%{opacity:1;transform:translate(104px,60px)}24%,28%{opacity:1;transform:translate(118px,74px)}38%,42%{opacity:1;transform:translate(176px,64px)}52%,56%{opacity:1;transform:translate(150px,118px)}64%,68%{opacity:1;transform:translate(196px,124px)}74%,100%{opacity:0;transform:translate(196px,124px)}'))}>${MAG}</g>
+    ${at(196,160,`<g ${on(62,'--oy:-8px')}>${at(0,0,BAGBODY('III')+BAGSEAL,0,.62)}</g>`)}
+    <g ${on(76,'--oy:0px')}>${chip(180,94,'KEEP IT SEALED','wax')}</g>
+    ${cap('READ THE RIDDLE',0,16)}${cap('SEARCH (NOT IN THE KITCHEN LANE)',18,62)}${cap('FOUND IT: KEEP IT SEALED ✓',64,null,'ok')}`)},
+
+  get test(){return SC(8,`${PAN(16,140,208)}
+    <ellipse cx="62" cy="139.5" rx="14" ry="2.4" fill="var(--syrup)"/><ellipse cx="184" cy="139.5" rx="10" ry="2" fill="var(--syrup)"/>
+    ${at(120,112,`<g ${A(kf('ts-sq','0%,52%{transform:none}58%,66%{transform:scale(1.05,.86)}74%,100%{transform:none}'),'transform-origin:50% 100%')}>${at(0,0,SPW,0,2.2)}</g>`)}
+    <g ${on(26,'--oy:0px')}><path d="M126 90 v8" stroke="var(--flesh-dk)" stroke-width="2.4" stroke-linecap="round"/></g>
+    ${pops([[58,137],[68,138],[180,138],[188,137]],1.4,2.4)}
+    ${at(128,84,`<g ${A(kf('ts-k','0%,6%{opacity:0;transform:translateY(-34px)}9%{opacity:1;transform:translateY(-34px)}22%,30%{opacity:1;transform:translateY(30px)}38%{opacity:1;transform:translateY(-34px)}42%,100%{opacity:0;transform:translateY(-34px)}'))}>${KNIFE}</g>`)}
+    ${at(116,64,`<g ${A(kf('ts-m','0%,46%{opacity:0;transform:translateY(-22px)}50%{opacity:1;transform:translateY(-22px)}58%,66%{opacity:1;transform:translateY(7px)}74%{opacity:1;transform:translateY(-22px)}78%,100%{opacity:0;transform:translateY(-22px)}'))}>${MITT}</g>`)}
+    ${chip(62,164,'SYRUP LEAK = FINE')}
+    ${cap('KNIFE INTO THE THICKEST ONE',0,22)}${cap('SLIDES IN, NO PUSH ✓',24,44,'ok')}${cap('MITT ON · SQUEEZE',46,64)}${cap('IT GIVES: SOFT ✓',66,86,'ok')}${cap('DONE · PAN OUT ✓',88,null,'ok')}`)},
+
+  get split(){const p1=`${PAN(28,140,184)}${[[68,-5],[120,4],[172,-3]].map(([x,r])=>at(x,128,SPW,r,.9)).join('')}
+      ${steam([72,120,168],104)}${ring(212,44,'5 min',2,34)}${chip(120,164,'ON THE BACK-LEFT BURNER (OFF)')}`;
+    const p2=`<ellipse cx="120" cy="114" rx="106" ry="56" fill="var(--plate)" stroke="var(--cream-ln)" stroke-width="1.5"/><ellipse cx="120" cy="114" rx="86" ry="44" fill="none" stroke="var(--cream-ln)" stroke-width="1"/>
+      <g ${off(70)}>${at(120,114,SPW,0,1.8)}${cut('M68 114 H176',44,64)}</g>
+      ${at(120,114,`<g ${A(kf('sp-u','0%,70%{opacity:0;transform:translateY(-6px) scaleY(.5)}72%{opacity:1;transform:translateY(-6px) scaleY(.5)}84%,100%{opacity:1;transform:translateY(-25px)}'))}>${at(0,0,HALF,0,1.6)}</g>`)}
+      ${at(120,114,`<g ${A(kf('sp-d','0%,70%{opacity:0;transform:translateY(6px) scaleY(.5)}72%{opacity:1;transform:translateY(6px) scaleY(.5)}84%,100%{opacity:1;transform:translateY(25px)}'))}>${at(0,0,HALF,180,1.6)}</g>`)}
+      ${win(40,70,at(70,114,`${TOWEL}<g ${M('squeeze',.9,0,'',true)}>${at(0,0,HAND,90,.9)}</g>`),'--oy:0px')}
+      <g ${A(kf('sp-k','0%,40%{opacity:0;transform:translate(70px,116px)}44%{opacity:1;transform:translate(70px,116px)}64%{opacity:1;transform:translate(176px,116px)}68%,100%{opacity:0;transform:translate(176px,116px)}'))}>${KNIFE}</g>
+      <g ${on(84)}>${steam([112,132],104)}</g>`;
+    return SC(8,`${win(0,36,p1,'--oy:0px')}<g ${on(38,'--oy:0px')}>${p2}</g>
+    ${cap('COOL ON THE PAN · 5 MIN',0,36)}${cap('TOWEL-HOLD · CUT LENGTHWISE',38,70)}${cap('OPEN IT: ORANGE INSIDE ✓',72,null,'ok')}`)},
+
+  get scoop(){const BOAT=`<ellipse rx="30" ry="11" fill="var(--skin)" stroke="var(--skin-ln)" stroke-width="1"/><ellipse cy="-2" rx="25" ry="7" fill="var(--skin-dk)"/>`;
+    return SC(8,`<ellipse cx="52" cy="134" rx="46" ry="13" fill="var(--plate)" stroke="var(--cream-ln)" stroke-width="1.5"/>
+    ${at(52,126,`<g ${A(kf('sq-sk','0%,62%{opacity:1;transform:none}78%,100%{opacity:0;transform:translate(-40px,18px) rotate(-30deg)}'))}>${BOAT}<g ${A(kf('sq-fl','0%,14%{transform:scale(1)}20%,42%{transform:scale(.6)}48%,100%{transform:scale(0)}'))}><ellipse cy="-3" rx="25" ry="7" fill="var(--flesh)"/></g></g>`)}
+    <g ${on(64)}>${chip(52,166,'SKINS → TRASH')}</g>
+    ${POTW(PX,PT,PW,PH)}${POTO(PX,PT,PW)}
+    <ellipse cx="${PX}" cy="${PT+1}" rx="${PW/2-5}" ry="${(PW*.1).toFixed(1)}" fill="var(--flesh)" ${A(kf('sq-up','0%,32%{transform:scale(0)}36%,62%{transform:scale(.55)}66%,100%{transform:scale(1)}'))}/>
+    ${POTRIM(PX,PT,PW)}<text x="${PX}" y="${PT+40}" font-size="9" fill="var(--ground)" text-anchor="middle">STOCKPOT</text>
+    <g ${A(kf('sq-sp','0%,8%{opacity:0;transform:translate(52px,106px)}10%{opacity:1;transform:translate(52px,106px)}16%{opacity:1;transform:translate(46px,124px)}22%{opacity:1;transform:translate(64px,116px)}30%{opacity:1;transform:translate(170px,82px)}34%{opacity:1;transform:translate(170px,94px)}38%{opacity:1;transform:translate(170px,82px)}44%{opacity:1;transform:translate(52px,106px)}50%{opacity:1;transform:translate(46px,124px)}54%{opacity:1;transform:translate(64px,116px)}60%{opacity:1;transform:translate(170px,82px)}64%{opacity:1;transform:translate(170px,94px)}68%{opacity:1;transform:translate(170px,82px)}72%,100%{opacity:0;transform:translate(170px,82px)}'))}>${spoon}<ellipse cy="-3" rx="8" ry="5" fill="var(--flesh)" ${A(kf('sq-bl','0%,17%{opacity:0}19%,33%{opacity:1}35%,51%{opacity:0}53%,63%{opacity:1}65%,100%{opacity:0}'))}/></g>
+    ${cap('SCOOP THE ORANGE FLESH',0,30)}${cap('INTO THE TALL STOCKPOT · HEAT OFF',32,62)}${cap('SKINS OUT',64,82)}${cap('ALL IN THE POT ✓',84,null,'ok')}`)},
+
+  get addins(){const BX=60,BY=124,bw=kf('ad-bw','0%,22%{transform:none}30%,38%{transform:translate(96px,-62px) rotate(80deg)}46%,60%{transform:none}68%,76%{transform:translate(96px,-62px) rotate(80deg)}84%,100%{transform:none}');
+    return SC(9,`${list(['BUTTER 75 g','HEAVY CREAM 120 g'],[4,50],34)}
+    ${SCALE(BX,148,[['0 g',0,8],['75 g',8,26],['0 g',42,50],['120 g',50,64],['0 g',84,100]])}
+    ${potWith()}
+    <g ${on(36,'--oy:-14px')}>${at(PX-14,PT,BUTTER)}</g><g ${on(74,'--oy:-14px')}><ellipse cx="${PX+12}" cy="${PT+1}" rx="22" ry="4.5" fill="var(--cream)" stroke="var(--cream-ln)"/></g>
+    ${POTRIM(PX,PT,PW)}
+    ${at(BX,BY,`<g ${A(bw)}>${gb(0,0,64,24)}${win(8,34,at(0,4,BUTTER),'--oy:-30px')}${win(50,72,`<ellipse cx="0" cy="8" rx="24" ry="4" fill="var(--cream)"/>`,'--oy:0px')}</g>`)}
+    ${taps(BX+44,154,[44])}
+    ${cap('GLASS BOWL ON SCALE · BUTTER 75 g',0,26)}${cap('TIP IT INTO THE POT',28,42)}${cap('TARE · CREAM 120 g',44,64)}${cap('TIP IT IN',66,84)}${cap('ON THE HOT FLESH ✓',86,null,'ok')}`)},
+
+  get secret(){const tub=kf('sc-tub','0%,24%{opacity:1;transform:none}36%{transform:translateY(-74px)}46%,52%{transform:translate(88px,-104px)}60%,74%{transform:translate(88px,-104px) rotate(118deg)}80%{opacity:1;transform:translate(88px,-104px) rotate(118deg)}86%,100%{opacity:0;transform:translate(88px,-104px) rotate(118deg)}');
+    return SC(10,`${potWith()}
+    <ellipse cx="${PX}" cy="${PT+1}" rx="${PW/2-8}" ry="9" fill="var(--ev3)" ${A(kf('sc-lv','0%,58%{transform:scale(0)}78%,100%{transform:scale(1)}'))}/>
+    <g ${on(80,'--oy:0px')}><path d="M${PX-30} ${PT} q14 -5 28 0 t28 0" stroke="var(--ev3-lt)" stroke-width="2.5" fill="none" stroke-linecap="round"/></g>
+    ${POTRIM(PX,PT,PW)}
+    <rect x="${PX-4}" y="44" width="9" height="50" rx="4" fill="var(--ev3)" ${A(kf('sc-st','0%,60%{transform:scaleY(0)}63%,74%{transform:scaleY(1)}78%,100%{transform:scaleY(0)}'),'transform-origin:50% 0')}/>
+    ${at(66,166,`<g ${A(tub)}>${TUB('III')}${TUBIN('var(--ev3)')}<g ${A(kf('sc-lid','0%,50%{opacity:1;transform:none}56%,100%{opacity:0;transform:translate(-30px,-30px) rotate(-60deg)}'))}>${TUBLID}</g></g>`)}
+    ${at(66,170,`<g ${A(kf('sc-bag','0%,82%{opacity:1;transform:none}90%,100%{opacity:0;transform:translateX(-40px)}'))}>${at(0,0,BAGBODY('III'),0,.9)}<g ${A(kf('sc-seal','0%,16%{opacity:1;transform:none}24%,100%{opacity:0;transform:translate(-26px,-46px) rotate(-40deg)}'))}>${at(0,0,BAGSEAL,0,.9)}</g></g>`)}
+    <g ${on(84,'--oy:0px')}>${chip(60,160,'BAG → TRASH')}</g>
+    ${cap('EVIDENCE III · STILL SEALED',0,14,'wax')}${cap('BREAK THE SEAL',16,26,'wax')}${cap('TUB OUT · LID OFF',28,56)}${cap('ALL OF IT INTO THE POT · ~516 g',58,82,'hot')}${cap('THE SECRET INGREDIENT IS IN ✓',84,null,'ok')}`)},
+
+  get mash(){const xs=[132,152,172,192,208,162,184],pts=xs.map((x,i)=>[x,PT+(i%2?-2:2)]),[k,T]=pokes('ms-m',pts,6,7,28);
+    return SC(8,`${POTW(PX,PT,PW,PH)}${POTO(PX,PT,PW)}<ellipse cx="${PX}" cy="${PT+1}" rx="${PW/2-5}" ry="10.4" fill="var(--flesh)"/>
+    ${xs.map((x,i)=>`<g ${off(T[i])}><circle cx="${x}" cy="${PT+(i%2?-2:2)}" r="6" fill="var(--flesh-lt)" stroke="var(--flesh-dk)" stroke-width="1.2"/></g>`).join('')}
+    <g ${off(26)}>${at(PX-30,PT,BUTTER,0,.7)}<ellipse cx="${PX+6}" cy="${PT+2}" rx="12" ry="3" fill="var(--ev3)"/></g>
+    <g ${on(58,'--oy:0px')}><ellipse cx="${PX}" cy="${PT+1}" rx="${PW/2-5}" ry="10.4" fill="var(--flesh-dk)" opacity=".55"/><path d="M${PX-36} ${PT+2} q14 -5 28 0 t28 0 t20 -1" stroke="var(--flesh)" stroke-width="2" fill="none" stroke-linecap="round"/></g>
+    ${POTRIM(PX,PT,PW)}
+    <g ${A(k)}>${MASHER}</g>
+    ${win(60,86,at(PX,PT+4,`<g ${M('circ',.6)}>${spoon}</g>`))}
+    ${list(['PRESS DOWN','LIFT, MOVE OVER','STIR'],[4,30,60],50)}
+    <text x="58" y="120" font-size="10" fill="var(--muted)" text-anchor="middle">no masher?</text><text x="58" y="133" font-size="10" fill="var(--muted)" text-anchor="middle">back of a fork</text>
+    ${cap('MASHER STRAIGHT DOWN',0,30)}${cap('PRESS, LIFT, MOVE OVER',32,58)}${cap('STIR IT ROUND',60,86)}${cap('MOSTLY SMOOTH ✓',88,null,'ok')}`)},
+
+  get season(){const face=`<circle r="18" ${HL}/><circle cx="-6" cy="-5" r="2" fill="var(--eye)"/><path d="M-14 6 q5 5 10 1" stroke="var(--eye)" stroke-width="2" fill="none" stroke-linecap="round"/>`,cx=96;
+    return SC(7,`${POTW(cx,96,110,64)}${POTO(cx,96,110)}<ellipse cx="${cx}" cy="97" rx="50" ry="10.6" fill="var(--flesh-dk)"/>${POTRIM(cx,96,110)}
+    ${win(2,24,`${at(cx,58,`<g ${M('shake',.15,0,'',true)}>${PINCH}</g>`)}${bits([cx-6,cx,cx+6],64,'#fff',30,1.6)}`,'--oy:-8px')}
+    ${win(74,86,`${at(cx+22,58,`<g ${M('shake',.15,0,'',true)}>${PINCH}</g>`)}${bits([cx+20,cx+26],64,'#fff',30,1.4)}`,'--oy:-8px')}
+    ${win(26,46,at(cx,100,`<g ${M('circ',.6)}>${spoon}</g>`))}
+    <g ${on(46)}>${at(206,68,face)}</g>
+    <g ${A(kf('sn-sp','0%,48%{opacity:0;transform:translate(96px,100px)}50%{opacity:1;transform:translate(96px,100px)}60%,68%{opacity:1;transform:translate(182px,76px)}72%,100%{opacity:0;transform:translate(182px,76px)}'))}>${spoon}<ellipse cy="-2" rx="6" ry="3.5" fill="var(--flesh-dk)" ${A(kf('sn-bl','0%,62%{opacity:1}66%,100%{opacity:0}'))}/></g>
+    <g ${on(88)}>${chip(184,104,'TASTES RIGHT','ok')}</g>
+    ${cap('SALT 9 g',0,24)}${cap('STIR WELL',26,46)}${cap('TASTE A LITTLE (BLOW FIRST)',48,72)}${cap('FLAT? A PINCH MORE',74,86)}${cap('SEASONED ✓',88,null,'ok')}`)},
+
+  get warm(){const cx=120,top=72,w=110;
+    return SC(8,`${flames(1,cx,152)}
+    ${POTW(cx,top,w,64)}${POTO(cx,top,w)}<ellipse cx="${cx}" cy="${top+1}" rx="${w/2-5}" ry="11" fill="var(--flesh-dk)"/>${POTRIM(cx,top,w)}
+    ${lid0(cx,top-2,kf('kw-lid','0%,4%{opacity:0;transform:translateY(-40px)}12%,40%{opacity:1;transform:none}46%,62%{opacity:1;transform:translate(70px,-30px) rotate(20deg)}70%,100%{opacity:1;transform:none}'))}
+    ${win(46,64,at(cx,top+4,`<g ${M('circ',.5)}>${spoon}</g>`))}
+    ${win(46,64,steam([cx-20,cx+10],top-10),'--oy:0px')}
+    ${ring(214,40,'~10 min',12,44)}
+    ${chip(cx,172,'BACK-RIGHT · 1 FLAME (LOWEST)','hot')}
+    ${cap('LID ON',0,14)}${cap('LOWEST FLAME, BACK-RIGHT',14,44)}${cap('EVERY ~10 MIN: LID OFF, STIR',46,66)}${cap('LID BACK ON ✓',70,null,'ok')}`)},
+
+  get serve(){return SC(6,`${steam([96,120,144],46)}
+    ${bowl(120,92,176,58)}<path d="${bowlP(120,98,164,52)}" fill="var(--flesh)"/>
+    <path d="M42 94 Q80 74 120 72 Q160 74 198 94 Z" fill="var(--flesh)"/><path d="M80 86 q16 -8 34 -4 t36 2" stroke="var(--flesh-dk)" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".6"/>${rim(120,92,176)}
+    ${at(120,150,`<g ${on(40,'--oy:0px')}><rect x="-62" y="-11" width="124" height="22" rx="11" fill="var(--wax)"/><text x="0" y="4" font-size="10" fill="#fff" text-anchor="middle">SHH: DON’T SAY WHAT’S IN IT</text></g>`)}
+    ${cap('SPOON IT INTO THE SERVING BOWL',0,36)}${cap('TO THE TABLE · ~T+75',38,null,'ok')}`)},
+};
+
+// ---------- "How?" panels: one short explanation + a zoomed-in loop per technique ----------
+const mini=(T,inner)=>SC(T,inner,120,160);
+const HOW = {
+  racks:{t:'Which rack is which',d:'Open the oven: there are two racks. Yours is the UPPER one, about the middle of the oven. Leave the LOWER rack free: the Dining Hall slides their pork in there at about T+33. Close the door fast each time so the heat stays in.',
+    get art(){return mini(4,`<rect x="20" y="8" width="120" height="100" rx="8" fill="var(--surface-3)" stroke="var(--steel)"/><rect x="30" y="20" width="100" height="80" rx="5" fill="var(--screen)"/>
+      <path d="M34 50 h92" stroke="var(--accent)" stroke-width="3"/><path d="M34 80 h92" stroke="var(--steel-dk)" stroke-width="2"/>
+      <g ${A(kf('hr-in','0%,10%{transform:translateX(110px)}36%,100%{transform:none}'))}>${PAN(44,44,72)}${[60,80,100].map(x=>at(x,38,SPW,0,.3)).join('')}</g>
+      <text x="80" y="62" font-size="8" fill="var(--accent)" text-anchor="middle">UPPER · YOURS</text><text x="80" y="92" font-size="8" fill="var(--muted)" text-anchor="middle">LOWER · PORK LATER</text>`)}},
+  scrub:{t:'Scrubbing',d:'Hold the potato under cold running water and rub it all over with your hand (or a brush) until no dirt is left, especially at the ends. No soap. Pat it dry with a towel so the skin roasts instead of steaming.',
+    get art(){return mini(3,`<rect x="76" y="6" width="6" height="56" fill="var(--water)" opacity=".85"/>${at(80,70,SPW,0,1.3)}${at(80,64,`<g ${M('rub',.6)}>${HAND}</g>`)}${bits([66,76,88,96],84,'var(--water)',22,2)}${chip(80,108,'COLD WATER · NO SOAP')}`)}},
+  prick:{t:'Why prick?',d:'As a sweet potato roasts, the water inside turns to steam. A few fork holes let it out, so the skin doesn’t split or, once in a while, burst in the oven. 6–8 pokes about 1 cm deep, all around, is plenty.',
+    get art(){return mini(4,`${at(40,54,SPW,0,1.1)}${dots([[28,50],[40,58],[52,48]],'var(--skin-ln)',1.4)}${steam([28,52],44)}
+      ${at(120,54,`<g ${A(kf('hp-sw','0%,30%{transform:scale(1)}74%{transform:scale(1.14,1.22)}78%,100%{transform:scale(1)}'))}>${SPW}</g>`,0,1.1)}
+      <g ${A(kf('hp-cr','0%,72%{opacity:0}76%,94%{opacity:1}98%,100%{opacity:0}'))}><path d="M112 42 l5 5 l-4 4 l6 5" stroke="var(--eye)" stroke-width="2" fill="none"/><circle cx="118" cy="36" r="3" fill="var(--flesh)"/><circle cx="128" cy="40" r="2.4" fill="var(--flesh)"/></g>
+      ${chip(40,100,'✓ STEAM OUT','ok')}${chip(120,100,'✗ CAN SPLIT','no')}`)}},
+  syrup:{t:'The syrup leak is normal',d:'Sweet potatoes are full of sugar. As they roast, a dark syrup bubbles out of the fork holes and burns onto the pan. It looks bad but it’s a good sign. Leave the black bits on the pan, never in the pot.',
+    get art(){return mini(4,`${PAN(10,88,140)}${at(66,74,SPW,0,1.2)}
+      ${at(108,76,`<g ${A(kf('hy-b','0%,10%{transform:scale(0)}40%,100%{transform:scale(1)}'))}>${tear('var(--syrup-lt)')}</g>`)}
+      <ellipse cx="112" cy="87.5" rx="18" ry="2.6" fill="var(--syrup)" ${A(kf('hy-p','0%,30%{transform:scaleX(0)}70%,100%{transform:scaleX(1)}'))}/>
+      ${pops([[104,86],[114,86],[122,86]],1,2.2)}
+      ${chip(80,108,'DARK SYRUP = NORMAL ✓','ok')}`)}},
+  test:{t:'Testing doneness with a knife',d:'Mitts on, pull the upper rack out a little. Push a knife into the thickest potato: done means it slides all the way in with no push, like into soft butter. If the knife stops or the middle feels hard, back in for 5–10 min and test again.',
+    get art(){return mini(4,`${at(40,72,SPW,0,1.1)}${at(120,72,SPW,0,1.1)}
+      ${at(46,52,`<g ${A(kf('hd-k1','0%,10%{transform:translateY(-14px)}40%,100%{transform:translateY(26px)}'))}>${KNIFE}</g>`,0,.7)}
+      ${at(126,52,`<g ${A(kf('hd-k2','0%,10%{transform:translateY(-14px)}26%{transform:translateY(10px)}30%{transform:translate(-2px,10px)}34%{transform:translate(2px,10px)}38%,100%{transform:translateY(10px)}'))}>${KNIFE}</g>`,0,.7)}
+      ${chip(40,98,'✓ SLIDES IN','ok')}${chip(120,98,'✗ STOPS','no')}${chip(120,114,'+5–10 MIN')}`)}},
+  hot:{t:'Handling hot potatoes',d:'Straight out of the oven the inside is hotter than boiling. Hold them with an oven mitt or a folded, DRY towel (a damp one lets the heat straight through). Open the halves away from your face: steam rushes out.',
+    get art(){return mini(3,`${at(40,66,SPW,0,1)}${at(40,30,`<g ${M('squeeze',.8,0,'',true)}>${MITT}</g>`,0,.8)}
+      ${at(120,66,SPW,0,1)}${at(98,66,TOWEL,0,.8)}${at(98,62,HAND,90,.7)}${steam([130,142],54)}
+      ${chip(40,106,'✓ MITT','ok')}${chip(120,106,'✓ DRY TOWEL','ok')}`)}},
+  halve:{t:'Cutting lengthwise',d:'Lengthwise means end to end, along the long side, so you get two long boat-shaped halves. Hold one end through the towel, cut from the other end toward your hand, stopping short of it, then pull the halves apart.',
+    get art(){return mini(4,`${at(80,62,SPW,0,1.9)}<path d="M22 62 H140" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <g ${A(kf('hv-k','0%,10%{transform:translate(140px,62px)}70%,100%{transform:translate(40px,62px)}'))}>${KNIFE}</g>
+      ${chip(80,104,'END TO END ✓','ok')}`)}},
+  scoop:{t:'Scooping the flesh',d:'Hold a half skin-side down in the towel. Run a big spoon between the flesh and the skin and lift the orange flesh out. Scrape close: the skin should end up thin, like paper. Skins go in the trash.',
+    get art(){return mini(4,`${at(70,70,`<ellipse rx="52" ry="20" fill="var(--skin)" stroke="var(--skin-ln)"/><ellipse cy="-3" rx="44" ry="13" fill="var(--skin-dk)"/>`)}
+      ${at(70,67,`<g ${A(kf('hs-fl','0%,20%{transform:scale(1)}70%,100%{transform:scale(.15)}'))}><ellipse rx="44" ry="13" fill="var(--flesh)"/></g>`)}
+      <g ${A(kf('hs-sp','0%{transform:translate(28px,70px)}50%{transform:translate(104px,64px)}100%{transform:translate(28px,70px)}'))}>${spoon}</g>
+      ${chip(80,108,'SKIN THIN AS PAPER ✓','ok')}`)}},
+  tare:{t:'Tare the scale',d:'Put the empty glass bowl on and press TARE so it reads 0. Add until you reach the number, tip it into the pot, then put the bowl back and TARE again for the next one. No cups or spoons needed.',
+    get art(){return mini(5,`${SCALE(70,80,[['96 g',0,27],['0 g',27,62],['120 g',62,100]])}
+      ${gb(70,50,78,28)}<g ${on(62,'--oy:0px')}><ellipse cx="70" cy="60" rx="28" ry="5" fill="var(--cream)" stroke="var(--cream-ln)" stroke-width="1"/></g>
+      <rect x="84" y="14" width="4" height="44" rx="2" fill="var(--cream)" ${A(kf('ht-st','0%,44%{transform:scaleY(0)}48%,60%{transform:scaleY(1)}63%,100%{transform:scaleY(0)}'),'transform-origin:50% 0')}/>
+      ${taps(114,86,[24])}`)}},
+  sealed:{t:'Why it stays sealed',d:'Your evidence is part of the game: nobody, including you, should see or taste what’s inside until it goes in the pot. Keep the bag closed, keep it near your station, and open it only at the step called “The secret ingredient”.',
+    get art(){return mini(4,`${at(56,112,BAGBODY('III')+BAGSEAL,0,.8)}
+      ${at(56,30,`<g ${A(kf('hz-h','0%,10%{opacity:0;transform:translateY(-10px)}20%,40%{opacity:1;transform:none}50%,100%{opacity:0;transform:translateY(-10px)}'))}>${PINCH}</g>`)}
+      <g ${on(40,'--oy:0px')}><path d="M30 30 l52 52 M82 30 l-52 52" stroke="var(--flame)" stroke-width="5" stroke-linecap="round"/></g>
+      ${chip(124,40,'NOT YET','no')}${chip(124,64,'OPEN AT')}${chip(124,82,'STEP 10','hot')}`)}},
+  scrape:{t:'Getting every last bit out',d:'Tip the tub over the pot and let it slide out, then run a spatula or spoon around the inside walls and the lid to scrape out the rest. The recipe counts on ALL of it (~516 g).',
+    get art(){return mini(4,`${at(70,60,`<g transform="rotate(150)">${TUB('III')}</g>`)}<ellipse cx="80" cy="104" rx="40" ry="8" fill="var(--ev3)"/>
+      <g ${A(kf('hx-sp','0%,100%{transform:translate(64px,70px)}50%{transform:translate(82px,58px) rotate(30deg)}'))}>${at(0,0,SPAT,180,.6)}</g>
+      ${chip(124,20,'ALL OF IT','hot')}`)}},
+  masher:{t:'Mashing',d:'Pot off the heat. Press the masher straight down to the bottom, lift, move over a hand’s width, press again, until you’ve covered the whole pot twice. Then stir. No masher: the back of a big fork, pressed and twisted, works too. Stop at mostly smooth; a few soft lumps are fine.',
+    get art(){return mini(3,`${POTW(44,48,60,44)}${POTO(44,48,60)}<ellipse cx="44" cy="49" rx="26" ry="6" fill="var(--flesh)"/>${POTRIM(44,48,60)}${at(44,52,`<g ${M('mashm',.8)}>${at(0,0,MASHER,0,.6)}</g>`)}
+      ${POTW(120,48,60,44)}${POTO(120,48,60)}<ellipse cx="120" cy="49" rx="26" ry="6" fill="var(--flesh)"/>${POTRIM(120,48,60)}${at(120,52,`<g ${M('mashm',.6)}>${at(0,0,FORK,0,.55)}</g>`)}
+      ${chip(44,108,'MASHER','ok')}${chip(120,108,'OR A FORK','ok')}`)}},
+  thick:{t:'Too thick? A milk splash',d:'If the mash is stiff or pasty, or a spoon stands up in it, stir in milk 20 g at a time until it’s soft and spoonable. No milk? A little more cream does the same job.',
+    get art(){return mini(4,`${bowl(72,56,104,42)}<path d="${bowlP(72,62,96,36)}" fill="var(--flesh-dk)"/>
+      <path d="M30 62 l8 -8 l6 6 l8 -9 l8 8 l8 -6 l8 8 l8 -7 l8 8 H30 Z" fill="var(--flesh-dk)" ${A(kf('ht-pk','0%,56%{opacity:1}66%,100%{opacity:0}'))}/>
+      <g ${on(58,'--oy:0px')}><path d="${bowlP(72,62,96,36)}" fill="var(--flesh)"/><ellipse cx="72" cy="62" rx="48" ry="5" fill="var(--flesh)"/></g>
+      ${rim(72,56,104)}
+      <rect x="112" y="18" width="4" height="42" fill="var(--milk)" ${A(kf('ht-ms','0%,30%{transform:scaleY(0)}34%,54%{transform:scaleY(1)}58%,100%{transform:scaleY(0)}'),'transform-origin:50% 0')}/>
+      ${win(0,28,chip(72,108,'STIFF, PASTY'),'--oy:0px')}${win(28,62,chip(72,108,'+ MILK 20 g','hot'),'--oy:0px')}<g ${on(62,'--oy:0px')}>${chip(72,108,'SOFT, SPOONABLE ✓','ok')}</g>`)}},
+  season:{t:'Seasoning to taste',d:'Stir the 9 g of salt in well, then taste a small spoonful (blow on it first). Flat or only sweet? Add a pinch (about 1 g), stir, taste again. Stop once it tastes lively: salt can’t come back out.',
+    get art(){const face=`<circle r="15" ${HL}/><circle cx="-5" cy="-4" r="1.8" fill="var(--eye)"/><path d="M-12 5 q4 4 8 1" stroke="var(--eye)" stroke-width="1.8" fill="none" stroke-linecap="round"/>`;
+      return mini(5,`${bowl(50,60,80,36)}<ellipse cx="50" cy="64" rx="36" ry="5" fill="var(--flesh)"/>${rim(50,60,80)}
+      ${win(0,24,`${at(50,28,PINCH)}${bits([46,50,54],34,'#fff',24,1.4)}`,'--oy:0px')}
+      <g ${A(kf('hs2-sp','0%,26%{opacity:0;transform:translate(50px,64px)}30%{opacity:1;transform:translate(50px,64px)}48%,62%{opacity:1;transform:translate(112px,42px)}66%,100%{opacity:0;transform:translate(112px,42px)}'))}>${spoon}<ellipse cy="-2" rx="6" ry="3.4" fill="var(--flesh)"/></g>
+      ${at(132,36,face)}
+      ${win(0,26,chip(80,106,'1 · SALT, STIR'),'--oy:0px')}${win(26,66,chip(80,106,'2 · TASTE'),'--oy:0px')}<g ${on(66,'--oy:0px')}>${chip(80,106,'3 · FLAT? A PINCH MORE','hot')}</g>`)}},
+  flames:{t:'Heat level: the flames',d:'The flames in the pictures show how far to turn the knob: 1 low, 2 medium, 3 medium-high, 4 high. Keep-warm is 1: turn the knob all the way to its lowest flame that stays lit.',
+    get art(){return mini(4,`${[1,2,3,4].map((n,i)=>{const x=22+i*39;return `<rect x="${x-15}" y="58" width="30" height="4" rx="2" fill="var(--steel-dk)"/>${Array.from({length:n},(_,j)=>flameIc(x+(j-(n-1)/2)*7,58,.8)).join('')}<text x="${x}" y="76" text-anchor="middle" font-size="11" fill="${n===1?'var(--accent)':'var(--ink)'}">${n}</text><text x="${x}" y="90" text-anchor="middle" font-size="8" fill="var(--muted)">${['low','medium','med-high','high'][i]}</text>`}).join('')}
+      <rect x="4" y="30" width="36" height="68" rx="6" fill="none" stroke="var(--accent)" stroke-width="2" ${M('glow',.9,0,'',true)}/>${chip(80,110,'KEEP WARM = 1','hot')}`)}},
+  keepwarm:{t:'Keeping it warm on low',d:'Lid on, back-right burner, lowest flame (1). The bottom can catch, so every 10 min or so take the lid off and stir from the bottom up. If it gets stiff, stir in a splash of milk or cream. It holds happily for 30+ min.',
+    get art(){return mini(4,`${flames(1,80,104)}${POTW(80,50,76,50)}${POTO(80,50,76)}<ellipse cx="80" cy="51" rx="33" ry="7.5" fill="var(--flesh-dk)"/>${POTRIM(80,50,76)}
+      ${at(80,48,`<g ${A(kf('hk-l','0%,40%{transform:none}48%,80%{transform:translate(40px,-20px) rotate(20deg)}88%,100%{transform:none}'))}>${POTLID(76)}</g>`)}
+      ${win(48,80,at(80,52,`<g ${M('circ',.5)}>${spoon}</g>`))}
+      ${chip(80,14,'STIR FROM THE BOTTOM','hot')}`)}},
+};
+
+// ---------- station (screen 0) + steps ----------
+const STATION={seal:'III',kick:'Case No. 08 · Team III',name:'The Root Cellar',
+  sub:'You make: <b>Sweet potato mash</b> for 12 · you start <b>FIRST</b>',
+  intro:'Oven on and potatoes in before anything else (by <b>T+8</b>). While they roast 45–55 min you solve your riddle. At the end you mash everything in the tall stockpot and keep it warm for dinner.',
+  hl:['sink','up','bl','br'],
+  marks:{sink:[66,46,'2'],up:[291,118,'4'],br:[252,22,'8']},
+  lg:'<span><b style="color:var(--accent)">2 · 4 · 8</b> = step numbers</span>',
+  gear:[['Oven, 425°F','UPPER rack','yours T+8 → ~T+63'],['Sheet pan #1 (the big one)','UPPER rack'],['Fork + small knife','Sink, then the stove'],['Oven mitts / dry towel','By the oven'],['Plate (to split on)','Back of the stove'],
+    ['Tall stockpot (~8 qt) + lid','Back-right burner','your mashing pot: the big mixing bowl is the Alpine Lodge’s'],['Potato masher (or a fork), big spoon','Next to the stockpot'],['Small glass bowl + kitchen scale','Shared: tare first'],['Sink','Scrubbing T+0–8, then free']],
+  ings:[['Sweet potatoes','2,400 g','about 6 large, similar sizes'],['Butter','75 g','soft or in pieces'],['Heavy cream','120 g'],['Salt','9 g','fine salt · a pinch more after tasting'],['Milk','a splash','only if the mash is thick · 20 g at a time'],['EVIDENCE III','all of it','~516 g · sealed until step 10']],
+  evid:'<p>Your riddle is on the <b>back of your card</b>. It leads to a sealed evidence bag marked <b>III</b>.</p><p><b>Oven and potatoes first.</b> Hunt only once the potatoes are in (from ~T+8): you have 45 min.</p><p>Keep the bag <b>SEALED</b> at your station until step 10, “The secret ingredient”.</p>',
+  clock:[[0,'Oven on 425°F (you), scrub',1],[8,'Potatoes in, UPPER rack · then hunt',1],[15,'Dining Hall sears pork on the front-left',0],[33,'Pork goes on the LOWER rack',0],[50,'Pork out, sauce on the front-left',0],[55,'Test yours · out by ~T+63',1],[65,'Scoop, add, secret ingredient, mash',1],[70,'Keep warm, back-right, 1 flame',1],[75,'Dinner',0],[100,'Dessert, then the answer cards',0]]};
+
+const STEPS = [
+  {kind:'station'},
+  { title:'Oven to 425°F', tm:[0], art:'oven', how:['racks'],
+    detail:'First thing, before anyone else: turn the oven to <b>425°F</b>. Check that a rack sits in the <b>upper</b> slot (about the middle of the oven). That’s yours. It takes ~15 min to heat: scrub and prick meanwhile.',
+    mw:'Everyone just got their cards. The Alpine Lodge is at the freezer, the Apothecary sets up on the counter beside the stove, the Dining Hall is hunting for their evidence. The oven is yours to start.' },
+  { title:'Scrub at the sink', tm:[1,5], art:'scrub', how:['scrub','tare'],
+    detail:'Weigh <b>2,400 g</b> sweet potatoes (about 6 large). At the sink, scrub each one under <b>cold running water</b> with your hands (skins stay on), then <b>pat dry</b>.',
+    ings:[['Sweet potatoes','2,400 g','whole, unpeeled']],
+    mw:'The sink is yours now. The Dining Hall will need it to wash hands after handling raw pork from ~T+10, so finish and step aside.' },
+  { title:'Prick 6–8 times', tm:[5,7], art:'prick', how:['prick'],
+    detail:'Poke each potato <b>6–8 times</b> with a <b>fork</b>, about 1 cm deep, turning it so the holes go all the way round.',
+    mw:'The Dining Hall trims pork on the board next to the stove. Work on the sink side; don’t use their board (raw meat).' },
+  { title:'Potatoes in: upper rack', tm:[8], art:'roast', how:['racks','syrup'],
+    detail:'Potatoes <b>whole</b> on <b>sheet pan #1</b> (the big one), space between them. Onto the <b>UPPER rack</b> at 425°F by <b>T+8</b>, even if the oven isn’t fully hot yet. Start the timer: <b>45–55 min</b>.',
+    timer:{id:'roast',label:'Roast',min:45},
+    mw:'The upper rack is yours until ~T+63. At ~T+33 the Dining Hall slides their pork onto the LOWER rack: leave it free and don’t move their pan.' },
+  { title:'Now: find your evidence', tm:[8,55], art:'hunt', how:['sealed'],
+    detail:'Flip your card: the <b>riddle</b> is on the back. Go find the bag marked <b>III</b>. Bring it to your station and keep it <b>SEALED</b>. The roast timer keeps running in the bar at the bottom.',
+    mw:'T+15 to T+33 the Dining Hall sears pork on the front-left burner: hot oil, so search away from the stove. ~T+15 the Apothecary hands their glaze over. Stay out of the stove lane.' },
+  { title:'Are they done?', tm:[55,63], art:'test', how:['test','hot','syrup'],
+    detail:'At 45 min, mitts on, pull the <b>upper rack</b> out a little. Slide a <b>knife</b> into the thickest one: it should go in with <b>no resistance</b>, and it should <b>give</b> when squeezed with a mitt. Still firm? <b>5–10 min more</b>. Done: pan out. Ask the Dining Hall before you switch the oven off.',
+    mw:'Pork came out at ~T+50 and rests under foil; the Dining Hall makes their sauce on the front-left burner until ~T+58. Touch only the UPPER rack.' },
+  { title:'Cool 5 min, then split', tm:[60,65], art:'split', how:['hot','halve'],
+    detail:'Rest the pan on the <b>back-left burner (switched off)</b> for <b>5 min</b>. On a plate, hold one in a <b>towel or mitt</b> and cut it <b>lengthwise</b>, end to end. Open the halves.',
+    timer:{id:'cool',label:'Cool',min:5},
+    mw:'The front-left burner is the Dining Hall’s skillet: keep the hot pan away from it. The Apothecary is setting the table.' },
+  { title:'Scoop into the stockpot', tm:[65], art:'scoop', how:['scoop','hot'],
+    detail:'Stand the <b>tall stockpot</b> on the <b>back-right burner, heat OFF</b>. With a big spoon, scoop all the orange flesh into it, scraping close to the skin. <b>Skins out</b>; leave any burnt syrup behind.',
+    mw:'You mash in the stockpot because the big mixing bowl belongs to the Alpine Lodge (their whipped cream is in the fridge in it).' },
+  { title:'Butter and cream', tm:[66], art:'addins', how:['tare'],
+    detail:'Small glass bowl on the scale, <b>tare</b>, <b>75 g butter</b>: tip it onto the hot flesh. Bowl back, tare, <b>120 g heavy cream</b>: tip it in. The heat melts the butter.',
+    ings:[['Butter','75 g'],['Heavy cream','120 g']],
+    mw:'The scale is shared: if someone else is using it, wait and tare again before you weigh.' },
+  { title:'Open Evidence III', tm:[67], art:'secret', how:['scrape','sealed'], secret:true,
+    detail:'Now break the seal. Take the tub out of the bag, lid off, and add <b>ALL of EVIDENCE III</b> (~516 g) to the pot. Scrape out every last bit. Bag and tub in the trash, and don’t tell anyone what you saw.',
+    ings:[['EVIDENCE III','~516 g','all of it']],
+    mw:'Nobody else should see what goes in: turn your back to the room if you like. The other teams are plating pork and setting the table.' },
+  { title:'Mash until mostly smooth', tm:[68], art:'mash', how:['masher','thick'],
+    detail:'Heat still <b>off</b>. Masher straight down to the bottom, lift, move over, repeat until you’ve covered the pot twice. Stir. Stop at <b>mostly smooth</b>; a few soft lumps are fine. Stiff? A <b>milk splash</b>.',
+    ings:[['Milk','a splash','only if thick · 20 g at a time']],
+    mw:'The Dining Hall is slicing pork at the board; the Apothecary is lighting the candles.' },
+  { title:'Salt, then taste', tm:[70], art:'season', how:['season'],
+    detail:'Sprinkle in <b>9 g salt</b> and stir well. Taste a little (blow first, it’s hot). Flat? A <b>pinch more</b>, stir, taste again.',
+    ings:[['Salt','9 g','plus a pinch if it tastes flat']],
+    mw:'Dinner is ~T+75. You’re almost there.' },
+  { title:'Keep warm on low', tm:[70,75], art:'warm', how:['flames','keepwarm'],
+    detail:'<b>Lid on</b>. Back-right burner on the <b>lowest flame (1 flame)</b>. Every ~10 min: lid off, <b>stir from the bottom</b>, lid back on. Stiff? A splash of milk or cream.',
+    timer:{id:'stir',label:'Stir',min:10},
+    mw:'The Dining Hall’s skillet is done by now. The Alpine Lodge needs no stove at all; dessert comes at ~T+100.' },
+  { title:'Serve at dinner', tm:[75], art:'serve',
+    detail:'Turn the burner <b>off</b>. Stir once more and spoon the mash into a serving bowl (or bring the pot) to the table. Keep a straight face: everyone will be guessing what’s in it.',
+    mw:'At dessert everyone fills an answer card for each dish, including yours. Don’t give anything away.',
+    note:'Burner off, oven off once the pork is out too. Soak sheet pan #1 in hot water: the burnt syrup lifts off.' },
+];
+
+// ---------- engine ----------
+const store={get(k,d){try{const v=localStorage.getItem(STORE_KEY+k);return v==null?d:JSON.parse(v)}catch{return d}},set(k,v){try{localStorage.setItem(STORE_KEY+k,JSON.stringify(v))}catch{}}};
+const hashStep=/^#(\d+)h?$/.exec(location.hash||'');
+let cur=Math.max(0,Math.min(hashStep?+hashStep[1]:(+store.get('step',0)||0),STEPS.length-1)), checked=store.get('checked',{})||{};
+const timers={}; let audio;
+const $=id=>document.getElementById(id);
+const fmt=s=>{s=Math.max(0,Math.ceil(s));return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`};
+// "Go" is ~4:00 pm (T+0)
+const clockAt=m=>{const t=16*60+m,h=Math.floor(t/60)%12||12;return `${h}:${String(t%60).padStart(2,'0')}`};
+const tTag=s=>s.tm?`≈ T+${s.tm[0]}${s.tm[1]!=null?`–${s.tm[1]}`:''} min · ~${clockAt(s.tm[0])} pm`:'';
+function timerFor(t){if(!timers[t.id])timers[t.id]={total:t.min*60,left:t.min*60,running:false,ring:false,label:t.label};return timers[t.id]}
+const tLeft=T=>T.running?(T.endAt-Date.now())/1000:T.left;
+function toggleTimer(id){const T=timers[id];if(!audio){try{audio=new(window.AudioContext||window.webkitAudioContext)()}catch{}}
+  if(T.ring){T.ring=false;T.running=false;T.left=T.total}else if(T.running){T.left=tLeft(T);T.running=false}else{T.endAt=Date.now()+T.left*1000;T.running=true}paintTimers()}
+function beep(){try{navigator.vibrate&&navigator.vibrate([300,150,300,150,300])}catch{}if(!audio)return;
+  try{[0,.35,.7].forEach(d=>{const o=audio.createOscillator(),g=audio.createGain();o.frequency.value=880;o.connect(g);g.connect(audio.destination);g.gain.setValueAtTime(.25,audio.currentTime+d);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+d+.3);o.start(audio.currentTime+d);o.stop(audio.currentTime+d+.3)})}catch{}}
+function paintTimers(){
+  for(const[id,T]of Object.entries(timers)){
+    if(T.running&&tLeft(T)<=0){T.running=false;T.left=0;T.ring=true;beep()}
+    const el=document.querySelector(`[data-timer="${id}"]`);
+    if(el){el.className='timer'+(T.ring?' ring':T.running?' run':'');el.querySelector('.clock').textContent=T.ring?'Done':fmt(tLeft(T));
+      el.querySelector('.lbl').textContent=T.ring?`${T.label}: time! Tap to reset`:T.running?`${T.label} · running · tap to pause`:(T.left<T.total?`${T.label} · paused · tap to resume`:`${T.label} · tap to start`)}}
+  const here=STEPS[cur].timer?.id;
+  $('dock').innerHTML=Object.entries(timers).filter(([id,T])=>(T.running||T.ring)&&id!==here).map(([id,T])=>`<button class="${T.ring?'ring':''}" data-dock="${id}">${T.label} ${T.ring?'done!':fmt(tLeft(T))}</button>`).join('');
+}
+setInterval(paintTimers,250);
+function station(){
+  const S=STATION;
+  return `<div class="case"><div class="seal">${S.seal}</div><div><p class="kick">${S.kick}</p><h1>${S.name}</h1><p class="sub">${S.sub}</p></div></div>
+    <p class="detail">${S.intro}</p>
+    <p class="gearh">Your station</p>
+    <div class="art">${MAP(S.hl,S.marks)}</div>
+    <div class="maplg"><span><i style="background:var(--accent)"></i>yours</span><span><i style="background:var(--surface-3)"></i>another team (I–IV)</span>${S.lg||''}</div>
+    <p class="gearh">Your gear &amp; where it lives</p>
+    <div class="gear">${S.gear.map(([g,w,n])=>`<div><span>${g}${n?`<small>${n}</small>`:''}</span><span class="w">${w}</span></div>`).join('')}</div>
+    <p class="gearh">Ingredients · for 12</p>
+    <div class="check">${S.ings.map(([n,q,note],i)=>`<label><input type="checkbox" data-ck="${i}" ${checked[i]?'checked':''}><span class="n">${n}${note?`<small>${note}</small>`:''}</span><span class="q">${q}</span></label>`).join('')}</div>
+    <div class="evid"><h2>Find your evidence</h2>${S.evid}</div>
+    <p class="gearh">Your clock · Go ≈ 4:00 pm</p>
+    <div class="clockl">${S.clock.map(([t,x,you])=>`<span class="t">T+${t}</span><span class="${you?'you':'oth'}">${x}</span>`).join('')}</div>`;
+}
+function render(){
+  const s=STEPS[cur];
+  $('bars').innerHTML=STEPS.map((_,i)=>`<button aria-label="${i?`Step ${i}`:'Your station'}" class="${i<cur?'done':i===cur?'cur':''}" data-go="${i}"></button>`).join('');
+  $('count').textContent=cur===0?'Your station':`Step ${cur} of ${STEPS.length-1}`;
+  let h='';
+  if(s.kind==='station'){h=station()}
+  else{
+    const hk=s.how||[];
+    const how=hk.length?`<button class="how" id="howbtn" data-how aria-expanded="false" aria-controls="howp">How?</button>`:'';
+    const howp=hk.length?`<div class="howp" id="howp" hidden>${hk.map(k=>`<div class="term"><div class="mini">${HOW[k].art}</div><div><h3>${HOW[k].t}</h3><p>${HOW[k].d}</p></div></div>`).join('')}</div>`:'';
+    const tag=`<span class="tag"${s.secret?' style="background:var(--wax);color:#fff;border-color:var(--wax-lt)"':''}>${s.secret?'The secret ingredient · ':''}${tTag(s)}</span>`;
+    h=`${tag}<div class="art">${ART[s.art]}</div><div class="ttl"><h1>${s.title}</h1>${how}</div>${howp}<p class="detail">${s.detail}</p>`;
+    if(s.timer){const T=timerFor(s.timer);h+=`<button class="timer" data-timer="${s.timer.id}"><span class="clock">${fmt(tLeft(T))}</span><span class="lbl"></span></button>`}
+    if(s.ings)h+=`<div class="ings">`+s.ings.map(([n,q,note])=>`<div class="q">${q}</div><div class="n">${n}${note?`<small>${note}</small>`:''}</div>`).join('')+`</div>`;
+    if(s.mw)h+=`<div class="mw"><b>Meanwhile in the kitchen</b><p>${s.mw}</p></div>`;
+    if(s.note)h+=`<p class="note">${s.note}</p>`;
+  }
+  const st=$('stage');st.innerHTML=h;st.scrollTop=0;st.classList.remove('fade');void st.offsetWidth;st.classList.add('fade');
+  $('back').disabled=cur===0;$('next').textContent=cur===0?'Start cooking':cur===STEPS.length-1?'Done':'Next';$('next').disabled=cur===STEPS.length-1;
+  store.set('step',cur);paintTimers();
+}
+function go(i){cur=Math.max(0,Math.min(STEPS.length-1,i));render();wake()}
+document.addEventListener('click',e=>{
+  const g=e.target.closest('[data-go]');if(g)return go(+g.dataset.go);
+  const hw=e.target.closest('[data-how]');if(hw){const p=$('howp'),open=p.hidden;p.hidden=!open;hw.setAttribute('aria-expanded',open);hw.textContent=open?'Close':'How?';return}
+  const t=e.target.closest('[data-timer]');if(t)return toggleTimer(t.dataset.timer);
+  const d=e.target.closest('[data-dock]');if(d){const id=d.dataset.dock;if(timers[id].ring)toggleTimer(id);return go(STEPS.findIndex(s=>s.timer?.id===id))}
+});
+document.addEventListener('change',e=>{const c=e.target.closest('[data-ck]');if(c){checked[c.dataset.ck]=c.checked;store.set('checked',checked)}});
+$('next').onclick=()=>go(cur+1);$('back').onclick=()=>go(cur-1);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+let tx=null,ty=null;
+$('stage').addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+$('stage').addEventListener('touchend',e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(cur+(dx<0?1:-1));tx=null},{passive:true});
+let lock=null;async function wake(){try{if(!lock&&navigator.wakeLock){lock=await navigator.wakeLock.request('screen');lock.addEventListener('release',()=>lock=null)}}catch{}}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')wake()});
+render();
+if(/h$/.test(location.hash))document.querySelector('[data-how]')?.click();
+</script>
+</body>
+</html>

@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#121a15">
+<title>Case No. 08 · IV · The Alpine Lodge</title>
+<meta name="description" content="Team IV cook-mode: snow-capped cream cups for 12.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --ground:#121a15; --surface:#1a241e; --surface-2:#24322a; --surface-3:#2d3d33;
+  --ink:#f3e7cf; --muted:#b9ab8e; --line:#34463b;
+  --accent:#e0a868; --accent-2:#c9a15a; --accent-ink:#121a15; --accent-soft:#3b3424;
+  --copper:#d8955f; --wax:#7a2a22; --wax-lt:#a8443a;
+  --green:#9fcf86; --green-soft:#22382a; --flame:#e4571c; --flame-in:#ffc23d; --honey:#f2b33a; --eye:#20130b;
+  --skin:#a8563d; --skin-dk:#7a3624; --skin-ln:#4a1e12;
+  --flesh:#f08a2e; --flesh-dk:#c9621a; --flesh-lt:#f8b26c;
+  --syrup:#4a230c; --syrup-lt:#8a4418;
+  --ev3:#a9542b; --ev3-lt:#cf7a45; --ev4:#5b3726; --ev4-lt:#8a5a42;
+  --mitt:#5a8cad; --mitt-ln:#3c6680; --towel:#d9d1c0; --towel-ln:#9c917c;
+  --butter:#f3d56e; --butter-ln:#c9a83e; --cream:#f2eadb; --cream-ln:#9c8c74; --milk:#ffffff;
+  --whip:#f4efe6; --whip-ln:#9c8f80; --tint:#c79a7c; --meringue:#efe6d6; --mer-ln:#9c8c74; --cocoa:#4a2c1e; --whey:#d9d3b8;
+  --glass:#3f6470; --glass-ln:#8fc3d4; --water:#4e8aa6; --ice:#8fcbf0; --ice-soft:#1e3440;
+  --pan:#4a443e; --pan-rim:#6c645c; --steel:#9a948a; --steel-dk:#6e685f;
+  --hand:#d8a987; --hand-ln:#a5724d; --plate:#e8e1d6; --screen:#0c120e; --lcd:#ffc46b;
+  --bag:#cfd8d2; --bag-ln:#8fa39a; --paper:#efe4c8; --tub:#e8e2d6; --tub-ln:#9c917c;
+  --fridge:#2e393e;
+  --display:"IM Fell English",Georgia,"Times New Roman",serif;
+  --display-sc:"IM Fell English SC","IM Fell English",Georgia,serif;
+  --body:"EB Garamond",Garamond,Georgia,"Times New Roman",serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%;background:var(--ground)}
+body{margin:0;color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.4;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;overflow:hidden;
+  background-image:radial-gradient(ellipse 90% 60% at 50% 30%,rgba(216,149,95,.07),transparent 70%)}
+.app{height:100%;display:flex;flex-direction:column;max-width:560px;margin:0 auto;padding-inline:16px;padding-top:env(safe-area-inset-top,0px)}
+.top{display:flex;flex-direction:column;gap:8px;padding-block:12px 4px}
+.bars{display:flex;gap:4px}
+.bars button{flex:1;height:7px;border:0;border-radius:3px;background:var(--line);padding:0;cursor:pointer}
+.bars button.done{background:var(--accent-2)}
+.bars button.cur{background:var(--ink)}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:8px;font:600 15px var(--body);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.meta .team{font-family:var(--display-sc);text-transform:none;letter-spacing:.04em;color:var(--accent);font-size:16px}
+.stage{flex:1;overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;gap:16px;padding-block:8px 18px;-webkit-overflow-scrolling:touch}
+.stage>*{flex-shrink:0}
+.gearh{margin:6px 0 0;font:700 14px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2)}
+.tag{align-self:flex-start;font:700 14px var(--body);letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:6px;background:var(--accent-soft);color:var(--accent);border:1px solid rgba(224,168,104,.35)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(32px,9vw,44px);line-height:1.04;margin:0;text-wrap:balance}
+.detail{font-size:20px;margin:0;line-height:1.42}
+.detail b{color:var(--accent);font-weight:700}
+.note{font-size:17px;margin:0;color:var(--muted)}
+.art{width:100%;max-width:380px;align-self:center;border-radius:16px;background:var(--surface);border:1px solid var(--line);overflow:hidden}
+.art svg{width:100%;height:auto;display:block}
+.ings{display:grid;grid-template-columns:auto 1fr;border-top:1.5px solid var(--line)}
+.ings div{padding:10px 0;border-bottom:1.5px solid var(--line)}
+.ings .q{font-weight:700;font-variant-numeric:tabular-nums lining-nums;padding-right:16px;white-space:nowrap;color:var(--accent)}
+.ings .n small,.check .n small,.gear small{display:block;color:var(--muted);font-size:16px;line-height:1.3}
+.timer{display:flex;align-items:center;gap:14px;border:1.5px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);padding:12px 16px;font:inherit;cursor:pointer;text-align:left;width:100%}
+.timer .clock{font:600 36px var(--body);font-variant-numeric:tabular-nums lining-nums;min-width:4.2ch}
+.timer .lbl{font-size:17px;color:var(--muted);line-height:1.25}
+.timer.run{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.timer.run .lbl{color:var(--ground);opacity:.75}
+.timer.ring{background:var(--flame);border-color:var(--flame);color:#fff;animation:pulse .8s ease-in-out infinite alternate}
+.timer.ring .lbl{color:#fff}
+@keyframes pulse{from{transform:scale(1)}to{transform:scale(1.02)}}
+.mw{border-left:4px solid var(--copper);background:var(--surface);border-radius:4px 12px 12px 4px;padding:10px 14px}
+.mw b{display:block;font:700 13px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--copper);margin-bottom:2px}
+.mw p{margin:0;font-size:18px;line-height:1.38}
+.check{display:flex;flex-direction:column;border-top:1.5px solid var(--line)}
+.check label{display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1.5px solid var(--line);cursor:pointer}
+.check input{width:24px;height:24px;accent-color:var(--accent);margin:0}
+.check .q{font-weight:700;font-variant-numeric:tabular-nums lining-nums;color:var(--accent);white-space:nowrap;text-align:right}
+.check label:has(input:checked) .n{text-decoration:line-through;color:var(--muted)}
+.gear{display:flex;flex-direction:column;border-top:1.5px solid var(--line)}
+.gear div{display:grid;grid-template-columns:1fr 1.1fr;gap:12px;padding:9px 0;border-bottom:1.5px solid var(--line);font-size:18px;line-height:1.3}
+.gear .w{color:var(--accent)}
+.clockl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:18px;line-height:1.3}
+.clockl .t{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums lining-nums;white-space:nowrap}
+.clockl .you{color:var(--ink)}
+.clockl .oth{color:var(--muted)}
+.case{display:flex;gap:14px;align-items:center}
+.seal{flex-shrink:0;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font:400 26px var(--display-sc);color:#f3d9c4;
+  background:radial-gradient(circle at 35% 30%,var(--wax-lt),var(--wax) 60%,#4f1a15);box-shadow:0 2px 0 rgba(0,0,0,.4),inset 0 0 0 4px rgba(0,0,0,.18)}
+.kick{margin:0;font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2)}
+.sub{margin:4px 0 0;font-size:19px;color:var(--ink)}
+.sub b{color:var(--accent)}
+.evid{border:1.5px dashed var(--accent-2);border-radius:14px;padding:14px;background:rgba(122,42,34,.16);display:flex;flex-direction:column;gap:8px}
+.evid h2{margin:0;font:400 26px var(--display)}
+.evid p{margin:0;font-size:19px}
+.evid b{color:var(--accent)}
+.maplg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:15px;color:var(--muted)}
+.maplg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.dock{display:flex;gap:8px;flex-wrap:wrap}
+.dock:empty{display:none}
+.dock button{border:0;border-radius:999px;background:var(--ink);color:var(--ground);font:700 16px var(--body);padding:8px 14px;font-variant-numeric:tabular-nums lining-nums;cursor:pointer}
+.dock button.ring{background:var(--flame);color:#fff}
+.nav{display:grid;grid-template-columns:1fr 2fr;gap:10px;padding-block:8px calc(12px + env(safe-area-inset-bottom,0px))}
+.nav button{border:0;border-radius:14px;font:400 24px var(--display-sc);padding:14px 0;cursor:pointer}
+.nav .back{background:var(--surface-2);color:var(--ink)}
+.nav .next{background:var(--accent);color:var(--accent-ink)}
+.nav button:disabled{opacity:.35;cursor:default}
+button:focus-visible,label:focus-within{outline:3px solid var(--accent);outline-offset:2px}
+.fade{animation:in .18s ease-out}
+@keyframes in{from{opacity:.4;transform:translateX(8px)}to{opacity:1;transform:none}}
+
+/* "How?" chip + inline technique panel */
+.ttl{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.ttl h1{flex:1}
+.how{flex-shrink:0;margin-top:4px;border:2px solid var(--accent);background:transparent;color:var(--accent);font:700 17px var(--body);letter-spacing:.04em;border-radius:999px;padding:6px 14px;cursor:pointer}
+.how[aria-expanded="true"]{background:var(--accent);color:var(--accent-ink)}
+.howp{display:flex;flex-direction:column;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px}
+.howp[hidden]{display:none}
+.term{display:grid;grid-template-columns:132px 1fr;gap:12px;align-items:center}
+.term .mini{border-radius:10px;background:var(--surface-2);overflow:hidden}
+.term .mini svg{width:100%;height:auto;display:block}
+.term h3{margin:0 0 2px;font:400 20px var(--display);line-height:1.15;color:var(--accent)}
+.term p{margin:0;font-size:17px;line-height:1.35;color:var(--ink)}
+@media (max-width:360px){.term{grid-template-columns:1fr}.term .mini{max-width:220px}}
+
+/* scene motion: .a = sequenced (runs on the scene clock --T), .m = small endless loops */
+.sc text{font-family:var(--body);font-weight:700;letter-spacing:.03em}
+.sc .a{animation-duration:var(--T,5s);animation-iteration-count:infinite;animation-fill-mode:both;animation-timing-function:ease-in-out;transform-box:fill-box;transform-origin:center}
+.sc .m{transform-box:fill-box;transform-origin:center}
+@keyframes scin{0%{opacity:0}5%,100%{opacity:1}}
+@keyframes flick{from{transform:scale(1,1)}to{transform:scale(.86,.74)}}
+@keyframes steam{0%{opacity:0;transform:translateY(6px)}35%{opacity:.8}100%{opacity:0;transform:translateY(-14px)}}
+@keyframes fallm{0%{opacity:0;transform:translateY(-6px)}15%,80%{opacity:1}100%{opacity:0;transform:translateY(var(--fd,40px))}}
+@keyframes pop{0%,50%{transform:scale(.2);opacity:0}70%{transform:scale(1.1);opacity:1}100%{transform:scale(1.35);opacity:0}}
+@keyframes shake{from{transform:translate(-2px,-2px)}to{transform:translate(2px,2px)}}
+@keyframes squeeze{from{transform:translateY(-4px)}to{transform:translateY(6px)}}
+@keyframes pinch{from{transform:translateX(0)}to{transform:translateX(5px)}}
+@keyframes circ{0%,100%{transform:translate(-7px,0)}25%{transform:translate(0,-2px)}50%{transform:translate(7px,0)}75%{transform:translate(0,2px)}}
+@keyframes rub{0%,100%{transform:translate(0,0)}25%{transform:translate(10px,-4px)}50%{transform:translate(-4px,8px)}75%{transform:translate(8px,6px)}}
+@keyframes wsw{from{transform:translate(-14px,0) rotate(-9deg)}to{transform:translate(14px,3px) rotate(9deg)}}
+@keyframes jsh{from{transform:translate(-5px,-6px) rotate(-7deg)}to{transform:translate(5px,6px) rotate(7deg)}}
+@keyframes tapm{0%,55%,100%{transform:none}70%{transform:translateY(3px) rotate(5deg)}}
+@keyframes foldm{0%,100%{transform:translate(0,-8px)}30%{transform:translate(0,6px)}60%{transform:translate(-16px,4px)}85%{transform:translate(-18px,-8px)}}
+@keyframes mashm{0%,100%{transform:translateY(-14px)}45%,60%{transform:translateY(4px)}}
+@keyframes blink{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes glow{from{opacity:.35}to{opacity:1}}
+@keyframes warmp{from{opacity:.06}to{opacity:.2}}
+@keyframes sweep{0%,100%{transform:translate(0,0)}25%{transform:translate(60px,-10px)}50%{transform:translate(120px,4px)}75%{transform:translate(60px,12px)}}
+@media (prefers-reduced-motion:reduce){
+  .fade,.timer.ring{animation:none!important}
+  /* sequenced art jumps straight to its final (done) frame; loops stop */
+  .sc .a{animation-duration:0s!important;animation-delay:0s!important;animation-iteration-count:1!important;animation-fill-mode:forwards!important}
+  .sc .m{animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top">
+    <div class="bars" id="bars" aria-label="Steps"></div>
+    <div class="meta"><span id="count"></span><span class="team">IV · The Alpine Lodge</span></div>
+  </div>
+  <main class="stage" id="stage" aria-live="polite"></main>
+  <div class="dock" id="dock"></div>
+  <nav class="nav">
+    <button class="back" id="back">Back</button>
+    <button class="next" id="next">Next</button>
+  </nav>
+</div>
+<script>
+// ---------- art kit: each step is a looping mini-scene (0% start → action → hold on the done state) ----------
+// Sequenced parts use class "a" and run on the scene clock --T; positioning/rotation always lives on an OUTER
+// <g transform> (see at()), animation on an inner <g>, so CSS never wipes out a rotation.
+const kfDone=new Set();let kfEl=null;
+const kf=(name,body)=>{if(!kfDone.has(name)){kfDone.add(name);if(!kfEl){kfEl=document.createElement('style');document.head.appendChild(kfEl)}kfEl.append(`@keyframes ${name}{${body}}`)}return name};
+const A=(name,x='')=>`class="a" style="animation-name:${name};${x}"`;
+const M=(anim,dur,delay=0,x='',alt=false)=>`class="m" style="animation:${anim} ${dur}s ${alt?'ease-in-out':'linear'} ${delay}s infinite${alt?' alternate':''};${x}"`;
+const on=(p,x='')=>A(kf(`on${p}`,`0%,${p}%{opacity:var(--o0,0);transform:translate(var(--ox,0px),var(--oy,5px))}${p+4}%,100%{opacity:1;transform:none}`),x);
+const off=(p,x='')=>A(kf(`off${p}`,`0%,${p}%{opacity:1}${p+4}%,100%{opacity:0}`),x);
+const drop=(p,x='')=>A(kf(`drop${p}`,`0%,${p}%{opacity:0;transform:translateY(var(--dy,-80px))}${p+1}%{opacity:1;transform:translateY(var(--dy,-80px))}${p+7}%{opacity:1;transform:none}${p+9}%{transform:scale(1.1,.88)}${p+11}%,100%{opacity:1;transform:none}`),x);
+const win=(a,b,inner,x='')=>`<g ${on(a,x)}><g ${off(b)}>${inner}</g></g>`;
+const SC=(T,inner,h=180,w=240)=>`<svg viewBox="0 0 ${w} ${h}" aria-hidden="true" class="sc" style="--T:${T}s"><g ${A('scin')}>${inner}</g></svg>`;
+const at=(x,y,inner,r=0,s=1)=>`<g transform="translate(${x} ${y})${r?` rotate(${r})`:''}${s!==1?` scale(${s})`:''}">${inner}</g>`;
+const chip=(x,y,label,tone='ink',anchor='middle')=>{const w=Math.round(label.length*6.4+16),bg=tone==='ok'?'var(--green)':tone==='hot'?'var(--accent)':tone==='no'?'var(--flame)':tone==='ice'?'var(--ice)':tone==='wax'?'var(--wax)':'var(--ink)',fg=tone==='no'||tone==='wax'?'#fff':'var(--ground)',x0=anchor==='start'?x:x-w/2;return `<rect x="${x0}" y="${y-8.5}" width="${w}" height="17" rx="8.5" fill="${bg}"/><text x="${x0+w/2}" y="${y+3.6}" font-size="10" fill="${fg}" text-anchor="middle">${label}</text>`};
+const cap=(t,a,b,tone)=>`<g ${on(a)}>${b==null?chip(120,12,t,tone):`<g ${off(b)}>${chip(120,12,t,tone)}</g>`}</g>`;
+const list=(L,P,y0=34)=>L.map((t,i)=>`<g ${on(P[i],'--o0:.28;--oy:0px')}>${chip(6,y0+i*18,t,'ink','start')}</g>`).join('');
+const bowlP=(cx,top,w,d)=>`M${cx-w/2} ${top} h${w} q${-w*.06} ${d} ${-w/2} ${d} q${-w*.44} 0 ${-w/2} ${-d} z`;
+const bowl=(cx,top,w,d)=>`<path d="${bowlP(cx,top,w,d)}" fill="var(--surface-3)" stroke="var(--steel)" stroke-width="1.5"/>`;
+const rim=(cx,top,w)=>`<path d="M${cx-w/2-2} ${top} h${w+4}" stroke="var(--steel)" stroke-width="3" stroke-linecap="round" fill="none"/>`;
+// small glass bowl (side-on): glass → contents → outline
+const gb=(cx,top,w,d,fill='',fa='')=>`<path d="${bowlP(cx,top,w,d)}" fill="var(--glass)" opacity=".5"/>${fill?`<path d="${bowlP(cx,top+5,w-8,d-5)}" fill="${fill}" ${fa}/>`:''}<path d="${bowlP(cx,top,w,d)}" fill="none" stroke="var(--glass-ln)" stroke-width="1.6"/><path d="M${cx-w/2-2} ${top} h${w+4}" stroke="var(--glass-ln)" stroke-width="3" stroke-linecap="round" fill="none"/>`;
+// countdown ring that fills from a% to b%
+const ring=(cx,cy,label,a,b)=>`<circle cx="${cx}" cy="${cy}" r="15" fill="var(--ground)"/><circle cx="${cx}" cy="${cy}" r="10" fill="none" stroke="var(--line)" stroke-width="5"/><path d="M${cx} ${cy-10} a10 10 0 1 1 0 20 a10 10 0 1 1 0 -20" fill="none" stroke="var(--accent)" stroke-width="5" pathLength="100" stroke-dasharray="100 100" ${A(kf(`rf${a}_${b}`,`0%,${a}%{stroke-dashoffset:100}${b}%,100%{stroke-dashoffset:0}`),'animation-timing-function:linear')}/>${label?`<text x="${cx}" y="${cy+28}" font-size="11" fill="var(--ink)" text-anchor="middle">${label}</text>`:''}`;
+const steam=(xs,y)=>xs.map((x,i)=>`<path ${M('steam',2.4,+(i*.8).toFixed(2))} d="M${x} ${y} q-7 -9 0 -18 q7 -9 0 -18" stroke="var(--muted)" stroke-width="3" fill="none" stroke-linecap="round"/>`).join('');
+const bits=(xs,y,fill,fd=40,r=2)=>xs.map((x,i)=>`<circle ${M('fallm',1.1,+(i*.22).toFixed(2),`--fd:${fd}px`)} cx="${x}" cy="${y}" r="${r}" fill="${fill}"/>`).join('');
+const pops=(pts,d=1.2,r=3.5,f='var(--syrup-lt)')=>pts.map(([x,y],i)=>`<circle ${M('pop',d,+(i*d/pts.length).toFixed(2))} cx="${x}" cy="${y}" r="${r}" fill="${f}"/>`).join('');
+const cut=(d,a,b,w=2.5,c='var(--flesh-dk)')=>`<path d="${d}" stroke="${c}" stroke-width="${w}" stroke-linecap="round" fill="none" pathLength="100" stroke-dasharray="100 100" ${A(kf(`ct${a}_${b}`,`0%,${a}%{stroke-dashoffset:100}${b}%,100%{stroke-dashoffset:0}`),'animation-timing-function:linear')}/>`;
+const dots=(pts,f,r,st='')=>pts.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${f}"${st?` stroke="${st}" stroke-width=".8"`:''}/>`).join('');
+const tear=(f,st='')=>`<path d="M0 -8 Q6 0 0 4 Q-6 0 0 -8Z" fill="${f}"${st?` stroke="${st}" stroke-width="1"`:''}/>`;
+// a tool that pokes down at each point in turn (global coords, tool tip at 0,0); returns [keyframe, poke-times]
+const pokes=(name,pts,p0,step,lift=24)=>{const d=Math.round(step*.35),u=Math.round(step*.7),P=pts.map((_,i)=>p0+i*step);
+  let s=`0%,${p0-2}%{opacity:0;transform:translate(${pts[0][0]}px,${pts[0][1]-lift}px)}`;
+  pts.forEach(([x,y],i)=>{const p=P[i];s+=`${p}%{opacity:1;transform:translate(${x}px,${y-lift}px)}${p+d}%{opacity:1;transform:translate(${x}px,${y+2}px)}${p+u}%{opacity:1;transform:translate(${x}px,${y-lift}px)}`});
+  const e=P.at(-1)+u,[lx,ly]=pts.at(-1);s+=`${e+3}%,100%{opacity:0;transform:translate(${lx}px,${ly-lift}px)}`;
+  return [kf(name,s),P.map(p=>p+d)]};
+// scale LCD: [text, from%, to%] windows (from 0 = shown at start, to 100 = the done reading)
+const lcdWin=(a,b)=>kf(`lw${a}_${b}`,a===0?`0%,${b}%{opacity:1}${b+.5}%,100%{opacity:0}`:b===100?`0%,${a}%{opacity:0}${a+.5}%,100%{opacity:1}`:`0%,${a}%{opacity:0}${a+.5}%,${b}%{opacity:1}${b+.5}%,100%{opacity:0}`);
+const SCALE=(cx,y,seq)=>`<rect x="${cx-62}" y="${y}" width="124" height="24" rx="7" fill="var(--steel)"/><rect x="${cx-26}" y="${y+5}" width="52" height="15" rx="3" fill="var(--screen)"/><rect x="${cx+32}" y="${y+6}" width="24" height="13" rx="6.5" fill="var(--ground)"/><text x="${cx+44}" y="${y+15.3}" font-size="7" fill="var(--ink)" text-anchor="middle">TARE</text>`+
+  seq.map(([t,a,b])=>`<g ${A(lcdWin(a,b))}><text x="${cx}" y="${y+16.5}" font-size="11" fill="var(--lcd)" text-anchor="middle">${t}</text></g>`).join('');
+const HL='fill="var(--hand)" stroke="var(--hand-ln)" stroke-width="1.5"';
+const FINGER=`<rect x="-5" y="-38" width="10" height="36" rx="5" ${HL}/>`;
+const taps=(x,y,ps)=>{const up='transform:translateY(-12px)';let b=`0%{opacity:0;${up}}`;ps.forEach(p=>{b+=`${p-4}%{opacity:0;${up}}${p-2}%{opacity:1;${up}}${p}%{opacity:1;transform:none}${p+3}%{opacity:1;${up}}${p+5}%{opacity:0;${up}}`});b+=`100%{opacity:0;${up}}`;return at(x,y,`<g ${A(kf('tp'+ps.join('_'),b))}>${FINGER}</g>`)};
+const HAND=`<ellipse rx="13" ry="9" ${HL}/><rect x="-11" y="-17" width="6" height="12" rx="3" ${HL}/><rect x="-3" y="-19" width="6" height="14" rx="3" ${HL}/><rect x="5" y="-17" width="6" height="12" rx="3" ${HL}/>`;
+const PINCH=`<ellipse cy="-14" rx="11" ry="8" ${HL}/><rect x="-6" y="-12" width="5" height="13" rx="2.5" ${HL}/><rect x="1" y="-12" width="5" height="13" rx="2.5" ${HL}/>`;
+const spoon=`<path d="M3 -3 L24 -50" stroke="var(--steel)" stroke-width="4" stroke-linecap="round" fill="none"/><ellipse rx="8" ry="4.5" fill="var(--steel)"/>`;
+const KNIFE=`<path d="M-3 0 L-3 -34 L4 -34 L4 -6 Z" fill="var(--steel)"/><rect x="-4" y="-54" width="8" height="21" rx="3" fill="var(--pan-rim)"/>`;
+const FORK=`<path d="M0 -26 V-62" stroke="var(--steel)" stroke-width="5" stroke-linecap="round"/><path d="M-6.9 -21 Q-7 -28 0 -28 Q7 -28 6.9 -21" fill="none" stroke="var(--steel)" stroke-width="3"/><path d="M-6.9 -21 V0 M-2.3 -21 V0 M2.3 -21 V0 M6.9 -21 V0" stroke="var(--steel)" stroke-width="2" stroke-linecap="round"/>`;
+const SPAT=`<rect x="-2.5" y="-60" width="5" height="44" rx="2.5" fill="var(--pan-rim)"/><path d="M-9 -18 h18 v14 q0 6 -9 6 q-9 0 -9 -6 Z" fill="var(--copper)" opacity=".95"/>`;
+const MITT=`<path d="M-14 -16 V6 Q-14 18 0 18 Q14 18 14 6 V-16 Z" fill="var(--mitt)" stroke="var(--mitt-ln)" stroke-width="1.5"/><path d="M14 -2 Q25 0 23 10 L14 12" fill="var(--mitt)" stroke="var(--mitt-ln)" stroke-width="1.5"/><rect x="-16" y="-22" width="32" height="8" rx="3" fill="var(--mitt-ln)"/>`;
+const TOWEL=`<rect x="-15" y="-24" width="30" height="48" rx="6" fill="var(--towel)" stroke="var(--towel-ln)" stroke-width="1.5"/><path d="M-15 -10 h30 M-15 10 h30" stroke="var(--towel-ln)" stroke-width="1"/>`;
+const PAT=`<rect x="-26" y="-12" width="52" height="16" rx="4" fill="var(--towel)" stroke="var(--towel-ln)" stroke-width="1.5"/><path d="M-26 -5 h52" stroke="var(--towel-ln)" stroke-width="1"/>`;
+const BUTTER=`<rect x="-10" y="-6" width="20" height="12" rx="2" fill="var(--butter)" stroke="var(--butter-ln)" stroke-width="1"/>`;
+const PAN=(x,y,w)=>`<rect x="${x}" y="${y}" width="${w}" height="6" rx="2" fill="var(--steel)"/><path d="M${x+1} ${y} v-4 M${x+w-1} ${y} v-4" stroke="var(--steel)" stroke-width="2.5" stroke-linecap="round"/>`;
+// burner + flames: 1 low … 4 high
+const flames=(n,cx,y)=>{const xs=Array.from({length:n},(_,i)=>cx+(i-(n-1)/2)*16);
+  return `<rect x="${cx-40}" y="${y}" width="80" height="5" rx="2.5" fill="var(--steel-dk)"/>${xs.map((x,i)=>at(x,y,`<g ${M('flick',.32+i*.07,+(i*.11).toFixed(2),'transform-origin:50% 100%',true)}><path d="M-6 0 q6 -19 12 0z" fill="var(--flame)"/><path d="M-3 0 q3 -9 6 0z" fill="var(--flame-in)"/></g>`)).join('')}`};
+const flameIc=(x,y,s=1)=>`<path d="M${x-5*s} ${y} q${5*s} ${-14*s} ${10*s} 0z" fill="var(--flame)"/><path d="M${x-2.5*s} ${y} q${2.5*s} ${-7*s} ${5*s} 0z" fill="var(--flame-in)"/>`;
+// tall stockpot, side-on but tipped so you see into it: opening ellipse at top
+const POTW=(cx,top,w,h)=>`<rect x="${cx-w/2-9}" y="${top+10}" width="10" height="6" rx="3" fill="var(--steel-dk)"/><rect x="${cx+w/2-1}" y="${top+10}" width="10" height="6" rx="3" fill="var(--steel-dk)"/><path d="M${cx-w/2} ${top} V${top+h-4} q0 4 4 4 H${cx+w/2-4} q4 0 4 -4 V${top}" fill="var(--steel)" stroke="var(--steel-dk)" stroke-width="1.5"/><path d="M${cx-w/2+8} ${top+12} v${h-26}" stroke="#fff" stroke-width="3" opacity=".22" stroke-linecap="round"/>`;
+const POTO=(cx,top,w)=>`<ellipse cx="${cx}" cy="${top}" rx="${w/2}" ry="${(w*.12).toFixed(1)}" fill="var(--screen)" stroke="var(--steel-dk)" stroke-width="2"/>`;
+const POTRIM=(cx,top,w)=>`<ellipse cx="${cx}" cy="${top}" rx="${w/2}" ry="${(w*.12).toFixed(1)}" fill="none" stroke="var(--steel)" stroke-width="2.5"/>`;
+const POTLID=(w)=>`<ellipse rx="${w/2+3}" ry="${(w*.13).toFixed(1)}" fill="var(--glass)" opacity=".75" stroke="var(--glass-ln)" stroke-width="2"/><rect x="-7" y="-${(w*.13+6).toFixed(1)}" width="14" height="7" rx="3" fill="var(--pan-rim)"/>`;
+// evidence bag, bottom-centre at 0,0; seal strip on top (animate it off with sealKf)
+const BAGBODY=(n,frost=false)=>`<path d="M-34 -78 H34 V-4 q0 4 -4 4 H-30 q-4 0 -4 -4 Z" fill="var(--bag)" opacity=".92" stroke="var(--bag-ln)" stroke-width="1.5"/>
+  <rect x="-26" y="-64" width="52" height="24" rx="2" fill="var(--paper)" stroke="var(--accent-2)" stroke-width="1"/><text x="0" y="-54" font-size="7" fill="var(--wax)" text-anchor="middle">EVIDENCE</text><text x="0" y="-44" font-size="9" fill="var(--ground)" text-anchor="middle" style="font-family:var(--display-sc)">${n}</text>
+  <path d="M-26 -30 h52 M-26 -22 h40 M-26 -14 h46" stroke="var(--bag-ln)" stroke-width="1.5"/>
+  <circle cx="20" cy="-14" r="8" fill="var(--wax)"/><circle cx="20" cy="-14" r="5" fill="none" stroke="var(--wax-lt)" stroke-width="1.2"/>
+  ${frost?`<g class="frost">${dots([[-28,-70],[-14,-34],[8,-74],[28,-50],[-30,-20],[14,-6],[30,-26],[-6,-8]],'#fff',2.2)}</g>`:''}`;
+const BAGSEAL=`<rect x="-36" y="-88" width="72" height="11" rx="2" fill="var(--wax)"/><text x="0" y="-80" font-size="6.5" fill="#fff" text-anchor="middle">SEALED · CASE No. 08</text>`;
+// opaque evidence tub, bottom-centre at 0,0; lid drawn separately so it can come off
+const TUB=(n)=>`<path d="M-21 -34 H21 L18 -3 q0 3 -3 3 H-15 q-3 0 -3 -3 Z" fill="var(--tub)" stroke="var(--tub-ln)" stroke-width="1.5"/><rect x="-12" y="-24" width="24" height="12" rx="1.5" fill="var(--paper)" stroke="var(--accent-2)" stroke-width=".8"/><text x="0" y="-15" font-size="8" fill="var(--wax)" text-anchor="middle" style="font-family:var(--display-sc)">${n}</text>`;
+const TUBLID=`<rect x="-23" y="-40" width="46" height="7" rx="2.5" fill="var(--wax)"/>`;
+const TUBIN=(f)=>`<ellipse cx="0" cy="-34" rx="19" ry="4" fill="${f}"/>`;
+// oven front: dial (animated by dialKf), LCD, window, racks at the given y's; glow=null for a switched-off oven
+const OVEN=(dialKf,lcdHtml,inner,racks=[100,136],glow=6,rl=[])=>`<rect x="14" y="24" width="170" height="146" rx="10" fill="var(--surface-3)" stroke="var(--steel)" stroke-width="1.5"/><path d="M14 52 h170" stroke="var(--steel)" stroke-width="1.5" fill="none"/>
+  <circle cx="42" cy="38" r="9" fill="var(--ground)" stroke="var(--ink)" stroke-width="2"/><g ${A(dialKf,'transform-box:view-box;transform-origin:42px 38px')}><path d="M42 38 V31" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" fill="none"/></g>
+  <rect x="108" y="30" width="56" height="16" rx="3" fill="var(--screen)"/>${lcdHtml}
+  <rect x="40" y="56" width="118" height="4" rx="2" fill="var(--steel)"/><rect x="28" y="64" width="142" height="92" rx="6" fill="var(--screen)"/>
+  ${glow==null?'':`<g ${on(glow,'--oy:0px')}><rect x="28" y="64" width="142" height="92" rx="6" fill="var(--flame)" opacity=".22"/></g>`}
+  ${racks.map((y,i)=>`<path d="M32 ${y} h134" stroke="var(--steel)" stroke-width="2" fill="none"/>${rl[i]?`<text x="36" y="${y-3}" font-size="7" fill="var(--muted)">${rl[i]}</text>`:''}`).join('')}${inner}`;
+const oLcd=t=>`<text x="136" y="42" font-size="11" fill="var(--lcd)" text-anchor="middle">${t}</text>`;
+
+// ---------- kitchen mini-map: hl = this team's spots (gold), own = which team uses each spot ----------
+const MAP=(hl,steps={})=>{
+  const H=new Set(hl),own={freezer:'IV',sink:'III',counter:'I',board:'II',fl:'II',br:'III',up:'III',lo:'II',table:'IV'};
+  const box=(k,x,y,w,h,lbl,sub='')=>{const on_=H.has(k);return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="4" fill="${on_?'var(--accent-soft)':'var(--surface-2)'}" stroke="${on_?'var(--accent)':'var(--line)'}" stroke-width="${on_?2.5:1.2}"/>${on_?`<rect x="${x-3}" y="${y-3}" width="${w+6}" height="${h+6}" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.5" ${M('glow',.9,0,'',true)}/>`:''}
+    <text x="${x+w/2-(own[k]?5:0)}" y="${y+h/2+(sub?-1:3)}" font-size="${w<52?7.5:8.5}" fill="${on_?'var(--ink)':'var(--muted)'}" text-anchor="middle">${lbl}</text>${sub?`<text x="${x+w/2}" y="${y+h/2+9}" font-size="7" fill="${on_?'var(--accent)':'var(--muted)'}" text-anchor="middle">${sub}</text>`:''}${tagT(k,x+w-2,y+2)}`};
+  const tagT=(k,x,y)=>own[k]?`<circle cx="${x-5}" cy="${y+5}" r="6" fill="${H.has(k)?'var(--wax)':'var(--surface-3)'}"/><text x="${x-5}" y="${y+7.6}" font-size="6.5" fill="${H.has(k)?'#fff':'var(--muted)'}" text-anchor="middle" style="font-family:var(--display-sc)">${own[k]}</text>`:'';
+  const burner=(k,cx,cy,r,lbl)=>{const on_=H.has(k);return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${on_?'var(--accent-soft)':'var(--screen)'}" stroke="${on_?'var(--accent)':'var(--steel-dk)'}" stroke-width="${on_?2.5:1.5}"/><circle cx="${cx}" cy="${cy}" r="${r*.5}" fill="none" stroke="${on_?'var(--accent)':'var(--steel-dk)'}" stroke-width="1"/>${on_?`<circle cx="${cx}" cy="${cy}" r="${r+3}" fill="none" stroke="var(--accent)" stroke-width="1.5" ${M('glow',.9,0,'',true)}/>`:''}<text x="${cx}" y="${cy+r+8}" font-size="6.5" fill="${on_?'var(--accent)':'var(--muted)'}" text-anchor="middle">${lbl}</text>${own[k]?`<text x="${cx}" y="${cy+2.5}" font-size="7" fill="${on_?'var(--ink)':'var(--muted)'}" text-anchor="middle" style="font-family:var(--display-sc)">${own[k]}</text>`:''}`};
+  const rack=(k,y,lbl)=>{const on_=H.has(k);return `<path d="M228 ${y} h56" stroke="${on_?'var(--accent)':'var(--steel-dk)'}" stroke-width="${on_?3.5:2}" ${on_?M('glow',.9,0,'',true):''}/><text x="256" y="${y-3}" font-size="6.5" fill="${on_?'var(--accent)':'var(--muted)'}" text-anchor="middle">${lbl}</text>`};
+  return `<svg viewBox="0 0 300 214" class="sc" aria-label="Kitchen map">
+    <text x="112" y="9" font-size="7" fill="var(--muted)" text-anchor="middle" letter-spacing=".2em">BACK WALL</text>
+    <rect x="4" y="12" width="292" height="44" rx="4" fill="var(--surface)" stroke="var(--line)"/>
+    ${box('freezer',6,14,50,17,'FREEZER')}${box('fridge',6,33,50,40,'FRIDGE')}
+    ${box('sink',60,16,44,36,'SINK')}
+    ${box('counter',108,16,54,36,'COUNTER','beside stove')}
+    ${box('board',166,16,42,36,'BOARD','raw meat')}
+    <rect x="212" y="14" width="80" height="62" rx="4" fill="var(--surface-3)" stroke="var(--steel-dk)"/>
+    ${burner('bl',234,28,7,'back-L')}${burner('br',270,28,7,'back-R')}${burner('fl',234,57,9.5,'front-L')}${burner('fr',270,57,7,'front-R')}
+    <text x="252" y="88" font-size="7" fill="var(--muted)" text-anchor="middle">OVEN (under the stove)</text>
+    <rect x="218" y="92" width="76" height="72" rx="6" fill="var(--surface-3)" stroke="var(--steel-dk)"/><rect x="224" y="102" width="64" height="56" rx="4" fill="var(--screen)"/>
+    ${rack('up',122,'UPPER rack')}${rack('lo',146,'LOWER rack')}
+    ${box('table',14,138,180,64,'DINING TABLE','far end / far counter')}
+    <rect x="58" y="170" width="92" height="22" rx="11" fill="none" stroke="var(--line)" stroke-dasharray="3 3"/>
+    ${Object.entries(steps).map(([k,[x,y,n]])=>`<circle cx="${x}" cy="${y}" r="7" fill="var(--accent)"/><text x="${x}" y="${y+3.2}" font-size="8.5" fill="var(--ground)" text-anchor="middle">${n}</text>`).join('')}
+  </svg>`};
+
+// ---------- Team IV · The Alpine Lodge: snow-capped cream cups, 12 glasses ----------
+const STORE_KEY='c08-iv:';
+// snowflake badge
+const SNOW=(r=8)=>`<circle r="${r+5}" fill="var(--ice-soft)" stroke="var(--ice)" stroke-width="1.5"/>${[0,60,120].map(a=>`<g transform="rotate(${a})"><path d="M0 ${-r} V${r} M-3 ${-r+2} L0 ${-r+5} L3 ${-r+2} M-3 ${r-2} L0 ${r-5} L3 ${r-2}" stroke="var(--ice)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>`).join('')}`;
+// whipped mound (side-on): base at y, h tall, w wide; curl = soft tip flopping over
+const MOUND=(cx,y,w,h,f='var(--whip)',curl=true)=>`<path d="M${cx-w/2} ${y} Q${cx-w*.36} ${y-h*.7} ${cx-w*.2} ${y-h*.62} Q${cx-w*.1} ${y-h*1.05} ${cx} ${y-h*.8} Q${cx+w*.12} ${y-h} ${cx+w*.22} ${y-h*.6} Q${cx+w*.38} ${y-h*.72} ${cx+w/2} ${y} Q${cx} ${y+h*.3} ${cx-w/2} ${y} Z" fill="${f}" stroke="var(--whip-ln)" stroke-width="1.2"/>${curl?`<path d="M${cx-w*.08} ${y-h*.84} q${w*.06} ${-h*.5} ${w*.12} ${-h*.2} q${w*.02} ${h*.12} ${-w*.03} ${h*.14}" fill="${f}" stroke="var(--whip-ln)" stroke-width="1.2"/>`:''}`;
+const liquid=(cx,y,w,f='var(--cream)')=>`<ellipse cx="${cx}" cy="${y}" rx="${w/2}" ry="${(w*.09).toFixed(1)}" fill="${f}"/><ellipse cx="${cx-w*.2}" cy="${y-1}" rx="${w*.12}" ry="1.8" fill="#fff" opacity=".6"/>`;
+const foamy=(cx,y,w)=>`<ellipse cx="${cx}" cy="${y}" rx="${w/2}" ry="${(w*.11).toFixed(1)}" fill="var(--whip)" stroke="var(--whip-ln)" stroke-width="1"/>${dots([[-.3,-1],[-.15,2],[0,-2],[.12,1],[.28,-1],[.36,2],[-.4,1]].map(([a,b])=>[cx+a*w,y+b]),'none',2,'var(--whip-ln)')}`;
+const whisk=`<rect x="-3" y="-66" width="6" height="26" rx="3" fill="var(--pan-rim)"/><path d="M-2 -40 C-14 -20 -10 2 0 2 C10 2 14 -20 2 -40 M-1 -40 C-6 -20 -5 0 0 0 C5 0 6 -20 1 -40" stroke="var(--steel)" stroke-width="2.5" fill="none"/>`;
+const ARMc=(sl)=>`<path d="M2 -60 L64 -136" stroke="${sl}" stroke-width="21" stroke-linecap="round"/><path d="M2 -60 L30 -94" stroke="var(--hand)" stroke-width="16" stroke-linecap="round"/><ellipse cx="0" cy="-56" rx="8" ry="10" ${HL}/>`;
+const ARM=ARMc('var(--mitt)'),ARM2=ARMc('var(--wax)');
+const DOLLOP=`<path d="M-12 5 Q-13 -3 -5 -5 Q-3 -13 3 -9 Q5 -15 8 -8 Q13 -4 12 5 Z" fill="var(--ev4)"/><path d="M-6 -1 q5 -4 10 0 M-2 -6 q3 -2 5 0" stroke="var(--ev4-lt)" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
+const KISS=`<path d="M-10 6 Q-11 -2 -4 -4 Q-1 -12 2 -17 Q4 -8 8 -4 Q12 0 10 6 Z" fill="var(--meringue)" stroke="var(--mer-ln)" stroke-width="1.2"/><path d="M-6 1 q6 -3 12 0 M-3 -5 q4 -2 7 0" stroke="var(--mer-ln)" stroke-width="1" fill="none"/>`;
+const crumb=(x,y,r)=>`<path d="M${x-r} ${y} l${(r*.6).toFixed(1)} ${-r} l${(r*1.3).toFixed(1)} ${(r*.3).toFixed(1)} l${(-r*.4).toFixed(1)} ${r} Z" fill="var(--meringue)" stroke="var(--mer-ln)" stroke-width=".8"/>`;
+const STRAINER=`<path d="M-18 0 A18 12 0 0 0 18 0 Z" fill="var(--steel)" opacity=".45" stroke="var(--pan-rim)" stroke-width="1.5"/><path d="M-12 3 l6 5 M-4 3 l6 6 M4 3 l6 5 M-12 7 l18 -4" stroke="var(--pan-rim)" stroke-width=".7" opacity=".6"/><path d="M-19 0 h38" stroke="var(--pan-rim)" stroke-width="2.5" stroke-linecap="round"/><path d="M18 -1 L46 -10" stroke="var(--pan-rim)" stroke-width="3.5" stroke-linecap="round"/>`;
+// tumbler glass, bottom-centre at 0,0
+const GLASS=(w,h,inner='')=>{const x=-w/2;return `<rect x="${x}" y="${-h}" width="${w}" height="${h}" rx="5" fill="var(--glass)" opacity=".38"/>${inner}<path d="M${x} ${-h} V-5 q0 5 5 5 H${w/2-5} q5 0 5 -5 V${-h}" fill="none" stroke="var(--glass-ln)" stroke-width="2"/><path d="M${x+5} ${-h+6} v${(h*.45).toFixed(1)}" stroke="#fff" stroke-width="2" opacity=".35" stroke-linecap="round"/>`};
+// the layers inside a glass: crumbs, cream, dollop, cream, cocoa
+const LAY=(w,h)=>{const iw=w-6,x=-iw/2,u=h/100,y0=-3,y1=y0-16*u,y2=y1-22*u,y4=y2-42*u,f=n=>+n.toFixed(1);
+  const topP=`M${f(x)} ${f(y4)} Q${f(-iw*.3)} ${f(y4-8*u)} ${f(-iw*.1)} ${f(y4-6*u)} Q0 ${f(y4-14*u)} ${f(iw*.12)} ${f(y4-6*u)} Q${f(iw*.32)} ${f(y4-8*u)} ${f(-x)} ${f(y4)}`;
+  return {
+    crumbs:`<rect x="${f(x)}" y="${f(y1)}" width="${iw}" height="${f(16*u)}" fill="var(--meringue)"/>${[[-.38,.3],[-.2,.7],[0,.35],[.18,.7],[.36,.4],[-.05,.75],[.3,.8]].map(([a,b])=>crumb(f(a*iw),f(y1+b*16*u),f(3.2*u+.6))).join('')}`,
+    whip1:`<path d="M${f(x)} ${f(y1)} V${f(y2+2*u)} q${f(iw/8)} ${f(-4*u)} ${f(iw/4)} 0 t${f(iw/4)} 0 t${f(iw/4)} 0 t${f(iw/4)} 0 V${f(y1)} Z" fill="var(--tint)"/>`,
+    dollop:`<ellipse cx="0" cy="${f(y2-9*u)}" rx="${f(iw*.34)}" ry="${f(10*u)}" fill="var(--ev4)"/><path d="M${f(-iw*.16)} ${f(y2-11*u)} q${f(iw*.1)} ${f(-3*u)} ${f(iw*.2)} 0" stroke="var(--ev4-lt)" stroke-width="${f(1.8*u+.3)}" fill="none" stroke-linecap="round"/>`,
+    whip2:`<path d="${topP} V${f(y2)} H${f(x)} Z" fill="var(--tint)"/>`,
+    cocoa:`<path d="${topP}" stroke="var(--cocoa)" stroke-width="${f(3.4*u+.4)}" fill="none" stroke-linecap="round" opacity=".9"/>${dots([[-.22,-3],[.02,-11],[.2,-4]].map(([a,b])=>[f(a*iw),f(y4+b*u)]),'var(--cocoa)',f(1.2*u+.3))}`}};
+const FULL=(w,h,cocoa=true)=>{const L=LAY(w,h);return GLASS(w,h,L.crumbs+L.whip1+L.whip2+L.dollop+(cocoa?L.cocoa:''))};
+// fridge with a freezer on top
+const FRIDGE=(x,y)=>`<rect x="${x}" y="${y}" width="84" height="146" rx="6" fill="var(--fridge)" stroke="var(--steel)" stroke-width="1.5"/><rect x="${x+5}" y="${y+5}" width="74" height="44" rx="3" fill="var(--surface-3)"/><rect x="${x+5}" y="${y+58}" width="74" height="83" rx="3" fill="var(--surface-3)"/><path d="M${x+5} ${y+100} h74" stroke="var(--steel)" stroke-width="1.5"/>`;
+const doorC=(x,y,h)=>`<rect x="${x}" y="${y}" width="84" height="${h}" rx="5" fill="var(--fridge)" stroke="var(--steel)" stroke-width="1.5"/><rect x="${x+72}" y="${y+8}" width="4" height="${Math.min(22,h-16)}" rx="2" fill="var(--steel)"/>`;
+const doorO=(x,y,h)=>`<path d="M${x+84} ${y} l12 6 v${h-12} l-12 6 Z" fill="var(--fridge)" stroke="var(--steel)" stroke-width="1.5"/>`;
+// door open between a% and b%, closed otherwise (a=null: always closed)
+const DOOR=(x,y,h,a=null,b=null)=>a==null?doorC(x,y,h):`<g ${off(a)}>${doorC(x,y,h)}</g>${win(a,b,doorO(x,y,h),'--oy:0px')}<g ${on(b,'--oy:0px')}>${doorC(x,y,h)}</g>`;
+const COUNTER=(x0,x1,y=150)=>`<rect x="${x0}" y="${y}" width="${x1-x0}" height="${180-y}" fill="var(--surface-3)"/>`;
+
+const ART = {
+  get freezer(){const FX=146,FY=22,mv=kf('fz-mv','0%,14%{transform:none}34%,100%{transform:translate(-120px,96px) scale(1.7)}');
+    return SC(9,`${FRIDGE(FX,FY)}${COUNTER(0,FX-4)}
+    ${at(FX+42,FY+46,`<g ${A(mv)}>${at(0,0,`${BAGBODY('IV',true)}${BAGSEAL}`,0,.42)}</g>`)}
+    <style>.sc .frost{animation:fz-fr var(--T) linear infinite both}@keyframes fz-fr{0%,44%{opacity:1}92%,100%{opacity:0}}@media (prefers-reduced-motion:reduce){.sc .frost{animation:none;opacity:0}}</style>
+    ${DOOR(FX,FY,54,6,36)}${DOOR(FX,FY+54,92)}
+    ${win(4,36,at(FX+40,FY+30,`<g ${M('squeeze',.5,0,'',true)}>${HAND}</g>`),'--oy:0px')}
+    <g ${on(40,'--oy:0px')}>${chip(70,38,'STILL SEALED','wax')}</g>
+    ${ring(116,128,'',62,94)}<g ${on(62,'--oy:0px')}>${chip(70,60,'THAW 15 MIN','hot')}</g>
+    ${cap('FREEZER: FIND EVIDENCE IV',0,38)}${cap('ON THE COUNTER, SEALED',40,62)}${cap('THAW 15 MIN · FROST GOES',64,92)}${cap('SOFT ENOUGH TO SPOON ✓',94,null,'ok')}`)},
+
+  get chill(){const FX=146,FY=22;
+    return SC(7,`${FRIDGE(FX,FY)}${COUNTER(0,FX-4)}
+    ${at(62,150,`<g ${A(kf('cb-mv','0%,8%{transform:none}24%,80%{transform:translate(126px,-86px) scale(.78)}94%,100%{transform:none}'))}>${bowl(0,-26,68,26)}${rim(0,-26,68)}${at(6,-22,whisk,24,.62)}<g ${on(84,'--oy:0px')}><path d="M-26 -18 l4 3 M-14 -10 l3 3 M8 -8 l4 -3 M20 -16 l3 -3 M-4 -4 l3 2" stroke="#fff" stroke-width="2" stroke-linecap="round"/></g></g>`)}
+    <g ${off(26)}>${doorO(FX,FY,54)}</g>${win(26,82,doorC(FX,FY,54),'--oy:0px')}<g ${on(82,'--oy:0px')}>${doorO(FX,FY,54)}</g>${DOOR(FX,FY+54,92)}
+    <g ${on(84,'--oy:0px')}>${at(20,120,SNOW(9))}</g>
+    ${ring(40,48,'5 min',30,80)}
+    ${cap('BIG STEEL BOWL + WHISK → FREEZER',0,24)}${cap('CHILL 5 MIN',26,80)}${cap('ICE-COLD BOWL ✓',82,null,'ok')}`)},
+
+  get cream(){const cx=116;
+    return SC(6,`${list(['HEAVY CREAM 480 g','SUGAR 30 g'],[4,56],34)}
+    ${SCALE(cx,148,[['0 g',0,20],['480 g',20,52],['0 g',52,60],['30 g',60,100]])}
+    ${bowl(cx,102,122,46)}
+    <g ${A(kf('cr-lv','0%,20%{transform:scaleY(0);opacity:0}21%{opacity:1}48%,100%{transform:scaleY(1);opacity:1}'),'transform-origin:50% 100%')}>${liquid(cx,112,104)}</g>
+    <g ${on(66,'--oy:0px')}>${dots([[-20,110],[-8,113],[4,109],[14,112],[24,110],[-2,115]].map(([x,y])=>[cx+x,y]),'#fff',1.6,'var(--whip-ln)')}</g>
+    ${rim(cx,102,122)}
+    <rect x="${cx+14}" y="62" width="5" height="46" rx="2" fill="var(--cream)" ${A(kf('cr-st','0%,21%{transform:scaleY(0)}24%,46%{transform:scaleY(1)}49%,100%{transform:scaleY(0)}'),'transform-origin:50% 0')}/>
+    ${at(cx+40,58,`<g ${A(kf('cr-ct','0%,14%{opacity:0;transform:translateX(40px)}18%{opacity:1;transform:none}23%,46%{opacity:1;transform:rotate(-70deg)}51%{opacity:1;transform:none}55%,100%{opacity:0;transform:translateX(40px)}'))}><rect x="-12" y="-20" width="24" height="40" rx="2" fill="var(--whip)" stroke="var(--whip-ln)" stroke-width="1.5"/><path d="M-12 -20 l12 -9 l12 9" fill="var(--whip)" stroke="var(--whip-ln)" stroke-width="1.5"/><text x="0" y="2" font-size="6" fill="var(--ground)" text-anchor="middle">CREAM</text>${at(0,12,SNOW(4))}</g>`)}
+    ${at(cx+4,106,`<g ${off(68)}><g ${drop(60,'--dy:-70px')}>${dots([[-5,0],[2,-2],[0,3],[6,2],[-3,-3]],'#fff',2,'var(--whip-ln)')}</g></g>`)}
+    ${taps(cx+44,154,[8,56])}
+    ${cap('COLD BOWL ON THE SCALE · TARE',0,16)}${cap('COLD CREAM 480 g',18,52)}${cap('TARE · SUGAR 30 g',54,86)}${cap('READY TO WHISK ✓',88,null,'ok')}`)},
+
+  get whisk(){const cx=112,top=104,W=140;
+    const lbl=(t,x,a,b)=>`${chip(x,168,t,'ink')}${b==null?`<g ${on(a,'--oy:0px')}>${chip(x,168,t,'hot')}</g>`:win(a,b,chip(x,168,t,'hot'),'--oy:0px')}`;
+    return SC(7,`${bowl(cx,top,W,52)}
+    ${win(0,30,liquid(cx,top+10,W-24),'--oy:0px')}
+    ${win(30,56,foamy(cx,top+8,W-22),'--oy:0px')}
+    <g ${on(56,'--oy:0px')}>${MOUND(cx,top+10,W-22,20,'var(--whip)',false)}</g>
+    <g ${on(80,'--oy:0px')}><g ${off(88)}><path d="M${cx-4} ${top-6} Q${cx+1} ${top-10} ${cx+4} ${top-26} Q${cx+7} ${top-10} ${cx+12} ${top-6} Z" fill="var(--whip)" stroke="var(--whip-ln)" stroke-width="1.2"/></g></g>
+    <g ${on(88,'--oy:0px')}><path d="M${cx-4} ${top-6} Q${cx} ${top-18} ${cx+6} ${top-20} Q${cx+14} ${top-21} ${cx+13} ${top-13} Q${cx+11} ${top-10} ${cx+9} ${top-14} Q${cx+8} ${top-9} ${cx+12} ${top-6} Z" fill="var(--whip)" stroke="var(--whip-ln)" stroke-width="1.2"/></g>
+    ${rim(cx,top,W)}
+    ${win(0,38,at(cx+4,top+8,`<g ${M('wsw',.3,0,'',true)}>${whisk}${ARM}</g>`),'--oy:0px')}
+    ${win(38,76,at(cx+4,top+8,`<g ${M('wsw',.3,0,'',true)}>${whisk}${ARM2}</g>`),'--oy:0px')}
+    ${win(34,46,chip(52,40,'SWAP!','hot'),'--oy:0px')}
+    <g ${on(76,'--oy:0px')}>${at(cx+4,top+8,`<g ${A(kf('wk-up','0%,76%{transform:none}84%,100%{transform:translateY(-34px)}'))}>${whisk}<ellipse cx="0" cy="-8" rx="7" ry="6" fill="var(--whip)" stroke="var(--whip-ln)" stroke-width="1"/>${ARM2}</g>`)}</g>
+    ${ring(212,44,'5–7 min',2,76)}
+    ${lbl('LIQUID',44,0,30)}${lbl('FOAMY',104,30,56)}${lbl('SOFT PEAKS',176,56)}
+    ${cap('WHISK FAST, SIDE TO SIDE',0,30)}${cap('FOAMY · TIRED? SWAP',30,56)}${cap('THICKER: SLOW DOWN, CHECK',56,78)}${cap('LIFT: THE TIP FLOPS OVER ✓',80,null,'ok')}`)},
+
+  get secret(){const cx=150,top=106,bw=kf('sv-tub','0%,20%{transform:none}32%,100%{transform:translateY(-34px)}');
+    let sb='0%,40%{opacity:0;transform:translate(44px,92px)}';
+    [42,54,66].forEach(p=>{sb+=`${p}%{opacity:1;transform:translate(44px,92px)}${p+2}%{opacity:1;transform:translate(44px,104px)}${p+7}%{opacity:1;transform:translate(${cx}px,${top-16}px)}${p+9}%{opacity:1;transform:translate(${cx}px,${top-8}px) rotate(-30deg)}${p+11}%{opacity:1;transform:translate(${cx}px,${top-18}px)}`});
+    sb+='80%,100%{opacity:0;transform:translate(150px,88px)}';
+    return SC(10,`${SCALE(cx,150,[['0 g',0,50],['30 g',50,62],['60 g',62,74],['90 g',74,100]])}
+    ${bowl(cx,top,104,40)}${MOUND(cx,top+8,90,18,'var(--whip)',false)}
+    ${[[-18,50],[0,62],[18,74]].map(([dx,p])=>at(cx+dx,top-4,`<g ${on(p,'--oy:-14px')}>${at(0,0,DOLLOP,0,.8)}</g>`)).join('')}${rim(cx,top,104)}
+    ${at(44,150,`<g ${A(bw)}>${TUB('IV')}${TUBIN('var(--ev4)')}<g ${A(kf('sv-lid','0%,32%{opacity:1;transform:none}38%,100%{opacity:0;transform:translate(-24px,-24px) rotate(-60deg)}'))}>${TUBLID}</g></g>`)}
+    ${at(44,168,`<g ${A(kf('sv-bag','0%,26%{opacity:1;transform:none}34%,100%{opacity:0;transform:translateY(20px)}'))}>${at(0,0,BAGBODY('IV'),0,.8)}<g ${A(kf('sv-seal','0%,12%{opacity:1;transform:none}20%,100%{opacity:0;transform:translate(-20px,-40px) rotate(-40deg)}'))}>${at(0,0,BAGSEAL,0,.8)}</g></g>`)}
+    <g ${A(kf('sv-sp',sb))}>${spoon}<g ${A(kf('sv-ld','0%,43%{opacity:0}44%,50%{opacity:1}52%,55%{opacity:0}56%,62%{opacity:1}64%,67%{opacity:0}68%,74%{opacity:1}76%,100%{opacity:0}'))}><ellipse cy="-3" rx="8" ry="5" fill="var(--ev4)"/></g></g>
+    ${taps(cx+44,156,[40])}
+    ${cap('EVIDENCE IV · THAWED, STILL SEALED',0,12,'wax')}${cap('BREAK THE SEAL · TUB OUT',14,38,'wax')}${cap('TARE · SPOON 90 g ONTO THE CREAM',40,80,'hot')}${cap('90 g ON · KEEP THE REST ✓',82,null,'ok')}`)},
+
+  get fold(){const cx=112,cy=100;
+    let sb='0%,18%{opacity:0;transform:translate(0px,-46px)}';
+    [20,38,56].forEach(s=>{sb+=`${s}%{opacity:1;transform:translate(0px,-46px)}${s+6}%{opacity:1;transform:translate(0px,44px)}${s+10}%{opacity:1;transform:translate(-44px,18px)}${s+13}%{opacity:1;transform:translate(-44px,-22px)}${s+15}%{opacity:1;transform:translate(0px,-46px)}`});
+    sb+='74%,100%{opacity:0;transform:translate(0px,-46px)}';
+    const rot=kf('fd-rot','0%,35%{transform:rotate(0deg)}38%,53%{transform:rotate(90deg)}56%,71%{transform:rotate(180deg)}74%,100%{transform:rotate(270deg)}');
+    return SC(8,`<circle cx="${cx}" cy="${cy}" r="66" fill="var(--surface-3)" stroke="var(--steel)" stroke-width="3"/>
+    <g ${A(rot,`transform-box:view-box;transform-origin:${cx}px ${cy}px`)}>
+      <rect x="${cx-8}" y="${cy-76}" width="16" height="10" rx="4" fill="var(--steel)"/>
+      <circle cx="${cx}" cy="${cy}" r="58" fill="var(--whip)"/>
+      <g ${on(76,'--oy:0px')}><circle cx="${cx}" cy="${cy}" r="58" fill="var(--tint)"/></g>
+      <g ${off(40)}>${at(cx+18,cy-10,`<g ${drop(6,'--dy:-60px')}>${at(0,0,DOLLOP,0,2)}</g>`)}</g>
+      ${win(40,60,at(cx+10,cy-4,DOLLOP,30,1.3),'--oy:0px')}
+      ${win(58,76,at(cx+4,cy+8,DOLLOP,70,.8),'--oy:0px')}
+      <g ${on(26,'--oy:0px')}><path d="M${cx+14} ${cy-44} q-10 40 0 86" stroke="var(--ev4-lt)" stroke-width="5" fill="none" stroke-linecap="round" opacity=".75"/></g>
+      <g ${on(44,'--oy:0px')}><path d="M${cx-40} ${cy-18} q30 12 76 -4 M${cx-10} ${cy+40} q-20 -30 -6 -70" stroke="var(--ev4-lt)" stroke-width="4" fill="none" stroke-linecap="round" opacity=".7"/></g>
+      <g ${on(62,'--oy:0px')}><path d="M${cx-44} ${cy+14} q40 10 84 -10 M${cx+30} ${cy-40} q-30 30 -60 40" stroke="var(--ev4-lt)" stroke-width="3" fill="none" stroke-linecap="round" opacity=".65"/></g>
+      <g ${on(76,'--oy:0px')}><path d="M${cx-36} ${cy-24} q24 8 60 -8 M${cx-30} ${cy+26} q30 -6 58 6" stroke="var(--ev4)" stroke-width="2" fill="none" stroke-linecap="round" opacity=".6"/></g>
+    </g>
+    ${at(cx,cy,`<g ${A(kf('fd-sp',sb))}>${SPAT}</g>`)}
+    ${win(20,76,`<path d="M190 58 a52 52 0 0 1 8 44" stroke="var(--accent)" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M191 96 l7 7 l4 -9" stroke="var(--accent)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="212" y="52" font-size="10" fill="var(--accent)" text-anchor="middle">¼ turn</text>`,'--oy:0px')}
+    ${win(20,76,chip(cx,174,'DOWN · UNDER · UP · TURN'),'--oy:0px')}<g ${on(78,'--oy:0px')}>${chip(cx,174,'STREAKY-EVEN = STOP')}</g>
+    ${cap('90 g ON TOP OF THE CREAM',0,18)}${cap('CUT DOWN · SWEEP UNDER · ¼ TURN',20,76)}${cap('STREAKY, STILL FLUFFY ✓',78,null,'ok')}`)},
+
+  get fridge(){const FX=150,FY=22;
+    return SC(6,`${FRIDGE(FX,FY)}${COUNTER(0,FX-4,152)}
+    ${at(62,152,`<g ${A(kf('fr-mv','0%,30%{transform:none}50%,100%{transform:translate(130px,-12px) scale(.7)}'))}>${bowl(0,-34,84,34)}${MOUND(0,-30,70,20,'var(--tint)',false)}<path d="M-24 -38 q16 -6 30 0" stroke="var(--ev4-lt)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"/>
+      <g ${drop(8,'--dy:-50px')}><path d="M-48 -34 Q0 -64 48 -34" fill="var(--glass)" opacity=".45" stroke="var(--glass-ln)" stroke-width="1.5"/></g>${rim(0,-34,84)}</g>`)}
+    ${doorC(FX,FY,54)}<g ${off(52)}>${doorO(FX,FY+54,92)}</g><g ${on(52,'--oy:0px')}>${doorC(FX,FY+54,92)}</g>
+    <g ${on(56,'--oy:0px')}>${at(192,60,SNOW(8))}${chip(72,110,'UNTIL ~T+100','hot')}</g>
+    ${cap('COVER THE BOWL',0,28)}${cap('INTO THE FRIDGE',30,54)}${cap('WAITS IN THE COLD ✓',56,null,'ok')}`)},
+
+  get dollops(){const cx=140,X=[114,140,166],S=[8,32,56],JX=40,JY=104;
+    let sb='0%,5%{opacity:0;transform:translate(0px,-8px)}',lb='0%{opacity:0}';
+    S.forEach((s,i)=>{const dx=X[i]-JX,dy=132-JY-4;sb+=`${s}%{opacity:1;transform:translate(0px,-8px)}${s+3}%{opacity:1;transform:translate(0px,6px)}${s+10}%{opacity:1;transform:translate(${dx}px,${dy-14}px)}${s+12}%{opacity:1;transform:translate(${dx}px,${dy}px)}${s+16}%{opacity:1;transform:translate(${dx}px,${dy-16}px)}`;
+      lb+=`${s+2}%{opacity:0}${s+4}%{opacity:1}${s+11}%{opacity:1}${s+12.5}%{opacity:0}`});
+    sb+='76%,100%{opacity:0;transform:translate(52px,0px)}';lb+='100%{opacity:0}';
+    return SC(7,`${SCALE(cx,146,[['0 g',0,20],['30 g',20,28],['0 g',28,44],['30 g',44,52],['0 g',52,68],['30 g',68,100]])}
+    <ellipse cx="${cx}" cy="138" rx="56" ry="10" fill="var(--plate)" stroke="var(--whip-ln)" stroke-width="1.5"/>
+    ${X.map((x,i)=>at(x,134,`<g ${on(S[i]+12,'--oy:-8px')}>${DOLLOP}</g>`)).join('')}
+    ${at(JX,150,`${TUB('IV')}${TUBIN('var(--ev4)')}`)}
+    ${at(JX,JY,`<g ${A(kf('dl-sp',sb))}>${spoon}<g ${A(kf('dl-ld',lb))}><ellipse cx="0" cy="-2" rx="7" ry="4" fill="var(--ev4)"/></g></g>`)}
+    ${taps(cx+44,152,[28,52])}
+    <g ${on(76,'--oy:0px')}>${chip(cx,58,'× 12 DOLLOPS','hot')}</g>
+    ${cap('PLATE ON THE SCALE · TARE',0,14)}${cap('SPOON ON TILL IT READS 30 g',16,28)}${cap('TARE · NEXT DOLLOP',30,74)}${cap('12 × 30 g · COVER, FRIDGE ✓',76,null,'ok')}`)},
+
+  get crumble(){const cx=128,K=[[108,112,-12],[126,108,8],[144,113,-4],[118,120,14],[138,121,-10]];
+    return SC(6,`${list(['MERINGUES 100 g'],[2],34)}
+    <path d="${bowlP(cx,104,112,42)}" fill="var(--glass)" opacity=".5"/>
+    <g ${off(52)}>${K.map(([x,y,r],i)=>at(x,y,`<g ${drop(3+i*3,'--dy:-90px')}>${at(0,0,KISS,r,1.1)}</g>`)).join('')}</g>
+    <g ${on(40,'--oy:0px')}><path d="${bowlP(cx,116,90,28)}" fill="var(--meringue)"/>${[[-30,118],[-18,114],[-6,119],[6,113],[18,118],[30,115],[-24,124],[-10,126],[4,124],[16,126],[26,123],[-2,131],[12,132]].map(([x,y])=>crumb(cx+x,y,3.6)).join('')}</g>
+    <path d="${bowlP(cx,104,112,42)}" fill="none" stroke="var(--glass-ln)" stroke-width="1.8"/><path d="M${cx-58} 104 h116" stroke="var(--glass-ln)" stroke-width="3" stroke-linecap="round"/>
+    ${win(24,72,at(cx,100,`<g ${M('squeeze',.28,0,'',true)}>${at(-8,0,FINGER,-14)}<g ${M('pinch',.28,0,'',true)}>${at(8,0,FINGER,14)}</g></g>`)+bits([cx-10,cx-2,cx+6,cx+12],104,'var(--meringue)',16,2.4),'--oy:-10px')}
+    <text x="${cx}" y="172" font-size="11" fill="var(--muted)" text-anchor="middle">8 g per glass</text>
+    ${cap('MERINGUES 100 g INTO A BOWL',0,22)}${cap('CRUSH WITH YOUR FINGERS',24,72)}${cap('PEA-SIZE CRUMBS ✓',74,null,'ok')}`)},
+
+  get assemble(){const GX=158,GY=164,L=LAY(64,100),
+      spoonIn=(a,y,name,f)=>at(GX,y,`<g ${A(kf(name,`0%,${a}%{opacity:0;transform:translate(40px,-60px)}${a+2}%{opacity:1;transform:translate(40px,-60px)}${a+7}%{opacity:1;transform:none}${a+10}%{opacity:1;transform:rotate(-45deg)}${a+12}%{opacity:1;transform:rotate(-45deg)}${a+14}%,100%{opacity:0;transform:translate(40px,-60px)}`))}>${spoon}<g ${off(a+9)}><ellipse cx="0" cy="-3" rx="9" ry="5" fill="${f}" stroke="var(--whip-ln)" stroke-width="1"/></g></g>`);
+    return SC(9,`${list(['MERINGUE 8 g','CREAM ~25 g','DOLLOP 30 g','CREAM ~25 g'],[2,18,40,62],34)}
+    <rect x="${GX-60}" y="${GY}" width="120" height="16" fill="var(--surface-3)"/>
+    ${at(GX,GY,GLASS(64,100,`<g ${on(10,'--oy:0px')}>${L.crumbs}</g><g ${on(26,'--oy:-6px')}>${L.whip1}</g><g ${on(70,'--oy:-6px')}>${L.whip2}</g><g ${drop(46,'--dy:-70px')}>${L.dollop}</g>`))}
+    ${win(2,14,bits([GX-14,GX-6,GX+2,GX+10,GX+16],62,'var(--meringue)',70,3),'--oy:0px')}
+    ${spoonIn(18,112,'as-s1','var(--tint)')}${spoonIn(40,96,'as-s3','var(--ev4)')}${spoonIn(62,84,'as-s2','var(--tint)')}
+    ${cap('MERINGUE CRUMBS 8 g',0,16)}${cap('A SPOON OF CREAM',18,38)}${cap('ONE 30 g DOLLOP',40,60)}${cap('MORE CREAM ON TOP',62,84)}${cap('LAYERED ✓ · ×12',86,null,'ok')}`)},
+
+  get serve(){const n=12,sp=18.5,x0=120-sp*(n-1)/2,X=[...Array(n)].map((_,i)=>+(x0+i*sp).toFixed(1));
+    let sb='0%,6%{opacity:0;transform:translate('+(X[0])+'px,92px)}';X.forEach((x,i)=>{sb+=`${8+i*6}%{opacity:1;transform:translate(${x+4}px,92px)}`});sb+=`${8+n*6}%,100%{opacity:0;transform:translate(${X.at(-1)+4}px,92px)}`;
+    return SC(9,`<rect x="0" y="146" width="240" height="34" fill="var(--surface-3)"/><rect x="6" y="142" width="228" height="6" rx="3" fill="var(--copper)" opacity=".7"/>
+    ${X.map((x,i)=>at(x,144,`${GLASS(16,34,(()=>{const L=LAY(16,34);return L.crumbs+L.whip1+L.whip2+L.dollop})())}<g ${on(9+i*6,'--oy:0px')}>${GLASS(16,34,LAY(16,34).cocoa)}</g>`)).join('')}
+    <g ${A(kf('sv-st',sb),'animation-timing-function:linear')}><g ${M('tapm',.4)}>${at(0,0,STRAINER,0,.55)}</g>${bits([-4,0,4],6,'var(--cocoa)',22,1)}</g>
+    ${at(120,60,`<g ${on(84,'--oy:0px')}>${SNOW(10)}</g>`)}
+    ${cap('COCOA THROUGH THE SMALL SIEVE',0,82)}${cap('12 SNOW-CAPPED CUPS · SERVE ✓',84,null,'ok')}`)},
+};
+
+// ---------- "How?" panels ----------
+const mini=(T,inner)=>SC(T,inner,120,160);
+const HOW = {
+  sealed:{t:'Why it stays sealed',d:'Your evidence is part of the game: nobody, you included, should see or taste what’s inside until it goes into the cream. Thaw it in its bag on the counter, at your station, and open it only at the step called “The secret ingredient”.',
+    get art(){return mini(4,`${at(56,112,BAGBODY('IV')+BAGSEAL,0,.8)}
+      ${at(56,30,`<g ${A(kf('hz-h','0%,10%{opacity:0;transform:translateY(-10px)}20%,40%{opacity:1;transform:none}50%,100%{opacity:0;transform:translateY(-10px)}'))}>${PINCH}</g>`)}
+      <g ${on(40,'--oy:0px')}><path d="M30 30 l52 52 M82 30 l-52 52" stroke="var(--flame)" stroke-width="5" stroke-linecap="round"/></g>
+      ${chip(124,40,'NOT YET','no')}${chip(124,64,'OPEN AT')}${chip(124,82,'STEP 5','hot')}`)}},
+  thaw:{t:'Thawing',d:'Straight from the freezer the contents are too stiff to spoon. 15 min on the counter (not near the stove or a sunny window) softens it to a thick, spoonable paste. Still hard in the middle? Give it 5 more minutes. Don’t microwave it.',
+    get art(){return mini(4,`${at(40,90,TUB('IV')+TUBIN('var(--ev4)'))}${at(40,56,SNOW(6))}
+      ${at(40,52,`<g ${A(kf('ht-sp1','0%,20%{transform:translateY(-14px)}40%{transform:translateY(0)}48%{transform:translateY(-10px)}60%,100%{transform:translateY(-14px)}'))}>${at(0,0,spoon,180,.7)}</g>`)}
+      ${at(120,90,TUB('IV')+TUBIN('var(--ev4)'))}
+      ${at(120,52,`<g ${A(kf('ht-sp2','0%,20%{transform:translateY(-14px)}50%,100%{transform:translateY(8px)}'))}>${at(0,0,spoon,180,.7)}</g>`)}
+      ${chip(40,108,'✗ FROZEN','no')}${chip(120,108,'✓ 15 MIN','ok')}`)}},
+  cold:{t:'Why a cold bowl',d:'Whipping works because tiny bits of solid fat in the cream wrap around air bubbles and hold them. Cold fat stays firm, so the foam builds fast. Warm cream stays runny much longer and turns grainy. So: cream straight from the fridge, bowl and whisk 5 min in the freezer, and work at the dining table, away from the hot stove.',
+    get art(){return mini(4,`${bowl(40,50,62,30)}${liquid(40,56,48)}${rim(40,50,62)}${at(42,56,`<g ${M('circ',.5)}>${at(0,0,whisk,0,.6)}</g>`)}<path d="M26 24 q-4 -6 0 -12 M40 22 q-4 -6 0 -12" stroke="var(--flame)" stroke-width="2" fill="none" stroke-linecap="round"/>
+      ${bowl(120,50,62,30)}<g ${off(40)}>${liquid(120,56,48)}</g><g ${on(40,'--oy:0px')}>${MOUND(120,58,50,16)}</g>${rim(120,50,62)}${at(146,22,SNOW(6))}
+      ${chip(40,106,'✗ WARM','no')}${chip(120,106,'✓ COLD','ok')}`)}},
+  tare:{t:'Tare the scale',d:'Put the empty bowl (or plate) on and press TARE so it reads 0. Add until you reach the number, then TARE again before the next thing. No cups or spoons needed.',
+    get art(){return mini(5,`${SCALE(70,80,[['612 g',0,27],['0 g',27,62],['480 g',62,100]])}
+      ${gb(70,50,78,28)}<g ${on(62,'--oy:0px')}><ellipse cx="70" cy="60" rx="28" ry="5" fill="var(--cream)" stroke="var(--whip-ln)" stroke-width="1"/></g>
+      <rect x="84" y="14" width="4" height="44" rx="2" fill="var(--cream)" ${A(kf('ht-st','0%,44%{transform:scaleY(0)}48%,60%{transform:scaleY(1)}63%,100%{transform:scaleY(0)}'),'transform-origin:50% 0')}/>
+      ${taps(114,86,[24])}`)}},
+  peaks:{t:'Soft peaks',d:'Lift the whisk and look at the peak it pulls up. Soft: the tip flops over like a wave. That’s the goal: silky and spoonable. Stiff: the peak stands straight up. Keep going and it turns grainy, then splits into butter and liquid. Near the end, check every 30 s. A bit too stiff? Fold in a splash of milk.',
+    get art(){return mini(4,`<rect x="6" y="80" width="42" height="6" rx="3" fill="var(--whip-ln)"/><rect x="60" y="80" width="42" height="6" rx="3" fill="var(--whip-ln)"/><rect x="114" y="80" width="42" height="6" rx="3" fill="var(--whip-ln)"/>
+      <g ${off(40)}><path d="M14 80 Q24 76 27 50 Q30 76 40 80 Z" fill="var(--whip)" stroke="var(--whip-ln)" stroke-width="1.2"/></g>
+      <g ${on(40,'--oy:0px')}><path d="M14 80 Q20 60 27 56 Q38 52 37 62 Q35 66 32 62 Q30 74 40 80 Z" fill="var(--whip)" stroke="var(--whip-ln)" stroke-width="1.2"/></g>
+      <path d="M68 80 L81 42 L94 80 Z" fill="var(--whip)" stroke="var(--whip-ln)" stroke-width="1.2" stroke-linejoin="round"/>
+      <ellipse cx="135" cy="78" rx="18" ry="5" fill="var(--whey)"/><ellipse cx="128" cy="74" rx="8" ry="5" fill="var(--butter)" stroke="var(--butter-ln)"/><ellipse cx="142" cy="75" rx="7" ry="4.5" fill="var(--butter)" stroke="var(--butter-ln)"/>
+      ${chip(27,104,'✓ SOFT','ok')}${chip(81,104,'STIFF')}${chip(135,104,'BUTTER','no')}`)}},
+  turns:{t:'Whisking by hand, taking turns',d:'Tilt the bowl toward you on a folded towel so it doesn’t skate. Whisk fast in a side-to-side zigzag through the cream (not slow circles), using your wrist. It takes 5–7 min and your arm will burn: swap whisker every minute or so. There are three of you.',
+    get art(){return mini(4,`${bowl(80,66,90,34)}${liquid(80,72,72,'var(--whip)')}${rim(80,66,90)}
+      ${win(0,50,at(82,74,`<g ${M('wsw',.25,0,'',true)}>${at(0,0,whisk+ARM,0,.55)}</g>`),'--oy:0px')}
+      <g ${on(50,'--oy:0px')}>${at(82,74,`<g ${M('wsw',.25,0,'',true)}>${at(0,0,whisk+ARM2,0,.55)}</g>`)}</g>
+      ${win(44,58,chip(40,20,'SWAP','hot'),'--oy:0px')}${chip(80,112,'ZIGZAG, FAST')}`)}},
+  jar:{t:'No whisk? Shake it in a jar',d:'Use clean jars with tight lids, filled no more than a third (480 g of cream: two ~1 L jars). Shake hard, up and down, 3–4 min. When the sloshing sound goes quiet, open and check for soft peaks. Still loose? 20–30 s more. Scrape it into the cold bowl.',
+    get art(){return mini(3,`${at(46,104,`<g ${M('jsh',.16,0,'',true)}><rect x="-22" y="-70" width="44" height="70" rx="7" fill="var(--glass)" opacity=".45"/><rect x="-20" y="-26" width="40" height="23" rx="3" fill="var(--whip)"/><rect x="-22" y="-70" width="44" height="70" rx="7" fill="none" stroke="var(--glass-ln)" stroke-width="2"/><rect x="-20" y="-82" width="40" height="11" rx="3" fill="var(--wax)"/></g>`)}
+      <path d="M12 44 q-6 12 0 24 M80 44 q6 12 0 24" stroke="var(--muted)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      ${chip(122,40,'FILL ≤ ⅓')}${chip(122,62,'3–4 MIN','hot')}${chip(122,84,'THEN CHECK')}`)}},
+  fold:{t:'Folding',d:'Folding mixes without knocking the air out. Cut the spatula straight down through the middle, sweep it along the bottom, lift it up the side and over, then turn the bowl a quarter. Repeat 10–12 times. Stop when it’s evenly tinted with a few streaks. Stirring or whisking would flatten it.',
+    get art(){return mini(3,`${bowl(40,48,64,34)}${MOUND(40,54,54,12,'var(--tint)',false)}${rim(40,48,64)}${at(46,54,`<g ${M('foldm',1.4)}>${at(0,0,SPAT,0,.7)}</g>`)}
+      <path d="M80 12 v84" stroke="var(--line)" stroke-width="2" fill="none"/>
+      ${bowl(120,48,64,34)}${liquid(120,54,52,'var(--tint)')}${rim(120,48,64)}${at(120,54,`<g ${M('circ',.3)}>${at(0,0,whisk,0,.6)}</g>`)}
+      ${chip(40,106,'✓ FOLD','ok')}${chip(120,106,'✗ STIR','no')}`)}},
+  dollops:{t:'Even dollops with the scale',d:'Plate on the scale, TARE. Spoon on until it reads 30 g, push it off with a second spoon, TARE again, next one. 12 the same size: all of the rest of Evidence IV. A little left over? Share it out across the dollops.',
+    get art(){const cx=80;return mini(5,`${SCALE(cx,86,[['0 g',0,30],['15 g',30,52],['30 g',52,100]])}<ellipse cx="${cx}" cy="80" rx="46" ry="8" fill="var(--plate)" stroke="var(--whip-ln)" stroke-width="1.2"/>
+      ${at(cx,76,`<g ${on(28,'--oy:-6px')}><g ${A(kf('hd-gr','0%,40%{transform:scale(.6)}56%,100%{transform:scale(1)}'))}>${at(0,0,DOLLOP,0,1.2)}</g></g>`)}
+      ${at(cx+14,40,`<g ${A(kf('hd-sp','0%,20%{opacity:0;transform:translateY(-10px)}26%,50%{opacity:1;transform:none}58%,100%{opacity:0;transform:translateY(-10px)}'))}>${spoon}</g>`)}
+      <g ${on(56,'--oy:0px')}>${chip(cx,20,'30 g EACH ✓','ok')}</g>`)}},
+  meringue:{t:'Why the meringue goes last',d:'Meringue is dried egg white and sugar, which is why it crunches. Under cream it pulls in moisture and turns chewy, then soggy, in about 30 min. So crush it and layer only right before dessert, around T+95.',
+    get art(){const G1=inner=>GLASS(40,56,inner);return mini(5,`${at(40,86,G1(`<rect x="-17" y="-18" width="34" height="15" fill="var(--meringue)"/>${[-10,0,10].map(x=>crumb(x,-10,3.4)).join('')}<rect x="-17" y="-40" width="34" height="22" fill="var(--tint)"/>`))}
+      ${at(120,86,G1(`<rect x="-17" y="-18" width="34" height="15" fill="var(--meringue)"/><g ${A(kf('hm-sog','0%,20%{opacity:0}80%,100%{opacity:1}'))}><rect x="-17" y="-18" width="34" height="15" fill="var(--whey)"/></g><rect x="-17" y="-40" width="34" height="22" fill="var(--tint)"/>`))}
+      ${chip(40,106,'✓ 0 MIN','ok')}${chip(120,106,'✗ 30+ MIN','no')}`)}},
+  layers:{t:'Neat layers',d:'Work glass by glass on the tray. Drop the crumbs in first, then a spoon of cream (about 25 g), one 30 g dollop in the middle, then cream again to cover it so the dollop hides inside. Wipe drips off the rim with a paper towel.',
+    get art(){const L=LAY(50,80);return mini(6,`${at(80,112,GLASS(50,80,`<g ${on(6,'--oy:0px')}>${L.crumbs}</g><g ${on(26,'--oy:-6px')}>${L.whip1}</g><g ${drop(46,'--dy:-50px')}>${L.dollop}</g><g ${on(66,'--oy:-6px')}>${L.whip2}</g>`))}
+      ${win(6,26,chip(80,14,'1 CRUMBS'),'--oy:0px')}${win(26,46,chip(80,14,'2 CREAM'),'--oy:0px')}${win(46,66,chip(80,14,'3 DOLLOP','hot'),'--oy:0px')}<g ${on(66,'--oy:0px')}>${chip(80,14,'4 CREAM ✓','ok')}</g>`)}},
+  cocoa:{t:'Dusting cocoa',d:'Put a teaspoon of cocoa in the small sieve, hold it a hand’s width above the glass and tap the rim gently with a finger. It falls as a fine, even “snow-dust”. Straight off a spoon it lands in wet clumps. No sieve? Rub a pinch between your fingers high above the glass.',
+    get art(){return mini(3,`${at(40,104,GLASS(40,44,`<rect x="-17" y="-38" width="34" height="35" fill="var(--tint)"/><path d="M-17 -38 h34" stroke="var(--cocoa)" stroke-width="3" opacity=".8"/>`))}
+      ${at(36,24,`<g ${M('tapm',.5)}>${at(0,0,STRAINER,0,.7)}</g>`)}${bits([32,38,44,40,34],32,'var(--cocoa)',26,1.1)}
+      ${at(120,104,GLASS(40,44,`<rect x="-17" y="-38" width="34" height="35" fill="var(--tint)"/><ellipse cx="4" cy="-39" rx="8" ry="4" fill="var(--cocoa)"/>`))}
+      ${at(128,40,`<g ${A(kf('hc-sp','0%,20%{transform:none}40%,100%{transform:rotate(-50deg)}'))}>${spoon}</g>`)}
+      ${chip(40,114,'✓ SIEVE','ok')}${chip(120,114,'✗ SPOON','no')}`)}},
+};
+
+// ---------- station (screen 0) + steps ----------
+const STATION={seal:'IV',kick:'Case No. 08 · Team IV',name:'The Alpine Lodge',
+  sub:'You make: <b>Snow-capped cream cups</b> · 12 glasses',
+  intro:'Cold work, far from the stove. Find your evidence in the <b>freezer</b> first so it can thaw, whip and flavour the cream, make 12 dollops, then rest until dinner. Right before dessert (~T+100) you layer and serve.',
+  hl:['freezer','fridge','table'],
+  marks:{freezer:[47,41,'1'],fridge:[47,64,'7'],table:[24,148,'3']},
+  lg:'<span><b style="color:var(--accent)">1 · 3 · 7</b> = step numbers</span>',
+  gear:[['Large stainless mixing bowl + whisk','Freezer 5 min, then the dining table','the bowl is yours; the Root Cellar mashes in a pot'],['Clean jar(s) with tight lids','Dining table','only if you shake instead of whisk'],['Spatula + 2 spoons','Dining table'],['Kitchen scale','Dining table','shared: tare first'],['Plate + plastic wrap','Fridge','for the 12 dollops'],['12 small glasses on a tray','Dining table, far end','the Apothecary sets them out'],['Small sieve (or a spoon) + cocoa','Dining table'],['Fridge shelf','Fridge','cream bowl + dollop plate, ~T+25 → T+95']],
+  ings:[['Heavy cream','480 g','COLD, straight from the fridge'],['Sugar','30 g'],['Meringue cookies','~100 g','8 g per glass · crush at ~T+95'],['Cocoa powder','a light dust','about 5 g for all 12'],['EVIDENCE IV','all of it','~456 g · 90 g in the cream, 12 × 30 g dollops']],
+  evid:'<p>Your riddle is on the <b>back of your card</b>. Your bag, marked <b>IV</b>, is <b>in the freezer</b>: find it <b>first</b> (T+0–5).</p><p>Set it on the counter, still <b>SEALED</b>, to thaw for <b>15 min</b>. Open it only at step 5, “The secret ingredient”.</p>',
+  clock:[[0,'Freezer: Evidence IV out, thaw 15 min',1],[5,'Chill the bowl 5 min',1],[8,'Root Cellar’s potatoes go in the oven',0],[10,'Cream + sugar, whisk 5–7 min',1],[15,'Dining Hall sears pork (front-left)',0],[20,'Secret ingredient + fold, fridge',1],[25,'12 dollops of 30 g, fridge',1],[33,'Pork in the oven, lower rack',0],[75,'Dinner',0],[95,'Crush the meringue',1],[100,'Layer 12 cups, cocoa, serve',1]]};
+
+const STEPS = [
+  {kind:'station'},
+  { title:'Evidence IV: freezer, first', tm:[0,5], art:'freezer', how:['sealed','thaw'],
+    detail:'Solve the riddle: your bag is in the <b>freezer</b>. Take it out and set it on the <b>counter</b>, <b>still sealed</b>, away from the stove. Start the <b>15 min</b> thaw timer.',
+    timer:{id:'thaw',label:'Thaw',min:15},
+    mw:'The Root Cellar is turning the oven on and scrubbing at the sink; the other teams are hunting. Get in and out of the freezer quickly.' },
+  { title:'Chill the big bowl', tm:[5,10], art:'chill', how:['cold'],
+    detail:'The <b>large stainless mixing bowl</b> and the <b>whisk</b> go into the <b>freezer</b> for <b>5 min</b>. Cold bowl = faster, fluffier cream. Leave the cream in the fridge until then.',
+    timer:{id:'chill',label:'Chill',min:5},
+    mw:'~T+8 the Root Cellar slides their potatoes onto the upper oven rack: stay clear of the oven door.' },
+  { title:'Cream and sugar', tm:[10], art:'cream', how:['tare','cold'],
+    detail:'At the <b>dining table (far end)</b>: cold bowl on the scale, <b>TARE</b>, pour in <b>480 g cold heavy cream</b>. TARE, then <b>30 g sugar</b>.',
+    ings:[['Heavy cream','480 g','cold'],['Sugar','30 g']],
+    mw:'The stove side gets hot soon. You work at the far end of the dining table; the Apothecary will set the near end later.' },
+  { title:'Whisk to soft peaks', tm:[11,18], art:'whisk', how:['peaks','turns','jar'],
+    detail:'Whisk fast, side to side, <b>5–7 min</b>. <b>Take turns</b>: swap every minute. Foamy → thicker → <b>soft peaks</b> (lift the whisk: the tip flops over). Stop there. No whisk? <b>Shake it in a jar</b> (see How?).',
+    timer:{id:'whisk',label:'Whisk',min:7},
+    mw:'T+15 to T+33 the Dining Hall sears pork on the front-left burner: loud and smoky. ~T+15 the Apothecary hands over their glaze. You’re far from all of it.' },
+  { title:'Open Evidence IV', tm:[20], art:'secret', how:['tare'], secret:true,
+    detail:'Thaw timer done? Break the seal, tub out, lid off. Bowl of cream on the scale, <b>TARE</b>, spoon <b>90 g of EVIDENCE IV</b> on top (about a fifth). Keep the rest in its tub for the dollops.',
+    ings:[['EVIDENCE IV','90 g','into the cream'],['EVIDENCE IV, the rest','~366 g','kept for step 8']],
+    mw:'Nobody else should see it: turn your back to the room if you like. The bag goes in the trash.' },
+  { title:'Fold it in', tm:[21], art:'fold', how:['fold'],
+    detail:'With the spatula: <b>cut down the middle, sweep under, lift up the side, turn the bowl ¼</b>. About 10–12 times, until it’s <b>evenly tinted</b> with a few streaks. Stop there so it stays fluffy.',
+    mw:'The Root Cellar’s potatoes are roasting on the upper rack; the oven stays shut until ~T+33.' },
+  { title:'Cover, into the fridge', tm:[23], art:'fridge',
+    detail:'Cover the bowl with plastic wrap (or a plate) and put it on a <b>fridge shelf</b>. It holds there until dessert.',
+    mw:'The fridge is shared: the Dining Hall may need their butter. Put your bowl where it isn’t in the way.' },
+  { title:'12 dollops of 30 g', tm:[25,32], art:'dollops', how:['dollops','tare'],
+    detail:'Plate on the scale, <b>TARE</b>. Spoon on the rest of Evidence IV until it reads <b>30 g</b>, push it off with a second spoon, TARE, repeat: <b>12 dollops</b>. Cover, <b>fridge</b>. You’re free until ~T+95: enjoy dinner.',
+    ings:[['EVIDENCE IV','12 × 30 g','all of the rest']],
+    mw:'~T+33 the pork goes onto the lower oven rack. Dinner is ~T+75 (pork and mash). Nothing for you to do in between.' },
+  { title:'Crush the meringue', tm:[95], art:'crumble', how:['meringue'],
+    detail:'Into a small bowl, crush <b>~100 g meringue cookies</b> with your fingers into <b>pea-size crumbs</b>. A little dust is fine. That’s <b>8 g per glass</b>.',
+    ings:[['Meringue cookies','~100 g','8 g per glass']],
+    mw:'Dinner plates are being cleared. The Root Cellar’s pot can come off the back-right burner; the stove is done for the night.' },
+  { title:'Layer the 12 cups', tm:[97,100], art:'assemble', how:['layers','meringue'],
+    detail:'Bowl and plate out of the fridge. On the tray, in each glass: <b>8 g meringue</b>, a spoon of cream (<b>~25 g</b>), <b>one 30 g dollop</b>, cream again (<b>~25 g</b>) to cover it.',
+    ings:[['Meringue crumbs','8 g','per glass'],['Flavoured cream','~25 g','per glass'],['Evidence IV dollop','30 g','per glass'],['Flavoured cream','~25 g','per glass, on top']],
+    mw:'The Apothecary put the 12 glasses on a tray for you. Everyone else is clearing up and finding a pen for the answer cards.' },
+  { title:'Cocoa dust, serve', tm:[100], art:'serve', how:['cocoa'],
+    detail:'Tap a <b>light dust of cocoa</b> through the small sieve over each glass, right before they go out. Serve straight away, while the meringue still crunches. Spoons in.',
+    ings:[['Cocoa powder','a light dust','~5 g for all 12']],
+    mw:'Then the answer cards: for each dish everyone circles up to 2 suspects, and names the accomplices. Keep a straight face.',
+    note:'Leftover cream keeps covered in the fridge for a day.' },
+];
+
+// ---------- engine ----------
+const store={get(k,d){try{const v=localStorage.getItem(STORE_KEY+k);return v==null?d:JSON.parse(v)}catch{return d}},set(k,v){try{localStorage.setItem(STORE_KEY+k,JSON.stringify(v))}catch{}}};
+const hashStep=/^#(\d+)h?$/.exec(location.hash||'');
+let cur=Math.max(0,Math.min(hashStep?+hashStep[1]:(+store.get('step',0)||0),STEPS.length-1)), checked=store.get('checked',{})||{};
+const timers={}; let audio;
+const $=id=>document.getElementById(id);
+const fmt=s=>{s=Math.max(0,Math.ceil(s));return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`};
+// "Go" is ~4:00 pm (T+0)
+const clockAt=m=>{const t=16*60+m,h=Math.floor(t/60)%12||12;return `${h}:${String(t%60).padStart(2,'0')}`};
+const tTag=s=>s.tm?`≈ T+${s.tm[0]}${s.tm[1]!=null?`–${s.tm[1]}`:''} min · ~${clockAt(s.tm[0])} pm`:'';
+function timerFor(t){if(!timers[t.id])timers[t.id]={total:t.min*60,left:t.min*60,running:false,ring:false,label:t.label};return timers[t.id]}
+const tLeft=T=>T.running?(T.endAt-Date.now())/1000:T.left;
+function toggleTimer(id){const T=timers[id];if(!audio){try{audio=new(window.AudioContext||window.webkitAudioContext)()}catch{}}
+  if(T.ring){T.ring=false;T.running=false;T.left=T.total}else if(T.running){T.left=tLeft(T);T.running=false}else{T.endAt=Date.now()+T.left*1000;T.running=true}paintTimers()}
+function beep(){try{navigator.vibrate&&navigator.vibrate([300,150,300,150,300])}catch{}if(!audio)return;
+  try{[0,.35,.7].forEach(d=>{const o=audio.createOscillator(),g=audio.createGain();o.frequency.value=880;o.connect(g);g.connect(audio.destination);g.gain.setValueAtTime(.25,audio.currentTime+d);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+d+.3);o.start(audio.currentTime+d);o.stop(audio.currentTime+d+.3)})}catch{}}
+function paintTimers(){
+  for(const[id,T]of Object.entries(timers)){
+    if(T.running&&tLeft(T)<=0){T.running=false;T.left=0;T.ring=true;beep()}
+    const el=document.querySelector(`[data-timer="${id}"]`);
+    if(el){el.className='timer'+(T.ring?' ring':T.running?' run':'');el.querySelector('.clock').textContent=T.ring?'Done':fmt(tLeft(T));
+      el.querySelector('.lbl').textContent=T.ring?`${T.label}: time! Tap to reset`:T.running?`${T.label} · running · tap to pause`:(T.left<T.total?`${T.label} · paused · tap to resume`:`${T.label} · tap to start`)}}
+  const here=STEPS[cur].timer?.id;
+  $('dock').innerHTML=Object.entries(timers).filter(([id,T])=>(T.running||T.ring)&&id!==here).map(([id,T])=>`<button class="${T.ring?'ring':''}" data-dock="${id}">${T.label} ${T.ring?'done!':fmt(tLeft(T))}</button>`).join('');
+}
+setInterval(paintTimers,250);
+function station(){
+  const S=STATION;
+  return `<div class="case"><div class="seal">${S.seal}</div><div><p class="kick">${S.kick}</p><h1>${S.name}</h1><p class="sub">${S.sub}</p></div></div>
+    <p class="detail">${S.intro}</p>
+    <p class="gearh">Your station</p>
+    <div class="art">${MAP(S.hl,S.marks)}</div>
+    <div class="maplg"><span><i style="background:var(--accent)"></i>yours</span><span><i style="background:var(--surface-3)"></i>another team (I–IV)</span>${S.lg||''}</div>
+    <p class="gearh">Your gear &amp; where it lives</p>
+    <div class="gear">${S.gear.map(([g,w,n])=>`<div><span>${g}${n?`<small>${n}</small>`:''}</span><span class="w">${w}</span></div>`).join('')}</div>
+    <p class="gearh">Ingredients · for 12</p>
+    <div class="check">${S.ings.map(([n,q,note],i)=>`<label><input type="checkbox" data-ck="${i}" ${checked[i]?'checked':''}><span class="n">${n}${note?`<small>${note}</small>`:''}</span><span class="q">${q}</span></label>`).join('')}</div>
+    <div class="evid"><h2>Find your evidence</h2>${S.evid}</div>
+    <p class="gearh">Your clock · Go ≈ 4:00 pm</p>
+    <div class="clockl">${S.clock.map(([t,x,you])=>`<span class="t">T+${t}</span><span class="${you?'you':'oth'}">${x}</span>`).join('')}</div>`;
+}
+function render(){
+  const s=STEPS[cur];
+  $('bars').innerHTML=STEPS.map((_,i)=>`<button aria-label="${i?`Step ${i}`:'Your station'}" class="${i<cur?'done':i===cur?'cur':''}" data-go="${i}"></button>`).join('');
+  $('count').textContent=cur===0?'Your station':`Step ${cur} of ${STEPS.length-1}`;
+  let h='';
+  if(s.kind==='station'){h=station()}
+  else{
+    const hk=s.how||[];
+    const how=hk.length?`<button class="how" id="howbtn" data-how aria-expanded="false" aria-controls="howp">How?</button>`:'';
+    const howp=hk.length?`<div class="howp" id="howp" hidden>${hk.map(k=>`<div class="term"><div class="mini">${HOW[k].art}</div><div><h3>${HOW[k].t}</h3><p>${HOW[k].d}</p></div></div>`).join('')}</div>`:'';
+    const tag=`<span class="tag"${s.secret?' style="background:var(--wax);color:#fff;border-color:var(--wax-lt)"':''}>${s.secret?'The secret ingredient · ':''}${tTag(s)}</span>`;
+    h=`${tag}<div class="art">${ART[s.art]}</div><div class="ttl"><h1>${s.title}</h1>${how}</div>${howp}<p class="detail">${s.detail}</p>`;
+    if(s.timer){const T=timerFor(s.timer);h+=`<button class="timer" data-timer="${s.timer.id}"><span class="clock">${fmt(tLeft(T))}</span><span class="lbl"></span></button>`}
+    if(s.ings)h+=`<div class="ings">`+s.ings.map(([n,q,note])=>`<div class="q">${q}</div><div class="n">${n}${note?`<small>${note}</small>`:''}</div>`).join('')+`</div>`;
+    if(s.mw)h+=`<div class="mw"><b>Meanwhile in the kitchen</b><p>${s.mw}</p></div>`;
+    if(s.note)h+=`<p class="note">${s.note}</p>`;
+  }
+  const st=$('stage');st.innerHTML=h;st.scrollTop=0;st.classList.remove('fade');void st.offsetWidth;st.classList.add('fade');
+  $('back').disabled=cur===0;$('next').textContent=cur===0?'Start cooking':cur===STEPS.length-1?'Done':'Next';$('next').disabled=cur===STEPS.length-1;
+  store.set('step',cur);paintTimers();
+}
+function go(i){cur=Math.max(0,Math.min(STEPS.length-1,i));render();wake()}
+document.addEventListener('click',e=>{
+  const g=e.target.closest('[data-go]');if(g)return go(+g.dataset.go);
+  const hw=e.target.closest('[data-how]');if(hw){const p=$('howp'),open=p.hidden;p.hidden=!open;hw.setAttribute('aria-expanded',open);hw.textContent=open?'Close':'How?';return}
+  const t=e.target.closest('[data-timer]');if(t)return toggleTimer(t.dataset.timer);
+  const d=e.target.closest('[data-dock]');if(d){const id=d.dataset.dock;if(timers[id].ring)toggleTimer(id);return go(STEPS.findIndex(s=>s.timer?.id===id))}
+});
+document.addEventListener('change',e=>{const c=e.target.closest('[data-ck]');if(c){checked[c.dataset.ck]=c.checked;store.set('checked',checked)}});
+$('next').onclick=()=>go(cur+1);$('back').onclick=()=>go(cur-1);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+let tx=null,ty=null;
+$('stage').addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+$('stage').addEventListener('touchend',e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(cur+(dx<0?1:-1));tx=null},{passive:true});
+let lock=null;async function wake(){try{if(!lock&&navigator.wakeLock){lock=await navigator.wakeLock.request('screen');lock.addEventListener('release',()=>lock=null)}}catch{}}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')wake()});
+render();
+if(/h$/.test(location.hash))document.querySelector('[data-how]')?.click();
+</script>
+</body>
+</html>
